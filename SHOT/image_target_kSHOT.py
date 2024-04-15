@@ -111,7 +111,7 @@ def cal_acc(loader, netF, netB, netC):
     with torch.no_grad():
         iter_test = iter(loader)
         for i in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test)#iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -181,7 +181,7 @@ def train_target(args):
     start = True
     iter_valid = iter(dset_loaders['valid'])
     for _ in range(len(dset_loaders['valid'])):
-        data = iter_valid.next()
+        data = next(iter_valid)#iter_valid.next()
         labels = data[1]
         if start:
             all_label = labels.long()
@@ -230,10 +230,10 @@ def train_target(args):
     epoch = 0
     while iter_num < max_iter:
         try:
-            inputs_test, _, tar_idx = iter_test.next()
+            inputs_test, _, tar_idx = next(iter_test)#iter_test.next()
         except:
             iter_test = iter(dset_loaders["target"])
-            inputs_test, _, tar_idx = iter_test.next()
+            inputs_test, _, tar_idx = next(iter_test)#iter_test.next()
 
         if inputs_test.size(0) == 1:
             continue
@@ -292,7 +292,7 @@ def train_target(args):
 
             logging.info(log_str)
             netF.train()
-            netB.train()
+            netB.train() 
 
     if args.issave:   
         torch.save(netF.state_dict(), osp.join(args.output_dir, "{}_{}_{}_{}_target_F_".format(args.timestamp, args.s, args.t, args.net) + args.savename + ".pt"))
@@ -312,7 +312,7 @@ def obtain_label(loader, netF, netB, netC, args, pk_solver, epoch):
     with torch.no_grad():
         iter_test = iter(loader)
         for _ in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test)#iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -479,7 +479,7 @@ if __name__ == "__main__":
         args.class_num = 40
     if args.dset == 'office31':
         args.names = ['webcam', 'amazon', 'dslr']
-        args.class_num = 31
+        args.class_num = 12
     if args.dset == 'visda-2017':
         args.names = ['train', 'validation']
         args.class_num = 12
