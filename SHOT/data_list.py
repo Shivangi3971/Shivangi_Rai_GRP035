@@ -113,7 +113,7 @@ class ImageList_idx(Dataset):
         elif mode == 'L':
             self.loader = l_loader
 
-    def __getitem__(self, index):
+    def __getitem__(self, index): 
         path, target = self.imgs[index]
         path = os.path.join(self.root, path)
         img = self.loader(path)
