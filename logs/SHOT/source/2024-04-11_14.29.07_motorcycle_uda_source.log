@@ -1,0 +1,28 @@
+2024-04-11 14:29:45:INFO:visdom:3025638
+2024-04-11 14:29:45:INFO:==========================================
+gpu_id:0
+s:motorcycle
+t:None
+max_epoch:10
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-04-11_14.29.07
+use_file_logger:True
+names:['train', 'validation']
+class_num:12
+s_dset_path:../data/visda-2017/image_list/motorcycle.txt
+test_dset_path:../data/visda-2017/image_list/motorcycle.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+

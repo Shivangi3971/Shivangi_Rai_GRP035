@@ -1,0 +1,28 @@
+2024-04-13 11:49:27:INFO:visdom:3598974
+2024-04-13 11:49:27:INFO:==========================================
+gpu_id:0
+s:webcam
+t:None
+max_epoch:100
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-04-13_11.49.17
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+class_num:12
+s_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+

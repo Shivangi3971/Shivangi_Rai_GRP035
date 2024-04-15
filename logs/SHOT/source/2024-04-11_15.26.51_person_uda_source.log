@@ -1,0 +1,81 @@
+2024-04-12 08:35:20:INFO:visdom:522135
+2024-04-12 08:35:20:INFO:==========================================
+gpu_id:0
+s:person
+t:None
+max_epoch:10
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-04-11_15.26.51
+use_file_logger:True
+names:['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
+class_num:12
+s_dset_path:../data/visda-2017/train/image_list.txt
+test_dset_path:../data/visda-2017/validation/image_list.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+
+2024-04-12 08:45:27:INFO:Task: person, Iter:2144/21440; Accuracy = 97.74%
+99.73 98.88 94.17 95.3 99.22 98.9 98.91 100.0 99.9 98.31 95.68 93.83
+2024-04-12 08:55:45:INFO:Task: person, Iter:4288/21440; Accuracy = 98.50%
+99.8 99.72 95.86 97.61 99.44 99.04 98.74 100.0 99.9 98.81 97.23 95.82
+2024-04-12 09:05:30:INFO:Task: person, Iter:6432/21440; Accuracy = 98.82%
+99.86 99.3 98.38 96.61 99.66 99.79 99.37 100.0 99.9 99.32 97.66 96.03
+2024-04-12 09:15:03:INFO:Task: person, Iter:8576/21440; Accuracy = 99.15%
+99.93 99.58 97.3 98.07 99.44 99.73 99.48 100.0 99.9 99.49 98.64 98.22
+2024-04-12 09:24:50:INFO:Task: person, Iter:10720/21440; Accuracy = 99.30%
+99.93 99.86 98.62 98.23 99.55 99.66 99.37 100.0 99.9 99.75 98.58 98.12
+2024-04-12 09:35:00:INFO:Task: person, Iter:12864/21440; Accuracy = 99.32%
+99.93 99.86 98.56 98.46 99.55 99.79 99.54 100.0 99.9 99.41 98.77 98.12
+2024-04-12 09:44:53:INFO:Task: person, Iter:15008/21440; Accuracy = 99.47%
+99.93 99.86 99.22 98.46 100.0 99.86 99.54 100.0 99.9 99.66 98.64 98.54
+2024-04-12 09:54:08:INFO:Task: person, Iter:17152/21440; Accuracy = 99.50%
+100.0 99.86 98.62 98.84 99.89 99.86 99.6 100.0 99.9 99.83 99.51 98.12
+2024-04-12 10:04:31:INFO:Task: person, Iter:19296/21440; Accuracy = 99.54%
+100.0 99.86 98.32 99.0 99.89 99.86 99.43 100.0 99.9 99.58 99.45 99.16
+2024-04-12 10:14:47:INFO:Task: person, Iter:21440/21440; Accuracy = 99.58%
+100.0 99.86 98.98 99.0 100.0 99.86 99.48 100.0 99.9 99.75 99.26 98.85
+2024-04-12 10:16:44:INFO:
+Training: val, Task: person->aeroplane, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:18:31:INFO:
+Training: val, Task: person->bicycle, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:20:23:INFO:
+Training: val, Task: person->bus, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:22:14:INFO:
+Training: val, Task: person->car, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:24:06:INFO:
+Training: val, Task: person->horse, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:25:56:INFO:
+Training: val, Task: person->knife, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:27:42:INFO:
+Training: val, Task: person->motorcycle, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:29:00:INFO:
+Training: val, Task: person->plant, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:30:41:INFO:
+Training: val, Task: person->skateboard, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:31:53:INFO:
+Training: val, Task: person->train, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6
+2024-04-12 10:33:32:INFO:
+Training: val, Task: person->truck, Accuracy = 46.72%
+51.21 19.05 52.15 78.87 62.65 4.39 81.95 18.18 69.2 33.76 82.63 6.6

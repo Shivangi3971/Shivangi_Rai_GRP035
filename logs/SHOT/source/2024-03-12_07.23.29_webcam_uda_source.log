@@ -1,0 +1,42 @@
+2024-03-12 07:31:36:INFO:visdom:25277
+2024-03-12 07:31:36:INFO:==========================================
+gpu_id:0
+s:webcam
+t:None
+max_epoch:100
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-03-12_07.23.29
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+class_num:31
+s_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+
+2024-03-12 07:31:59:INFO:Task: webcam, Iter:120/1200; Accuracy = 98.75%
+2024-03-12 07:32:19:INFO:Task: webcam, Iter:240/1200; Accuracy = 98.75%
+2024-03-12 07:32:39:INFO:Task: webcam, Iter:360/1200; Accuracy = 98.75%
+2024-03-12 07:32:57:INFO:Task: webcam, Iter:480/1200; Accuracy = 98.75%
+2024-03-12 07:33:16:INFO:Task: webcam, Iter:600/1200; Accuracy = 98.75%
+2024-03-12 07:33:33:INFO:Task: webcam, Iter:720/1200; Accuracy = 98.75%
+2024-03-12 07:33:52:INFO:Task: webcam, Iter:840/1200; Accuracy = 98.75%
+2024-03-12 07:34:09:INFO:Task: webcam, Iter:960/1200; Accuracy = 98.75%
+2024-03-12 07:34:29:INFO:Task: webcam, Iter:1080/1200; Accuracy = 98.75%
+2024-03-12 07:34:48:INFO:Task: webcam, Iter:1200/1200; Accuracy = 98.75%
+2024-03-12 07:34:53:INFO:
+Training: val, Task: webcam->amazon, Accuracy = 62.55%
+2024-03-12 07:34:56:INFO:
+Training: val, Task: webcam->dslr, Accuracy = 97.59%

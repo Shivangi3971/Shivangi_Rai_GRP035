@@ -1,0 +1,28 @@
+2024-04-11 15:02:24:INFO:visdom:3096460
+2024-04-11 15:02:24:INFO:==========================================
+gpu_id:0
+s:bicycle
+t:None
+max_epoch:10
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-04-11_15.02.04
+use_file_logger:True
+names:['aeroplane', 'bicycle', 'bus', 'car', 'horse', 'knife', 'motorcycle', 'person', 'plant', 'skateboard', 'train', 'truck']
+class_num:12
+s_dset_path:../data/visda-2017/train/image_list.txt
+test_dset_path:../data/visda-2017/validation/image_list.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+

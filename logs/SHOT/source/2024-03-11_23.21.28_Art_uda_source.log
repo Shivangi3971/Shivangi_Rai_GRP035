@@ -1,0 +1,44 @@
+2024-03-11 23:44:30:INFO:visdom:3090350
+2024-03-11 23:44:30:INFO:==========================================
+gpu_id:0
+s:Art
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-03-11_23.21.28
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+class_num:65
+s_dset_path:../data/office-home/image_list/Art.txt
+test_dset_path:../data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+
+2024-03-11 23:45:24:INFO:Task: Art, Iter:175/1750; Accuracy = 74.90%
+2024-03-11 23:46:05:INFO:Task: Art, Iter:350/1750; Accuracy = 75.72%
+2024-03-11 23:46:48:INFO:Task: Art, Iter:525/1750; Accuracy = 75.31%
+2024-03-11 23:47:27:INFO:Task: Art, Iter:700/1750; Accuracy = 74.49%
+2024-03-11 23:48:09:INFO:Task: Art, Iter:875/1750; Accuracy = 74.49%
+2024-03-11 23:48:49:INFO:Task: Art, Iter:1050/1750; Accuracy = 74.90%
+2024-03-11 23:49:30:INFO:Task: Art, Iter:1225/1750; Accuracy = 73.66%
+2024-03-11 23:50:11:INFO:Task: Art, Iter:1400/1750; Accuracy = 74.90%
+2024-03-11 23:50:53:INFO:Task: Art, Iter:1575/1750; Accuracy = 73.66%
+2024-03-11 23:51:37:INFO:Task: Art, Iter:1750/1750; Accuracy = 73.66%
+2024-03-11 23:51:47:INFO:
+Training: val, Task: Art->Clipart, Accuracy = 44.54%
+2024-03-11 23:51:56:INFO:
+Training: val, Task: Art->Product, Accuracy = 67.52%
+2024-03-11 23:52:30:INFO:
+Training: val, Task: Art->Real_World, Accuracy = 74.48%

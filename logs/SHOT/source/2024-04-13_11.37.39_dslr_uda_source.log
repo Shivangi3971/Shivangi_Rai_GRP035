@@ -1,0 +1,42 @@
+2024-04-13 11:43:05:INFO:visdom:3557696
+2024-04-13 11:43:05:INFO:==========================================
+gpu_id:0
+s:dslr
+t:None
+max_epoch:100
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-04-13_11.37.39
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+class_num:31
+s_dset_path:../data/office31/image_list/dslr.txt
+test_dset_path:../data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+
+2024-04-13 11:43:21:INFO:Task: dslr, Iter:30/300; Accuracy = 94.74%
+2024-04-13 11:43:35:INFO:Task: dslr, Iter:60/300; Accuracy = 94.74%
+2024-04-13 11:43:49:INFO:Task: dslr, Iter:90/300; Accuracy = 94.74%
+2024-04-13 11:44:03:INFO:Task: dslr, Iter:120/300; Accuracy = 94.74%
+2024-04-13 11:44:17:INFO:Task: dslr, Iter:150/300; Accuracy = 94.74%
+2024-04-13 11:44:31:INFO:Task: dslr, Iter:180/300; Accuracy = 94.74%
+2024-04-13 11:44:45:INFO:Task: dslr, Iter:210/300; Accuracy = 94.74%
+2024-04-13 11:44:59:INFO:Task: dslr, Iter:240/300; Accuracy = 94.74%
+2024-04-13 11:45:14:INFO:Task: dslr, Iter:270/300; Accuracy = 94.74%
+2024-04-13 11:45:28:INFO:Task: dslr, Iter:300/300; Accuracy = 94.74%
+2024-04-13 11:45:31:INFO:
+Training: val, Task: dslr->amazon, Accuracy = 77.13%
+2024-04-13 11:45:33:INFO:
+Training: val, Task: dslr->webcam, Accuracy = 97.71%

@@ -1,0 +1,44 @@
+2024-03-19 15:50:52:INFO:visdom:1092825
+2024-03-19 15:50:52:INFO:==========================================
+gpu_id:0
+s:real
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:domainnet40
+lr:0.01
+net:resnet50
+seed:2020
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+smooth:0.1
+output:san
+da:uda
+trte:val
+timestamp:2024-03-19_15.26.19
+use_file_logger:True
+names:['sketch', 'clipart', 'painting', 'real']
+class_num:40
+s_dset_path:../data/domainnet40/image_list/real_train_mini.txt
+test_dset_path:../data/domainnet40/image_list/real_test_mini.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+
+2024-03-19 15:53:02:INFO:Task: real, Iter:1135/11350; Accuracy = 94.24%
+2024-03-19 15:55:01:INFO:Task: real, Iter:2270/11350; Accuracy = 93.99%
+2024-03-19 15:56:57:INFO:Task: real, Iter:3405/11350; Accuracy = 94.30%
+2024-03-19 15:59:00:INFO:Task: real, Iter:4540/11350; Accuracy = 94.24%
+2024-03-19 16:00:57:INFO:Task: real, Iter:5675/11350; Accuracy = 94.06%
+2024-03-19 16:02:54:INFO:Task: real, Iter:6810/11350; Accuracy = 94.12%
+2024-03-19 16:04:52:INFO:Task: real, Iter:7945/11350; Accuracy = 94.37%
+2024-03-19 16:06:49:INFO:Task: real, Iter:9080/11350; Accuracy = 94.12%
+2024-03-19 16:08:50:INFO:Task: real, Iter:10215/11350; Accuracy = 94.67%
+2024-03-19 16:11:01:INFO:Task: real, Iter:11350/11350; Accuracy = 94.49%
+2024-03-19 16:11:07:INFO:
+Training: val, Task: real->sketch, Accuracy = 57.61%
+2024-03-19 16:11:11:INFO:
+Training: val, Task: real->clipart, Accuracy = 66.65%
+2024-03-19 16:11:17:INFO:
+Training: val, Task: real->painting, Accuracy = 75.04%
