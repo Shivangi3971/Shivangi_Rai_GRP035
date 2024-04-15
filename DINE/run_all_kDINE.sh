@@ -34,13 +34,13 @@ for seed in 2020 2021 2022; do
     done
 done
 
-# office-home (PDA)-----------------------------------------------------------------------------------------------------
-for seed in 2020 2021 2022; do
-    for src in 'Product' 'Real_World' 'Art' 'Clipart' ; do
-        echo $src
-        python DINE_dist.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 50 --timestamp $time
+# # office-home (PDA)-----------------------------------------------------------------------------------------------------
+# for seed in 2020 2021 2022; do
+#     for src in 'Product' 'Real_World' 'Art' 'Clipart' ; do
+#         echo $src
+#         python DINE_dist.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 50 --timestamp $time
 
-        python DINE_dist_kDINE.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 30 --net resnet50  --distill --topk 1 --timestamp $time --pk_type ub --pk_uconf 0.0
-        python DINE_dist_kDINE.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 30 --net resnet50  --distill --topk 1 --timestamp $time --pk_type br --pk_uconf 1.0
-    done
-done
+#         python DINE_dist_kDINE.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 30 --net resnet50  --distill --topk 1 --timestamp $time --pk_type ub --pk_uconf 0.0
+#         python DINE_dist_kDINE.py --gpu_id $gpu_id --seed $seed --dset office-home --s $src --da pda --net_src resnet50 --max_epoch 30 --net resnet50  --distill --topk 1 --timestamp $time --pk_type br --pk_uconf 1.0
+#     done
+# done
