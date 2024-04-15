@@ -19,7 +19,7 @@ import distutils.util
 import logging
 
 import sys
-sys.path.append("../util/")
+sys.path.append("/data3/Shivangi/KUDA/util/")
 from utils import resetRNGseed, init_logger, get_hostname, get_pid
 
 import time
@@ -97,11 +97,11 @@ def data_load(args):
         txt_tar = new_tar.copy()
         txt_test = txt_tar.copy()
 
-    dsets["target"] = ImageList_idx(txt_tar, root="../data/{}/".format(args.dset), transform=image_train())
+    dsets["target"] = ImageList_idx(txt_tar, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_train())
     dset_loaders["target"] = DataLoader(dsets["target"], batch_size=train_bs, shuffle=True, num_workers=args.worker, drop_last=False)
-    dsets["test"] = ImageList_idx(txt_test, root="../data/{}/".format(args.dset), transform=image_test())
+    dsets["test"] = ImageList_idx(txt_test, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_test())
     dset_loaders["test"] = DataLoader(dsets["test"], batch_size=train_bs*3, shuffle=False, num_workers=args.worker, drop_last=False)
-    dsets["target_te"] = ImageList(txt_tar, root="../data/{}/".format(args.dset), transform=image_test())
+    dsets["target_te"] = ImageList(txt_tar, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_test())
     dset_loaders["target_te"] = DataLoader(dsets["target_te"], batch_size=train_bs, shuffle=True, num_workers=args.worker, drop_last=False)
 
     return dset_loaders
@@ -111,7 +111,7 @@ def cal_acc(loader, netF, netB, netC, flag=False):
     with torch.no_grad():
         iter_test = iter(loader)
         for i in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test)#iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -141,7 +141,7 @@ def cal_acc(loader, netF, netB, netC, flag=False):
 
 def train_target(args):
     dset_loaders = data_load(args)
-    if args.net[0:3] == 'res':
+    if args.net[0:3] == 'res': 
         netF = network.ResBase(res_name=args.net).cuda()
         
     netB = network.feat_bootleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
@@ -188,10 +188,10 @@ def train_target(args):
     while iter_num < max_iter:
         optimizer.zero_grad()
         try:
-            inputs_test, _, tar_idx = iter_test.next()
+            inputs_test, _, tar_idx = next(iter_test)#iter_test.next()
         except:
             iter_test = iter(dset_loaders["target"])
-            inputs_test, _, tar_idx = iter_test.next()
+            inputs_test, _, tar_idx = next(iter_test)#iter_test.next()
 
         if inputs_test.size(0) == 1:
             continue
@@ -297,7 +297,7 @@ if __name__ == "__main__":
             init_logger(dir, True, '../logs/DINE/')
     logging.info("{}:{}".format(get_hostname(), get_pid()))
 
-    folder = '../data/'
+    folder = '/data3/Shivangi/KUDA/data/'
     for t in args.names:
         if t == args.s:
             continue
