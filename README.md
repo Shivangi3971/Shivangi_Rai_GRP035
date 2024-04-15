@@ -26,11 +26,11 @@ Download the [office31](https://faculty.cc.gatech.edu/~judy/domainadapt/), [Offi
 
 Setup dataset path in ./data
 ```shell
-bash setup_data_path.sh /Path_to_data/office/domain_adaptation_images office31
-bash setup_data_path.sh /Path_to_data/office-home/images office-home
-bash setup_data_path.sh /Path_to_data/office-home/images office-home-rsut
-bash setup_data_path.sh /Path_to_data/VisDA visda
-bash setup_data_path.sh /Path_to_data/DomainNet domainnet40
+
+bash data/setup_data_path.sh /data3/Shivangi/dataset/office-home office-home
+bash data/setup_data_path.sh /data3/Shivangi/dataset/office31 office31
+bash data/setup_data_path.sh /data3/Shivangi/dataset/visda-2017 visda
+bash data/setup_data_path.sh /data3/Shivangi/dataset/domainnet40 domainnet40
 ```
 
 ### kSHOT
