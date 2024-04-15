@@ -18,7 +18,7 @@ import distutils.util
 import logging
 
 import sys
-sys.path.append("../util/")
+sys.path.append("/data3/Shivangi/KUDA/util/")
 from utils import resetRNGseed, init_logger, get_hostname, get_pid
 
 import time
@@ -108,15 +108,15 @@ def data_load(args):
         txt_tar = new_tar.copy()
         txt_test = txt_tar.copy()
 
-    dsets["source_tr"] = ImageList(tr_txt, root="../data/{}/".format(args.dset), transform=image_train())
+    dsets["source_tr"] = ImageList(tr_txt, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_train())
     dset_loaders["source_tr"] = DataLoader(dsets["source_tr"], batch_size=train_bs, shuffle=True, num_workers=args.worker, drop_last=False)
-    dsets["source_te"] = ImageList(te_txt, root="../data/{}/".format(args.dset), transform=image_test())
+    dsets["source_te"] = ImageList(te_txt, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_test())
     dset_loaders["source_te"] = DataLoader(dsets["source_te"], batch_size=train_bs, shuffle=True, num_workers=args.worker, drop_last=False)
-    dsets["target"] = ImageList_idx(txt_tar, root="../data/{}/".format(args.dset), transform=image_train())
+    dsets["target"] = ImageList_idx(txt_tar, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_train())
     dset_loaders["target"] = DataLoader(dsets["target"], batch_size=train_bs, shuffle=True, num_workers=args.worker, drop_last=False)
-    dsets["target_te"] = ImageList(txt_tar, root="../data/{}/".format(args.dset), transform=image_test())
+    dsets["target_te"] = ImageList(txt_tar, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_test())
     dset_loaders["target_te"] = DataLoader(dsets["target_te"], batch_size=train_bs, shuffle=False, num_workers=args.worker, drop_last=False)
-    dsets["test"] = ImageList(txt_test, root="../data/{}/".format(args.dset), transform=image_test())
+    dsets["test"] = ImageList(txt_test, root="/data3/Shivangi/KUDA/data/{}/".format(args.dset), transform=image_test())
     dset_loaders["test"] = DataLoader(dsets["test"], batch_size=train_bs*2, shuffle=False, num_workers=args.worker, drop_last=False)
 
     return dset_loaders
@@ -126,7 +126,7 @@ def cal_acc(loader, netF, netB, netC, flag=False):
     with torch.no_grad():
         iter_test = iter(loader)
         for i in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test)#iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -183,10 +183,10 @@ def train_source_simp(args):
 
     while iter_num < max_iter:
         try:
-            inputs_source, labels_source = iter_source.next()
+            inputs_source, labels_source = next(iter_source)#iter_source.next()
         except:
             iter_source = iter(dset_loaders["source_tr"])
-            inputs_source, labels_source = iter_source.next()
+            inputs_source, labels_source = next(iter_source)#iter_source.next()
 
         if inputs_source.size(0) == 1:
             continue
@@ -288,7 +288,7 @@ def copy_target_simp(args):
     with torch.no_grad():
         iter_test = iter(dset_loaders["target_te"])
         for i in range(len(dset_loaders["target_te"])):
-            data = iter_test.next()
+            data = next(iter_test)#iter_test.next()
             inputs, labels = data[0], data[1]
             inputs = inputs.cuda()
             outputs = source_model(inputs)
@@ -317,7 +317,7 @@ def copy_target_simp(args):
             with torch.no_grad():
                 iter_test = iter(dset_loaders["target_te"])
                 for i in range(len(dset_loaders["target_te"])):
-                    data = iter_test.next()
+                    data = next(iter_test)#iter_test.next()
                     inputs = data[0]
                     inputs = inputs.cuda()
                     outputs = model(inputs)
@@ -331,10 +331,10 @@ def copy_target_simp(args):
             model.train()
 
         try:
-            inputs_target, y, tar_idx = iter_target.next()
+            inputs_target, y, tar_idx = next(iter_target)#iter_target.next()
         except:
             iter_target = iter(dset_loaders["target"])
-            inputs_target, y, tar_idx = iter_target.next()
+            inputs_target, y, tar_idx = next(iter_target)#iter_target.next()
 
         if inputs_target.size(0) == 1:
             continue
@@ -400,7 +400,7 @@ def print_args(args):
         s += "{}:{}\n".format(arg, content)
     return s
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     parser = argparse.ArgumentParser(description='DINE')
     parser.add_argument('--gpu_id', type=str, nargs='?', default='0', help="device id to run")
     parser.add_argument('--s', type=str, default=None, help="source")
@@ -456,7 +456,7 @@ if __name__ == "__main__":
         init_logger(dir, True, '../logs/DINE/{}/'.format(args.method))
     logging.info("{}:{}".format(get_hostname(), get_pid()))
 
-    folder = '../data/'
+    folder = '/data3/Shivangi/KUDA/data/'
     args.s_dset_path = folder + args.dset + '/image_list/' + args.s + '.txt'
     args.t_dset_path = folder + args.dset + '/image_list/' + args.s + '.txt'
     args.test_dset_path = folder + args.dset + '/image_list/' + args.s + '.txt'
