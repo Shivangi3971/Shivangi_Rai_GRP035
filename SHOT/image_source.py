@@ -1,7 +1,7 @@
 import argparse
 import os
 import os.path as osp
-import numpy as np
+import numpy as np 
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.cluster import KMeans
 import distutils
 import distutils.util
-import logging
+import logging 
 
 import sys
 sys.path.append("../util/")
@@ -128,7 +128,7 @@ def cal_acc(loader, netF, netB, netC, flag=False):
     with torch.no_grad():
         iter_test = iter(loader)
         for i in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test) #iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -161,7 +161,7 @@ def cal_acc_oda(loader, netF, netB, netC):
     with torch.no_grad():
         iter_test = iter(loader)
         for i in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test) #iter_test.next()
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -221,14 +221,14 @@ def train_source(args):
 
     netF.train()
     netB.train()
-    netC.train()
+    netC.train() 
 
     while iter_num < max_iter:
         try:
-            inputs_source, labels_source = iter_source.next()
+            inputs_source, labels_source = next(iter_source) #iter_source.next()
         except:
             iter_source = iter(dset_loaders["source_tr"])
-            inputs_source, labels_source = iter_source.next()
+            inputs_source, labels_source = next(iter_source) #iter_source.next()
 
         if inputs_source.size(0) == 1:
             continue
@@ -362,7 +362,7 @@ if __name__ == "__main__":
         args.class_num = 126
     if args.dset == 'office31':
         args.names = ['amazon', 'dslr', 'webcam']
-        args.class_num = 31
+        args.class_num = 12
     if args.dset == 'visda-2017':
         args.names = ['train', 'validation']
         args.class_num = 12
