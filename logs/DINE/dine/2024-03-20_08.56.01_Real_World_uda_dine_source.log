@@ -1,0 +1,39 @@
+2024-03-20 09:22:51:INFO:visdom:3136961
+2024-03-20 09:22:51:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.56.01
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+method:dine
+class_num:65
+s_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Real_World.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Real_World.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Real_World.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+
+2024-03-20 09:26:58:INFO:Task: Real_World, Iter:330/3300; Accuracy = 78.97%
+2024-03-20 09:30:59:INFO:Task: Real_World, Iter:660/3300; Accuracy = 82.56%
+2024-03-20 09:34:45:INFO:Task: Real_World, Iter:990/3300; Accuracy = 84.62%
+2024-03-20 09:38:42:INFO:Task: Real_World, Iter:1320/3300; Accuracy = 82.56%
+2024-03-20 09:42:35:INFO:Task: Real_World, Iter:1650/3300; Accuracy = 83.59%

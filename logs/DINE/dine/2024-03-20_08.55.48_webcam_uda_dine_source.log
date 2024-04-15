@@ -1,0 +1,96 @@
+2024-03-20 08:55:53:INFO:visdom:3003384
+2024-03-20 08:55:53:INFO:==========================================
+gpu_id:0
+s:webcam
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:dine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+
+2024-03-20 08:56:14:INFO:Task: webcam, Iter:55/550; Accuracy = 98.92%
+2024-03-20 08:56:30:INFO:Task: webcam, Iter:110/550; Accuracy = 100.00%
+2024-03-20 08:56:46:INFO:Task: webcam, Iter:165/550; Accuracy = 100.00%
+2024-03-20 08:57:05:INFO:Task: webcam, Iter:220/550; Accuracy = 100.00%
+2024-03-20 08:57:25:INFO:Task: webcam, Iter:275/550; Accuracy = 100.00%
+2024-03-20 08:57:44:INFO:Task: webcam, Iter:330/550; Accuracy = 100.00%
+2024-03-20 08:58:01:INFO:Task: webcam, Iter:385/550; Accuracy = 100.00%
+2024-03-20 08:58:17:INFO:Task: webcam, Iter:440/550; Accuracy = 100.00%
+2024-03-20 08:58:33:INFO:Task: webcam, Iter:495/550; Accuracy = 100.00%
+2024-03-20 08:58:50:INFO:Task: webcam, Iter:550/550; Accuracy = 100.00%
+2024-03-20 08:59:00:INFO:
+Task: webcam->amazon, Accuracy = 61.48%
+2024-03-20 08:59:07:INFO:
+Task: webcam->dslr, Accuracy = 98.59%
+2024-03-20 09:35:49:INFO:visdom:3193911
+2024-03-20 09:35:49:INFO:==========================================
+gpu_id:0
+s:webcam
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:dine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/DINE/2021/source/uda/
+
+2024-03-20 09:36:08:INFO:Task: webcam, Iter:55/550; Accuracy = 98.92%
+2024-03-20 09:36:20:INFO:Task: webcam, Iter:110/550; Accuracy = 100.00%
+2024-03-20 09:36:33:INFO:Task: webcam, Iter:165/550; Accuracy = 100.00%
+2024-03-20 09:36:45:INFO:Task: webcam, Iter:220/550; Accuracy = 100.00%
+2024-03-20 09:36:59:INFO:Task: webcam, Iter:275/550; Accuracy = 100.00%
+2024-03-20 09:37:15:INFO:Task: webcam, Iter:330/550; Accuracy = 100.00%
+2024-03-20 09:37:31:INFO:Task: webcam, Iter:385/550; Accuracy = 100.00%
+2024-03-20 09:37:46:INFO:Task: webcam, Iter:440/550; Accuracy = 100.00%
+2024-03-20 09:37:59:INFO:Task: webcam, Iter:495/550; Accuracy = 100.00%
+2024-03-20 09:38:13:INFO:Task: webcam, Iter:550/550; Accuracy = 100.00%
+2024-03-20 09:38:20:INFO:
+Task: webcam->amazon, Accuracy = 58.79%
+2024-03-20 09:38:26:INFO:
+Task: webcam->dslr, Accuracy = 98.39%

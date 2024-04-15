@@ -1,0 +1,130 @@
+2024-03-20 09:51:17:INFO:visdom:3251485
+2024-03-20 09:51:17:INFO:==========================================
+gpu_id:1
+s:dslr
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-19_23.10.40
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:dine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+
+2024-03-20 09:53:13:INFO:visdom:3255995
+2024-03-20 09:53:13:INFO:==========================================
+gpu_id:0
+s:dslr
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-19_23.10.40
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:dine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+
+2024-03-20 09:53:42:INFO:visdom:3257693
+2024-03-20 09:53:42:INFO:==========================================
+gpu_id:0
+s:dslr
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2022
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-19_23.10.40
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:dine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/DINE/2022/source/uda/
+
+2024-03-20 09:53:52:INFO:Task: dslr, Iter:35/350; Accuracy = 86.02%
+2024-03-20 09:54:22:INFO:Task: dslr, Iter:70/350; Accuracy = 90.32%
+2024-03-20 09:54:23:INFO:Task: dslr, Iter:35/350; Accuracy = 86.02%
+2024-03-20 09:54:45:INFO:Task: dslr, Iter:105/350; Accuracy = 89.25%
+2024-03-20 09:54:46:INFO:Task: dslr, Iter:70/350; Accuracy = 89.25%
+2024-03-20 09:55:15:INFO:Task: dslr, Iter:105/350; Accuracy = 93.55%
+2024-03-20 09:55:16:INFO:Task: dslr, Iter:140/350; Accuracy = 89.25%
+2024-03-20 09:55:43:INFO:Task: dslr, Iter:140/350; Accuracy = 92.47%
+2024-03-20 09:55:44:INFO:Task: dslr, Iter:175/350; Accuracy = 91.40%
+2024-03-20 09:56:11:INFO:Task: dslr, Iter:175/350; Accuracy = 92.47%
+2024-03-20 09:56:13:INFO:Task: dslr, Iter:210/350; Accuracy = 91.40%
+2024-03-20 09:56:43:INFO:Task: dslr, Iter:245/350; Accuracy = 91.40%
+2024-03-20 09:56:43:INFO:Task: dslr, Iter:210/350; Accuracy = 92.47%
+2024-03-20 09:57:10:INFO:Task: dslr, Iter:280/350; Accuracy = 91.40%
+2024-03-20 09:57:12:INFO:Task: dslr, Iter:245/350; Accuracy = 92.47%
+2024-03-20 09:57:37:INFO:Task: dslr, Iter:315/350; Accuracy = 91.40%
+2024-03-20 09:57:41:INFO:Task: dslr, Iter:280/350; Accuracy = 93.55%
+2024-03-20 09:58:08:INFO:Task: dslr, Iter:350/350; Accuracy = 91.40%
+2024-03-20 09:58:11:INFO:Task: dslr, Iter:315/350; Accuracy = 93.55%
+2024-03-20 09:58:22:INFO:
+Task: dslr->amazon, Accuracy = 57.65%
+2024-03-20 09:58:29:INFO:
+Task: dslr->webcam, Accuracy = 93.58%
+2024-03-20 09:58:41:INFO:Task: dslr, Iter:350/350; Accuracy = 93.55%
+2024-03-20 09:58:51:INFO:
+Task: dslr->amazon, Accuracy = 55.20%
+2024-03-20 09:58:58:INFO:
+Task: dslr->webcam, Accuracy = 93.46%

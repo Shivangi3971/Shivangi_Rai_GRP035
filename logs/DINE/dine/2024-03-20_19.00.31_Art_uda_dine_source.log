@@ -1,0 +1,150 @@
+2024-03-21 15:22:09:INFO:visdom:2153667
+2024-03-21 15:22:09:INFO:==========================================
+gpu_id:0
+s:Art
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_19.00.31
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+method:dine
+class_num:65
+s_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+
+2024-03-21 15:23:01:INFO:Task: Art, Iter:175/1750; Accuracy = 69.74%
+2024-03-21 15:23:46:INFO:Task: Art, Iter:350/1750; Accuracy = 74.36%
+2024-03-21 15:24:32:INFO:Task: Art, Iter:525/1750; Accuracy = 74.36%
+2024-03-21 15:25:17:INFO:Task: Art, Iter:700/1750; Accuracy = 74.87%
+2024-03-21 15:26:05:INFO:Task: Art, Iter:875/1750; Accuracy = 75.90%
+2024-03-21 15:26:53:INFO:Task: Art, Iter:1050/1750; Accuracy = 76.41%
+2024-03-21 15:27:39:INFO:Task: Art, Iter:1225/1750; Accuracy = 76.41%
+2024-03-21 15:28:27:INFO:Task: Art, Iter:1400/1750; Accuracy = 76.92%
+2024-03-21 15:29:17:INFO:Task: Art, Iter:1575/1750; Accuracy = 75.38%
+2024-03-21 15:30:03:INFO:Task: Art, Iter:1750/1750; Accuracy = 75.90%
+2024-03-21 15:30:15:INFO:
+Task: Art->Clipart, Accuracy = 43.37%
+2024-03-21 15:30:26:INFO:
+Task: Art->Product, Accuracy = 67.38%
+2024-03-21 15:31:23:INFO:
+Task: Art->Real_World, Accuracy = 74.29%
+2024-03-23 06:16:20:INFO:visdom:606363
+2024-03-23 06:16:20:INFO:==========================================
+gpu_id:0
+s:Art
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_19.00.31
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+method:dine
+class_num:65
+s_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/DINE/2021/source/uda/
+
+2024-03-23 06:17:07:INFO:Task: Art, Iter:175/1750; Accuracy = 68.21%
+2024-03-23 06:17:47:INFO:Task: Art, Iter:350/1750; Accuracy = 71.79%
+2024-03-23 06:18:26:INFO:Task: Art, Iter:525/1750; Accuracy = 71.28%
+2024-03-23 06:19:04:INFO:Task: Art, Iter:700/1750; Accuracy = 72.31%
+2024-03-23 06:19:42:INFO:Task: Art, Iter:875/1750; Accuracy = 71.79%
+2024-03-23 06:20:18:INFO:Task: Art, Iter:1050/1750; Accuracy = 72.82%
+2024-03-23 06:20:55:INFO:Task: Art, Iter:1225/1750; Accuracy = 72.82%
+2024-03-23 06:21:32:INFO:Task: Art, Iter:1400/1750; Accuracy = 72.82%
+2024-03-23 06:22:09:INFO:Task: Art, Iter:1575/1750; Accuracy = 72.82%
+2024-03-23 06:22:45:INFO:Task: Art, Iter:1750/1750; Accuracy = 72.82%
+2024-03-23 06:22:53:INFO:
+Task: Art->Clipart, Accuracy = 44.86%
+2024-03-23 06:23:02:INFO:
+Task: Art->Product, Accuracy = 67.15%
+2024-03-23 06:23:36:INFO:
+Task: Art->Real_World, Accuracy = 74.11%
+2024-03-24 16:28:39:INFO:visdom:1284095
+2024-03-24 16:28:39:INFO:==========================================
+gpu_id:0
+s:Art
+t:None
+max_epoch:50
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2022
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:False
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_19.00.31
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+method:dine
+class_num:65
+s_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/DINE/2022/source/uda/
+
+2024-03-24 16:29:15:INFO:Task: Art, Iter:175/1750; Accuracy = 69.74%
+2024-03-24 16:29:47:INFO:Task: Art, Iter:350/1750; Accuracy = 72.82%
+2024-03-24 16:30:18:INFO:Task: Art, Iter:525/1750; Accuracy = 73.85%
+2024-03-24 16:30:51:INFO:Task: Art, Iter:700/1750; Accuracy = 74.87%
+2024-03-24 16:31:23:INFO:Task: Art, Iter:875/1750; Accuracy = 74.87%
+2024-03-24 16:31:55:INFO:Task: Art, Iter:1050/1750; Accuracy = 75.90%
+2024-03-24 16:32:28:INFO:Task: Art, Iter:1225/1750; Accuracy = 74.87%
+2024-03-24 16:33:01:INFO:Task: Art, Iter:1400/1750; Accuracy = 74.87%
+2024-03-24 16:33:34:INFO:Task: Art, Iter:1575/1750; Accuracy = 75.90%
+2024-03-24 16:34:06:INFO:Task: Art, Iter:1750/1750; Accuracy = 74.87%
+2024-03-24 16:34:13:INFO:
+Task: Art->Clipart, Accuracy = 43.92%
+2024-03-24 16:34:21:INFO:
+Task: Art->Product, Accuracy = 66.57%
+2024-03-24 16:34:49:INFO:
+Task: Art->Real_World, Accuracy = 73.84%
