@@ -1,0 +1,2193 @@
+2024-04-09 16:03:16:INFO:visdom:2354882
+2024-04-09 16:03:16:INFO:==========================================
+gpu_id:0
+s:amazon
+t:webcam
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-09_15.41.31
+use_file_logger:True
+names:['webcam', 'amazon', 'dslr']
+use_train_transform:False
+pk_uconf:1.0
+pk_type:br
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+pk_NC:None
+pk_noise:0.0
+pk_dratio:1.0
+method:kshot
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target_kshot/
+savename:par_0.3
+
+2024-04-09 16:03:27:INFO:Accuracy = 76.48% -> 86.67%    Per_class_accuracy = 76.98% -> 87.29%
+2024-04-09 16:03:27:INFO:Set parameter WLSAccessID
+2024-04-09 16:03:27:INFO:Set parameter WLSSecret
+2024-04-09 16:03:27:INFO:Set parameter LicenseID to value 2487155
+2024-04-09 16:03:27:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:03:29:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:03:29:INFO:
+2024-04-09 16:03:29:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:03:29:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:03:29:INFO:
+2024-04-09 16:03:29:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:03:29:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:03:29:INFO:Model fingerprint: 0xf472a3fe
+2024-04-09 16:03:29:INFO:Model has 465 general constraints
+2024-04-09 16:03:29:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:03:29:INFO:Coefficient statistics:
+2024-04-09 16:03:29:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:03:29:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:03:29:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:03:29:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:03:34:INFO:Presolve removed 465 rows and 893 columns (presolve time = 5s) ...
+2024-04-09 16:03:34:INFO:Presolve removed 0 rows and 893 columns
+2024-04-09 16:03:34:INFO:Presolve time: 5.33s
+2024-04-09 16:03:34:INFO:Presolved: 1260 rows, 24682 columns, 751192 nonzeros
+2024-04-09 16:03:34:INFO:Variable types: 0 continuous, 24682 integer (24217 binary)
+2024-04-09 16:03:35:INFO:Found heuristic solution: objective -6296.655361
+2024-04-09 16:03:35:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:03:35:INFO:Showing barrier log only...
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Root barrier log...
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Ordering time: 0.00s
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Barrier performed 0 iterations in 6.31 seconds (4.05 work units)
+2024-04-09 16:03:35:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Solved with dual simplex
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Root simplex log...
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:03:35:INFO:      68    4.4712868e+01   0.000000e+00   0.000000e+00      6s
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:Root relaxation: objective 4.471287e+01, 68 iterations, 0.26 seconds (0.22 work units)
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:03:35:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:03:35:INFO:
+2024-04-09 16:03:35:INFO:     0     0   44.71287    0    2 -6296.6554   44.71287   101%     -    6s
+2024-04-09 16:03:36:INFO:H    0     0                      44.7096018   44.71287  0.01%     -    6s
+2024-04-09 16:03:36:INFO:
+2024-04-09 16:03:36:INFO:Explored 1 nodes (68 simplex iterations) in 7.00 seconds (4.85 work units)
+2024-04-09 16:03:36:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:03:36:INFO:
+2024-04-09 16:03:36:INFO:Solution count 2: 44.7096 -6296.66 
+2024-04-09 16:03:36:INFO:
+2024-04-09 16:03:36:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:03:36:INFO:Best objective 4.470960183959e+01, best bound 4.471286769149e+01, gap 0.0073%
+2024-04-09 16:03:36:INFO:PK Accuracy = 86.67% -> 89.06%    Per_class_accuracy = 87.29% -> 89.24%
+2024-04-09 16:03:37:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:03:37:INFO:
+2024-04-09 16:03:37:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:03:37:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:03:37:INFO:
+2024-04-09 16:03:37:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:03:37:INFO:Optimize a model with 3120 rows, 25575 columns and 768180 nonzeros
+2024-04-09 16:03:37:INFO:Model fingerprint: 0xfe84338c
+2024-04-09 16:03:37:INFO:Model has 465 general constraints
+2024-04-09 16:03:37:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:03:37:INFO:Coefficient statistics:
+2024-04-09 16:03:37:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:03:37:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:03:37:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:03:37:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:03:43:INFO:Presolve removed 2385 rows and 2716 columns (presolve time = 6s) ...
+2024-04-09 16:03:46:INFO:Presolve removed 1920 rows and 2716 columns
+2024-04-09 16:03:46:INFO:Presolve time: 8.86s
+2024-04-09 16:03:46:INFO:Presolved: 1200 rows, 22859 columns, 694679 nonzeros
+2024-04-09 16:03:46:INFO:Variable types: 0 continuous, 22859 integer (22394 binary)
+2024-04-09 16:03:46:INFO:Found heuristic solution: objective -10075.39586
+2024-04-09 16:03:47:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:03:47:INFO:Showing barrier log only...
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Root barrier log...
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Ordering time: 0.01s
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Barrier performed 0 iterations in 10.09 seconds (3.68 work units)
+2024-04-09 16:03:47:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Solved with dual simplex
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Root simplex log...
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:03:47:INFO:      40    4.4638813e+01   0.000000e+00   0.000000e+00     10s
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:Root relaxation: objective 4.463881e+01, 40 iterations, 0.38 seconds (0.19 work units)
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:03:47:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:03:47:INFO:
+2024-04-09 16:03:47:INFO:     0     0   44.63881    0   16 -10075.396   44.63881   100%     -   10s
+2024-04-09 16:03:48:INFO:H    0     0                      44.6257912   44.63881  0.03%     -   10s
+2024-04-09 16:03:48:INFO:H    0     0                      44.6292499   44.63881  0.02%     -   10s
+2024-04-09 16:03:48:INFO:H    0     0                      44.6305013   44.63881  0.02%     -   11s
+2024-04-09 16:03:48:INFO:
+2024-04-09 16:03:48:INFO:Cutting planes:
+2024-04-09 16:03:48:INFO:  Cover: 9
+2024-04-09 16:03:48:INFO:  MIR: 4
+2024-04-09 16:03:48:INFO:  StrongCG: 1
+2024-04-09 16:03:48:INFO:  GUB cover: 6
+2024-04-09 16:03:48:INFO:  Zero half: 1
+2024-04-09 16:03:48:INFO:  RLT: 5
+2024-04-09 16:03:48:INFO:
+2024-04-09 16:03:48:INFO:Explored 1 nodes (40 simplex iterations) in 11.39 seconds (4.67 work units)
+2024-04-09 16:03:48:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:03:48:INFO:
+2024-04-09 16:03:48:INFO:Solution count 4: 44.6305 44.6292 44.6258 -10075.4 
+2024-04-09 16:03:48:INFO:
+2024-04-09 16:03:48:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:03:48:INFO:Best objective 4.463050127216e+01, best bound 4.463350874237e+01, gap 0.0067%
+2024-04-09 16:03:48:INFO:PK Accuracy = 86.67% -> 90.57%    Per_class_accuracy = 87.29% -> 90.30%
+2024-04-09 16:03:56:INFO:Task: amazon->webcam, Iter:13/195; Accuracy = 90.06%    Per_class_accuracy=90.45
+2024-04-09 16:03:59:INFO:Accuracy = 90.06% -> 92.20%    Per_class_accuracy = 90.45% -> 92.41%
+2024-04-09 16:04:00:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:04:00:INFO:
+2024-04-09 16:04:00:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:04:00:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:04:00:INFO:
+2024-04-09 16:04:00:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:04:00:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:04:00:INFO:Model fingerprint: 0xaf674249
+2024-04-09 16:04:00:INFO:Model has 465 general constraints
+2024-04-09 16:04:00:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:04:00:INFO:Coefficient statistics:
+2024-04-09 16:04:00:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:04:00:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:04:00:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:04:00:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:04:05:INFO:Presolve removed 465 rows and 862 columns (presolve time = 5s) ...
+2024-04-09 16:04:06:INFO:Presolve removed 0 rows and 862 columns
+2024-04-09 16:04:06:INFO:Presolve time: 5.79s
+2024-04-09 16:04:06:INFO:Presolved: 1260 rows, 24713 columns, 752153 nonzeros
+2024-04-09 16:04:06:INFO:Variable types: 0 continuous, 24713 integer (24248 binary)
+2024-04-09 16:04:07:INFO:Found heuristic solution: objective -4431.167247
+2024-04-09 16:04:07:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:04:07:INFO:Showing barrier log only...
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Root barrier log...
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Ordering time: 0.04s
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Barrier performed 0 iterations in 7.01 seconds (4.01 work units)
+2024-04-09 16:04:07:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Solved with dual simplex
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Root simplex log...
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:04:07:INFO:      46    5.2665938e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:Root relaxation: objective 5.266594e+01, 46 iterations, 0.41 seconds (0.22 work units)
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:04:07:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:04:07:INFO:
+2024-04-09 16:04:07:INFO:     0     0   52.66594    0   16 -4431.1672   52.66594   101%     -    7s
+2024-04-09 16:04:08:INFO:H    0     0                      52.6589229   52.66594  0.01%     -    7s
+2024-04-09 16:04:08:INFO:H    0     0                      52.6597435   52.66594  0.01%     -    8s
+2024-04-09 16:04:08:INFO:H    0     0                      52.6602367   52.66594  0.01%     -    8s
+2024-04-09 16:04:09:INFO:H    0     0                      52.6644475   52.66594  0.00%     -    8s
+2024-04-09 16:04:09:INFO:
+2024-04-09 16:04:09:INFO:Cutting planes:
+2024-04-09 16:04:09:INFO:  MIR: 5
+2024-04-09 16:04:09:INFO:  Zero half: 3
+2024-04-09 16:04:09:INFO:
+2024-04-09 16:04:09:INFO:Explored 1 nodes (46 simplex iterations) in 8.37 seconds (4.92 work units)
+2024-04-09 16:04:09:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:04:09:INFO:
+2024-04-09 16:04:09:INFO:Solution count 5: 52.6644 52.6602 52.6597 ... -4431.17
+2024-04-09 16:04:09:INFO:
+2024-04-09 16:04:09:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:04:09:INFO:Best objective 5.266444748411e+01, best bound 5.266535437100e+01, gap 0.0017%
+2024-04-09 16:04:09:INFO:PK Accuracy = 92.20% -> 94.59%    Per_class_accuracy = 92.41% -> 93.98%
+2024-04-09 16:04:10:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:04:10:INFO:
+2024-04-09 16:04:10:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:04:10:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:04:10:INFO:
+2024-04-09 16:04:10:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:04:10:INFO:Optimize a model with 2469 rows, 25575 columns and 766878 nonzeros
+2024-04-09 16:04:10:INFO:Model fingerprint: 0x8ca05720
+2024-04-09 16:04:10:INFO:Model has 465 general constraints
+2024-04-09 16:04:10:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:04:10:INFO:Coefficient statistics:
+2024-04-09 16:04:10:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:04:10:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:04:10:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:04:10:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:04:15:INFO:Presolve removed 1713 rows and 2044 columns (presolve time = 5s) ...
+2024-04-09 16:04:18:INFO:Presolve removed 1248 rows and 2044 columns
+2024-04-09 16:04:18:INFO:Presolve time: 8.04s
+2024-04-09 16:04:18:INFO:Presolved: 1221 rows, 23531 columns, 715511 nonzeros
+2024-04-09 16:04:18:INFO:Variable types: 0 continuous, 23531 integer (23066 binary)
+2024-04-09 16:04:19:INFO:Found heuristic solution: objective -7302.948722
+2024-04-09 16:04:19:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:04:19:INFO:Showing barrier log only...
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Root barrier log...
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Ordering time: 0.02s
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Barrier performed 0 iterations in 9.12 seconds (3.79 work units)
+2024-04-09 16:04:19:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Solved with dual simplex
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Root simplex log...
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:04:19:INFO:      15    5.2601767e+01   0.000000e+00   0.000000e+00      9s
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:Root relaxation: objective 5.260177e+01, 15 iterations, 0.29 seconds (0.19 work units)
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:04:19:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:04:19:INFO:
+2024-04-09 16:04:19:INFO:     0     0   52.60177    0   12 -7302.9487   52.60177   101%     -    9s
+2024-04-09 16:04:20:INFO:H    0     0                      52.5484093   52.60177  0.10%     -    9s
+2024-04-09 16:04:22:INFO:H    0     0                      52.5889301   52.60177  0.02%     -   11s
+2024-04-09 16:04:22:INFO:H    0     0                      52.5958628   52.60177  0.01%     -   11s
+2024-04-09 16:04:22:INFO:
+2024-04-09 16:04:22:INFO:Cutting planes:
+2024-04-09 16:04:22:INFO:  Cover: 3
+2024-04-09 16:04:22:INFO:  GUB cover: 1
+2024-04-09 16:04:22:INFO:  Zero half: 1
+2024-04-09 16:04:22:INFO:
+2024-04-09 16:04:22:INFO:Explored 1 nodes (15 simplex iterations) in 11.77 seconds (7.83 work units)
+2024-04-09 16:04:22:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:04:22:INFO:
+2024-04-09 16:04:22:INFO:Solution count 4: 52.5959 52.5889 52.5484 -7302.95 
+2024-04-09 16:04:22:INFO:
+2024-04-09 16:04:22:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:04:22:INFO:Best objective 5.259586282071e+01, best bound 5.259593385970e+01, gap 0.0001%
+2024-04-09 16:04:22:INFO:PK Accuracy = 92.20% -> 95.97%    Per_class_accuracy = 92.41% -> 95.29%
+2024-04-09 16:04:28:INFO:Task: amazon->webcam, Iter:26/195; Accuracy = 93.21%    Per_class_accuracy=93.07
+2024-04-09 16:04:31:INFO:Accuracy = 93.21% -> 94.59%    Per_class_accuracy = 93.07% -> 94.18%
+2024-04-09 16:04:32:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:04:32:INFO:
+2024-04-09 16:04:32:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:04:32:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:04:32:INFO:
+2024-04-09 16:04:32:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:04:32:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:04:33:INFO:Model fingerprint: 0xb854d63f
+2024-04-09 16:04:33:INFO:Model has 465 general constraints
+2024-04-09 16:04:33:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:04:33:INFO:Coefficient statistics:
+2024-04-09 16:04:33:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:04:33:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:04:33:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:04:33:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:04:38:INFO:Presolve removed 465 rows and 864 columns (presolve time = 5s) ...
+2024-04-09 16:04:38:INFO:Presolve removed 0 rows and 864 columns
+2024-04-09 16:04:38:INFO:Presolve time: 5.05s
+2024-04-09 16:04:38:INFO:Presolved: 1260 rows, 24711 columns, 752091 nonzeros
+2024-04-09 16:04:38:INFO:Variable types: 0 continuous, 24711 integer (24246 binary)
+2024-04-09 16:04:38:INFO:Found heuristic solution: objective -3303.540521
+2024-04-09 16:04:39:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:04:39:INFO:Showing barrier log only...
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Root barrier log...
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Ordering time: 0.04s
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Barrier statistics:
+2024-04-09 16:04:39:INFO: AA' NZ     : 3.832e+05
+2024-04-09 16:04:39:INFO: Factor NZ  : 5.909e+05 (roughly 15 MB of memory)
+2024-04-09 16:04:39:INFO: Factor Ops : 3.444e+08 (less than 1 second per iteration)
+2024-04-09 16:04:39:INFO: Threads    : 30
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Barrier performed 0 iterations in 6.38 seconds (4.01 work units)
+2024-04-09 16:04:39:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Concurrent spin time: 0.07s
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Solved with dual simplex
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Root simplex log...
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:04:39:INFO:      43    5.6482558e+01   0.000000e+00   0.000000e+00      6s
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Root relaxation: objective 5.648256e+01, 43 iterations, 0.46 seconds (0.22 work units)
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:04:39:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:*    0     0               0      56.4825582   56.48256  0.00%     -    6s
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Explored 1 nodes (43 simplex iterations) in 6.67 seconds (4.00 work units)
+2024-04-09 16:04:39:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Solution count 2: 56.4826 -3303.54 
+2024-04-09 16:04:39:INFO:
+2024-04-09 16:04:39:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:04:39:INFO:Best objective 5.648255817239e+01, best bound 5.648255817239e+01, gap 0.0000%
+2024-04-09 16:04:39:INFO:PK Accuracy = 94.59% -> 95.72%    Per_class_accuracy = 94.18% -> 95.06%
+2024-04-09 16:04:40:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:04:40:INFO:
+2024-04-09 16:04:40:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:04:40:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:04:40:INFO:
+2024-04-09 16:04:41:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:04:41:INFO:Optimize a model with 1880 rows, 25575 columns and 765700 nonzeros
+2024-04-09 16:04:41:INFO:Model fingerprint: 0x167bda3c
+2024-04-09 16:04:41:INFO:Model has 465 general constraints
+2024-04-09 16:04:41:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:04:41:INFO:Coefficient statistics:
+2024-04-09 16:04:41:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:04:41:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:04:41:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:04:41:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:04:46:INFO:Presolve removed 1105 rows and 1472 columns (presolve time = 5s) ...
+2024-04-09 16:04:47:INFO:Presolve removed 640 rows and 1472 columns
+2024-04-09 16:04:47:INFO:Presolve time: 6.87s
+2024-04-09 16:04:47:INFO:Presolved: 1240 rows, 24103 columns, 733243 nonzeros
+2024-04-09 16:04:47:INFO:Variable types: 0 continuous, 24103 integer (23638 binary)
+2024-04-09 16:04:48:INFO:Found heuristic solution: objective -4584.058719
+2024-04-09 16:04:48:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:04:48:INFO:Showing barrier log only...
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Root barrier log...
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Ordering time: 0.00s
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Barrier performed 0 iterations in 7.92 seconds (3.90 work units)
+2024-04-09 16:04:48:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Solved with dual simplex
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Root simplex log...
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:04:48:INFO:      24    5.6443771e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:Root relaxation: objective 5.644377e+01, 24 iterations, 0.24 seconds (0.20 work units)
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:04:48:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:04:48:INFO:
+2024-04-09 16:04:48:INFO:     0     0   56.44377    0    8 -4584.0587   56.44377   101%     -    7s
+2024-04-09 16:04:49:INFO:H    0     0                      56.4281625   56.44377  0.03%     -    8s
+2024-04-09 16:04:49:INFO:H    0     0                      56.4326325   56.44377  0.02%     -    8s
+2024-04-09 16:04:50:INFO:
+2024-04-09 16:04:50:INFO:Cutting planes:
+2024-04-09 16:04:50:INFO:  Cover: 2
+2024-04-09 16:04:50:INFO:  MIR: 3
+2024-04-09 16:04:50:INFO:  GUB cover: 3
+2024-04-09 16:04:50:INFO:  Zero half: 1
+2024-04-09 16:04:50:INFO:
+2024-04-09 16:04:50:INFO:Explored 1 nodes (24 simplex iterations) in 9.17 seconds (4.83 work units)
+2024-04-09 16:04:50:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:04:50:INFO:
+2024-04-09 16:04:50:INFO:Solution count 3: 56.4326 56.4282 -4584.06 
+2024-04-09 16:04:50:INFO:
+2024-04-09 16:04:50:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:04:50:INFO:Best objective 5.643263254959e+01, best bound 5.643652186008e+01, gap 0.0069%
+2024-04-09 16:04:50:INFO:PK Accuracy = 94.59% -> 96.10%    Per_class_accuracy = 94.18% -> 95.30%
+2024-04-09 16:04:54:INFO:Task: amazon->webcam, Iter:39/195; Accuracy = 94.34%    Per_class_accuracy=93.92
+2024-04-09 16:04:57:INFO:Accuracy = 94.34% -> 95.22%    Per_class_accuracy = 93.92% -> 94.75%
+2024-04-09 16:04:58:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:04:58:INFO:
+2024-04-09 16:04:58:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:04:58:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:04:58:INFO:
+2024-04-09 16:04:58:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:04:58:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:04:58:INFO:Model fingerprint: 0xcb7ee441
+2024-04-09 16:04:58:INFO:Model has 465 general constraints
+2024-04-09 16:04:58:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:04:58:INFO:Coefficient statistics:
+2024-04-09 16:04:58:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:04:58:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:04:58:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:04:58:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:05:04:INFO:Presolve removed 465 rows and 850 columns (presolve time = 5s) ...
+2024-04-09 16:05:06:INFO:Presolve removed 0 rows and 850 columns
+2024-04-09 16:05:06:INFO:Presolve time: 7.74s
+2024-04-09 16:05:06:INFO:Presolved: 1260 rows, 24725 columns, 752525 nonzeros
+2024-04-09 16:05:06:INFO:Variable types: 0 continuous, 24725 integer (24260 binary)
+2024-04-09 16:05:07:INFO:Found heuristic solution: objective -6501.345613
+2024-04-09 16:05:08:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:05:08:INFO:Showing barrier log only...
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Root barrier log...
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Ordering time: 0.01s
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Barrier performed 0 iterations in 9.29 seconds (4.01 work units)
+2024-04-09 16:05:08:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Solved with dual simplex
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Root simplex log...
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:05:08:INFO:      21    5.8027191e+01   0.000000e+00   0.000000e+00      9s
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Root relaxation: objective 5.802719e+01, 21 iterations, 0.34 seconds (0.22 work units)
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:05:08:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:*    0     0               0      58.0271912   58.02719  0.00%     -    9s
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Explored 1 nodes (21 simplex iterations) in 9.61 seconds (3.99 work units)
+2024-04-09 16:05:08:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Solution count 2: 58.0272 -6501.35 
+2024-04-09 16:05:08:INFO:
+2024-04-09 16:05:08:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:05:08:INFO:Best objective 5.802719117440e+01, best bound 5.802719117440e+01, gap 0.0000%
+2024-04-09 16:05:08:INFO:PK Accuracy = 95.22% -> 96.35%    Per_class_accuracy = 94.75% -> 95.62%
+2024-04-09 16:05:09:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:05:09:INFO:
+2024-04-09 16:05:09:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:05:09:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:05:09:INFO:
+2024-04-09 16:05:09:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:05:09:INFO:Optimize a model with 1663 rows, 25575 columns and 765266 nonzeros
+2024-04-09 16:05:09:INFO:Model fingerprint: 0x025c6f3f
+2024-04-09 16:05:09:INFO:Model has 465 general constraints
+2024-04-09 16:05:09:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:05:09:INFO:Coefficient statistics:
+2024-04-09 16:05:09:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:05:09:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:05:09:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:05:09:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:05:15:INFO:Presolve removed 881 rows and 1245 columns (presolve time = 5s) ...
+2024-04-09 16:05:16:INFO:Presolve removed 416 rows and 1245 columns
+2024-04-09 16:05:16:INFO:Presolve time: 6.32s
+2024-04-09 16:05:16:INFO:Presolved: 1247 rows, 24330 columns, 740280 nonzeros
+2024-04-09 16:05:16:INFO:Variable types: 0 continuous, 24330 integer (23865 binary)
+2024-04-09 16:05:16:INFO:Found heuristic solution: objective -6564.131776
+2024-04-09 16:05:17:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:05:17:INFO:Showing barrier log only...
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Root barrier log...
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Barrier performed 0 iterations in 7.33 seconds (3.93 work units)
+2024-04-09 16:05:17:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Concurrent spin time: 0.03s
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Solved with dual simplex
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Root simplex log...
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:05:17:INFO:      18    5.7981807e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:Root relaxation: objective 5.798181e+01, 18 iterations, 0.26 seconds (0.20 work units)
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:05:17:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:05:17:INFO:
+2024-04-09 16:05:17:INFO:     0     0   57.98181    0   11 -6564.1318   57.98181   101%     -    7s
+2024-04-09 16:05:17:INFO:H    0     0                      57.9431485   57.98181  0.07%     -    8s
+2024-04-09 16:05:18:INFO:H    0     0                      57.9547656   57.98181  0.05%     -    8s
+2024-04-09 16:05:18:INFO:H    0     0                      57.9681990   57.98181  0.02%     -    8s
+2024-04-09 16:05:18:INFO:
+2024-04-09 16:05:18:INFO:Cutting planes:
+2024-04-09 16:05:18:INFO:  Cover: 3
+2024-04-09 16:05:18:INFO:  MIR: 5
+2024-04-09 16:05:18:INFO:  GUB cover: 2
+2024-04-09 16:05:18:INFO:  RLT: 2
+2024-04-09 16:05:18:INFO:
+2024-04-09 16:05:18:INFO:Explored 1 nodes (18 simplex iterations) in 8.62 seconds (5.17 work units)
+2024-04-09 16:05:18:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:05:18:INFO:
+2024-04-09 16:05:18:INFO:Solution count 4: 57.9682 57.9548 57.9431 -6564.13 
+2024-04-09 16:05:18:INFO:
+2024-04-09 16:05:18:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:05:18:INFO:Best objective 5.796819901562e+01, best bound 5.797050569014e+01, gap 0.0040%
+2024-04-09 16:05:18:INFO:PK Accuracy = 95.22% -> 94.84%    Per_class_accuracy = 94.75% -> 94.29%
+2024-04-09 16:05:22:INFO:Task: amazon->webcam, Iter:52/195; Accuracy = 95.60%    Per_class_accuracy=95.05
+2024-04-09 16:05:25:INFO:Accuracy = 95.60% -> 95.97%    Per_class_accuracy = 95.05% -> 95.46%
+2024-04-09 16:05:26:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:05:26:INFO:
+2024-04-09 16:05:26:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:05:26:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:05:26:INFO:
+2024-04-09 16:05:26:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:05:26:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:05:26:INFO:Model fingerprint: 0xf49eeaa2
+2024-04-09 16:05:26:INFO:Model has 465 general constraints
+2024-04-09 16:05:26:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:05:26:INFO:Coefficient statistics:
+2024-04-09 16:05:26:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:05:26:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:05:26:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:05:26:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:05:31:INFO:Presolve removed 465 rows and 819 columns (presolve time = 5s) ...
+2024-04-09 16:05:34:INFO:Presolve removed 0 rows and 819 columns
+2024-04-09 16:05:34:INFO:Presolve time: 8.17s
+2024-04-09 16:05:34:INFO:Presolved: 1260 rows, 24756 columns, 753486 nonzeros
+2024-04-09 16:05:35:INFO:Variable types: 0 continuous, 24756 integer (24291 binary)
+2024-04-09 16:05:35:INFO:Found heuristic solution: objective -5370.421290
+2024-04-09 16:05:36:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:05:36:INFO:Showing barrier log only...
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Root barrier log...
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Ordering time: 0.02s
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Barrier performed 0 iterations in 9.45 seconds (3.92 work units)
+2024-04-09 16:05:36:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Solved with dual simplex
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Root simplex log...
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:05:36:INFO:      17    5.8673388e+01   0.000000e+00   0.000000e+00      9s
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Root relaxation: objective 5.867339e+01, 17 iterations, 0.36 seconds (0.22 work units)
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:05:36:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:*    0     0               0      58.6733879   58.67339  0.00%     -    9s
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Explored 1 nodes (17 simplex iterations) in 9.78 seconds (3.90 work units)
+2024-04-09 16:05:36:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Solution count 2: 58.6734 -5370.42 
+2024-04-09 16:05:36:INFO:
+2024-04-09 16:05:36:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:05:36:INFO:Best objective 5.867338788418e+01, best bound 5.867338788418e+01, gap 0.0000%
+2024-04-09 16:05:36:INFO:PK Accuracy = 95.97% -> 96.35%    Per_class_accuracy = 95.46% -> 95.62%
+2024-04-09 16:05:37:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:05:37:INFO:
+2024-04-09 16:05:37:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:05:37:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:05:37:INFO:
+2024-04-09 16:05:37:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:05:37:INFO:Optimize a model with 1632 rows, 25575 columns and 765204 nonzeros
+2024-04-09 16:05:37:INFO:Model fingerprint: 0xdb25c4e8
+2024-04-09 16:05:37:INFO:Model has 465 general constraints
+2024-04-09 16:05:37:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:05:37:INFO:Coefficient statistics:
+2024-04-09 16:05:37:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:05:37:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:05:37:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:05:37:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:05:43:INFO:Presolve removed 849 rows and 1181 columns (presolve time = 5s) ...
+2024-04-09 16:05:45:INFO:Presolve removed 384 rows and 1181 columns
+2024-04-09 16:05:45:INFO:Presolve time: 7.12s
+2024-04-09 16:05:45:INFO:Presolved: 1248 rows, 24394 columns, 742264 nonzeros
+2024-04-09 16:05:45:INFO:Variable types: 0 continuous, 24394 integer (23929 binary)
+2024-04-09 16:05:45:INFO:Found heuristic solution: objective -7302.890074
+2024-04-09 16:05:46:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:05:46:INFO:Showing barrier log only...
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Root barrier log...
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Ordering time: 0.01s
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Barrier performed 0 iterations in 8.33 seconds (3.96 work units)
+2024-04-09 16:05:46:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Solved with dual simplex
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Root simplex log...
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:05:46:INFO:      14    5.8635254e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:Root relaxation: objective 5.863525e+01, 14 iterations, 0.30 seconds (0.20 work units)
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:05:46:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:05:46:INFO:
+2024-04-09 16:05:46:INFO:     0     0   58.63525    0   12 -7302.8901   58.63525   101%     -    8s
+2024-04-09 16:05:47:INFO:H    0     0                     -95.2746616   58.63525   162%     -    9s
+2024-04-09 16:05:47:INFO:H    0     0                     -44.0294210   58.63525   233%     -    9s
+2024-04-09 16:05:50:INFO:H    0     0                       7.2821554   58.63525   705%     -   12s
+2024-04-09 16:05:50:INFO:H    0     0                      58.5984707   58.63525  0.06%     -   12s
+2024-04-09 16:05:50:INFO:H    0     0                      58.6234675   58.63525  0.02%     -   12s
+2024-04-09 16:05:50:INFO:
+2024-04-09 16:05:50:INFO:Cutting planes:
+2024-04-09 16:05:50:INFO:  MIR: 6
+2024-04-09 16:05:50:INFO:  Zero half: 1
+2024-04-09 16:05:50:INFO:
+2024-04-09 16:05:50:INFO:Explored 1 nodes (14 simplex iterations) in 12.78 seconds (10.30 work units)
+2024-04-09 16:05:50:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:05:50:INFO:
+2024-04-09 16:05:50:INFO:Solution count 6: 58.6235 58.5985 7.28216 ... -7302.89
+2024-04-09 16:05:50:INFO:
+2024-04-09 16:05:50:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:05:50:INFO:Best objective 5.862346752468e+01, best bound 5.862346752468e+01, gap 0.0000%
+2024-04-09 16:05:50:INFO:PK Accuracy = 95.97% -> 95.72%    Per_class_accuracy = 95.46% -> 95.08%
+2024-04-09 16:05:56:INFO:Task: amazon->webcam, Iter:65/195; Accuracy = 95.72%    Per_class_accuracy=95.16
+2024-04-09 16:06:01:INFO:Accuracy = 95.72% -> 95.97%    Per_class_accuracy = 95.16% -> 95.41%
+2024-04-09 16:06:01:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:06:01:INFO:
+2024-04-09 16:06:01:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:06:01:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:06:01:INFO:
+2024-04-09 16:06:02:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:06:02:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:06:02:INFO:Model fingerprint: 0xc46bd67c
+2024-04-09 16:06:02:INFO:Model has 465 general constraints
+2024-04-09 16:06:02:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:06:02:INFO:Coefficient statistics:
+2024-04-09 16:06:02:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:06:02:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:06:02:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:06:02:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:06:07:INFO:Presolve removed 465 rows and 805 columns (presolve time = 5s) ...
+2024-04-09 16:06:08:INFO:Presolve removed 0 rows and 805 columns
+2024-04-09 16:06:08:INFO:Presolve time: 6.60s
+2024-04-09 16:06:08:INFO:Presolved: 1260 rows, 24770 columns, 753920 nonzeros
+2024-04-09 16:06:08:INFO:Variable types: 0 continuous, 24770 integer (24305 binary)
+2024-04-09 16:06:09:INFO:Found heuristic solution: objective -4751.721294
+2024-04-09 16:06:09:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:06:09:INFO:Showing barrier log only...
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Root barrier log...
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Ordering time: 0.02s
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Barrier performed 0 iterations in 7.86 seconds (3.93 work units)
+2024-04-09 16:06:09:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Concurrent spin time: 0.03s
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Solved with dual simplex
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Root simplex log...
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:06:09:INFO:      15    5.9050839e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:Root relaxation: objective 5.905084e+01, 15 iterations, 0.38 seconds (0.22 work units)
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:06:09:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:06:09:INFO:
+2024-04-09 16:06:09:INFO:*    0     0               0      59.0508387   59.05084  0.00%     -    7s
+2024-04-09 16:06:10:INFO:
+2024-04-09 16:06:10:INFO:Explored 1 nodes (15 simplex iterations) in 8.26 seconds (3.91 work units)
+2024-04-09 16:06:10:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:06:10:INFO:
+2024-04-09 16:06:10:INFO:Solution count 2: 59.0508 -4751.72 
+2024-04-09 16:06:10:INFO:
+2024-04-09 16:06:10:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:06:10:INFO:Best objective 5.905083867979e+01, best bound 5.905083867979e+01, gap 0.0000%
+2024-04-09 16:06:10:INFO:PK Accuracy = 95.97% -> 95.85%    Per_class_accuracy = 95.41% -> 95.15%
+2024-04-09 16:06:11:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:06:11:INFO:
+2024-04-09 16:06:11:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:06:11:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:06:11:INFO:
+2024-04-09 16:06:11:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:06:11:INFO:Optimize a model with 1632 rows, 25575 columns and 765204 nonzeros
+2024-04-09 16:06:11:INFO:Model fingerprint: 0xa54543d3
+2024-04-09 16:06:11:INFO:Model has 465 general constraints
+2024-04-09 16:06:11:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:06:11:INFO:Coefficient statistics:
+2024-04-09 16:06:11:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:06:11:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:06:11:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:06:11:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:06:16:INFO:Presolve removed 849 rows and 1167 columns (presolve time = 5s) ...
+2024-04-09 16:06:17:INFO:Presolve removed 384 rows and 1167 columns
+2024-04-09 16:06:17:INFO:Presolve time: 6.25s
+2024-04-09 16:06:17:INFO:Presolved: 1248 rows, 24408 columns, 742698 nonzeros
+2024-04-09 16:06:17:INFO:Variable types: 0 continuous, 24408 integer (23943 binary)
+2024-04-09 16:06:18:INFO:Found heuristic solution: objective -4921.756418
+2024-04-09 16:06:18:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:06:18:INFO:Showing barrier log only...
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Root barrier log...
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Barrier performed 0 iterations in 7.47 seconds (3.86 work units)
+2024-04-09 16:06:18:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Solved with dual simplex
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Root simplex log...
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:06:18:INFO:      18    5.9006244e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:Root relaxation: objective 5.900624e+01, 18 iterations, 0.26 seconds (0.20 work units)
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:06:18:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:06:18:INFO:
+2024-04-09 16:06:18:INFO:     0     0   59.00624    0   17 -4921.7564   59.00624   101%     -    7s
+2024-04-09 16:06:19:INFO:H    0     0                      58.9787875   59.00624  0.05%     -    8s
+2024-04-09 16:06:19:INFO:H    0     0                      58.9939671   59.00624  0.02%     -    8s
+2024-04-09 16:06:19:INFO:H    0     0                      58.9948551   58.99798  0.01%     -    8s
+2024-04-09 16:06:19:INFO:
+2024-04-09 16:06:19:INFO:Cutting planes:
+2024-04-09 16:06:19:INFO:  Cover: 7
+2024-04-09 16:06:19:INFO:  MIR: 5
+2024-04-09 16:06:19:INFO:
+2024-04-09 16:06:19:INFO:Explored 1 nodes (18 simplex iterations) in 8.56 seconds (4.91 work units)
+2024-04-09 16:06:19:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:06:19:INFO:
+2024-04-09 16:06:19:INFO:Solution count 4: 58.9949 58.994 58.9788 -4921.76 
+2024-04-09 16:06:19:INFO:
+2024-04-09 16:06:19:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:06:19:INFO:Best objective 5.899485510598e+01, best bound 5.899797665637e+01, gap 0.0053%
+2024-04-09 16:06:20:INFO:PK Accuracy = 95.97% -> 95.72%    Per_class_accuracy = 95.41% -> 94.98%
+2024-04-09 16:06:24:INFO:Task: amazon->webcam, Iter:78/195; Accuracy = 95.72%    Per_class_accuracy=95.16
+2024-04-09 16:06:29:INFO:Accuracy = 95.72% -> 95.85%    Per_class_accuracy = 95.16% -> 95.36%
+2024-04-09 16:06:30:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:06:30:INFO:
+2024-04-09 16:06:30:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:06:30:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:06:30:INFO:
+2024-04-09 16:06:30:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:06:30:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:06:30:INFO:Model fingerprint: 0x1072f088
+2024-04-09 16:06:30:INFO:Model has 465 general constraints
+2024-04-09 16:06:30:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:06:30:INFO:Coefficient statistics:
+2024-04-09 16:06:30:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:06:30:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:06:30:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:06:30:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:06:35:INFO:Presolve removed 465 rows and 802 columns (presolve time = 5s) ...
+2024-04-09 16:06:36:INFO:Presolve removed 0 rows and 802 columns
+2024-04-09 16:06:36:INFO:Presolve time: 6.01s
+2024-04-09 16:06:36:INFO:Presolved: 1260 rows, 24773 columns, 754013 nonzeros
+2024-04-09 16:06:36:INFO:Variable types: 0 continuous, 24773 integer (24308 binary)
+2024-04-09 16:06:36:INFO:Found heuristic solution: objective -4871.583041
+2024-04-09 16:06:37:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:06:37:INFO:Showing barrier log only...
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Root barrier log...
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Ordering time: 0.03s
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Barrier statistics:
+2024-04-09 16:06:37:INFO: AA' NZ     : 3.832e+05
+2024-04-09 16:06:37:INFO: Factor NZ  : 5.909e+05 (roughly 15 MB of memory)
+2024-04-09 16:06:37:INFO: Factor Ops : 3.444e+08 (less than 1 second per iteration)
+2024-04-09 16:06:37:INFO: Threads    : 30
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Barrier performed 0 iterations in 7.29 seconds (3.93 work units)
+2024-04-09 16:06:37:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Concurrent spin time: 0.05s
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Solved with dual simplex
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Root simplex log...
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:06:37:INFO:      18    5.9357500e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Root relaxation: objective 5.935750e+01, 18 iterations, 0.39 seconds (0.22 work units)
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:06:37:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:*    0     0               0      59.3574999   59.35750  0.00%     -    7s
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Explored 1 nodes (18 simplex iterations) in 7.63 seconds (3.91 work units)
+2024-04-09 16:06:37:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Solution count 2: 59.3575 -4871.58 
+2024-04-09 16:06:37:INFO:
+2024-04-09 16:06:37:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:06:37:INFO:Best objective 5.935749986559e+01, best bound 5.935749986559e+01, gap 0.0000%
+2024-04-09 16:06:37:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.36% -> 95.15%
+2024-04-09 16:06:38:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:06:38:INFO:
+2024-04-09 16:06:38:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:06:38:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:06:38:INFO:
+2024-04-09 16:06:38:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:06:38:INFO:Optimize a model with 1601 rows, 25575 columns and 765142 nonzeros
+2024-04-09 16:06:38:INFO:Model fingerprint: 0x0199a89e
+2024-04-09 16:06:38:INFO:Model has 465 general constraints
+2024-04-09 16:06:38:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:06:38:INFO:Coefficient statistics:
+2024-04-09 16:06:38:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:06:38:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:06:38:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:06:38:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:06:43:INFO:Presolve removed 817 rows and 1134 columns (presolve time = 5s) ...
+2024-04-09 16:06:44:INFO:Presolve removed 352 rows and 1134 columns
+2024-04-09 16:06:44:INFO:Presolve time: 5.65s
+2024-04-09 16:06:44:INFO:Presolved: 1249 rows, 24441 columns, 743721 nonzeros
+2024-04-09 16:06:44:INFO:Variable types: 0 continuous, 24441 integer (23976 binary)
+2024-04-09 16:06:45:INFO:Found heuristic solution: objective -10671.12796
+2024-04-09 16:06:45:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:06:45:INFO:Showing barrier log only...
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Root barrier log...
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Ordering time: 0.01s
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Barrier performed 0 iterations in 6.83 seconds (3.87 work units)
+2024-04-09 16:06:45:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Solved with dual simplex
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Root simplex log...
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:06:45:INFO:      16    5.9319535e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:Root relaxation: objective 5.931953e+01, 16 iterations, 0.31 seconds (0.20 work units)
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:06:45:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:06:45:INFO:
+2024-04-09 16:06:45:INFO:     0     0   59.31953    0   14 -10671.128   59.31953   101%     -    6s
+2024-04-09 16:06:46:INFO:H    0     0                      59.2946310   59.31953  0.04%     -    7s
+2024-04-09 16:06:46:INFO:H    0     0                      59.3070634   59.31953  0.02%     -    7s
+2024-04-09 16:06:46:INFO:H    0     0                      59.3124416   59.31953  0.01%     -    7s
+2024-04-09 16:06:47:INFO:
+2024-04-09 16:06:47:INFO:Cutting planes:
+2024-04-09 16:06:47:INFO:  Cover: 5
+2024-04-09 16:06:47:INFO:  MIR: 1
+2024-04-09 16:06:47:INFO:  RLT: 2
+2024-04-09 16:06:47:INFO:
+2024-04-09 16:06:47:INFO:Explored 1 nodes (16 simplex iterations) in 8.18 seconds (4.85 work units)
+2024-04-09 16:06:47:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:06:47:INFO:
+2024-04-09 16:06:47:INFO:Solution count 4: 59.3124 59.3071 59.2946 -10671.1 
+2024-04-09 16:06:47:INFO:
+2024-04-09 16:06:47:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:06:47:INFO:Best objective 5.931244157939e+01, best bound 5.931268635460e+01, gap 0.0004%
+2024-04-09 16:06:47:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.36% -> 95.14%
+2024-04-09 16:06:51:INFO:Task: amazon->webcam, Iter:91/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:06:54:INFO:Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.32% -> 95.36%
+2024-04-09 16:06:55:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:06:55:INFO:
+2024-04-09 16:06:55:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:06:55:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:06:55:INFO:
+2024-04-09 16:06:55:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:06:55:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:06:55:INFO:Model fingerprint: 0x05a4b0b0
+2024-04-09 16:06:55:INFO:Model has 465 general constraints
+2024-04-09 16:06:55:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:06:55:INFO:Coefficient statistics:
+2024-04-09 16:06:55:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:06:55:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:06:55:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:06:55:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:07:00:INFO:Presolve removed 465 rows and 795 columns (presolve time = 5s) ...
+2024-04-09 16:07:02:INFO:Presolve removed 0 rows and 795 columns
+2024-04-09 16:07:02:INFO:Presolve time: 7.16s
+2024-04-09 16:07:02:INFO:Presolved: 1260 rows, 24780 columns, 754230 nonzeros
+2024-04-09 16:07:02:INFO:Variable types: 0 continuous, 24780 integer (24315 binary)
+2024-04-09 16:07:03:INFO:Found heuristic solution: objective -6547.967226
+2024-04-09 16:07:03:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:07:03:INFO:Showing barrier log only...
+2024-04-09 16:07:03:INFO:
+2024-04-09 16:07:03:INFO:Root barrier log...
+2024-04-09 16:07:03:INFO:
+2024-04-09 16:07:04:INFO:Ordering time: 0.03s
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Barrier statistics:
+2024-04-09 16:07:04:INFO: AA' NZ     : 3.832e+05
+2024-04-09 16:07:04:INFO: Factor NZ  : 5.909e+05 (roughly 15 MB of memory)
+2024-04-09 16:07:04:INFO: Factor Ops : 3.444e+08 (less than 1 second per iteration)
+2024-04-09 16:07:04:INFO: Threads    : 30
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Barrier performed 0 iterations in 8.47 seconds (3.92 work units)
+2024-04-09 16:07:04:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Concurrent spin time: 0.06s
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Solved with dual simplex
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Root simplex log...
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:07:04:INFO:      34    5.9543121e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Root relaxation: objective 5.954312e+01, 34 iterations, 0.42 seconds (0.22 work units)
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:07:04:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:     0     0   59.54312    0    6 -6547.9672   59.54312   101%     -    8s
+2024-04-09 16:07:04:INFO:H    0     0                      59.5358915   59.54312  0.01%     -    9s
+2024-04-09 16:07:04:INFO:H    0     0                      59.5420413   59.54312  0.00%     -    9s
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Explored 1 nodes (34 simplex iterations) in 9.25 seconds (4.73 work units)
+2024-04-09 16:07:04:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Solution count 3: 59.542 59.5359 -6547.97 
+2024-04-09 16:07:04:INFO:
+2024-04-09 16:07:04:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:07:04:INFO:Best objective 5.954204128568e+01, best bound 5.954312127958e+01, gap 0.0018%
+2024-04-09 16:07:05:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.36% -> 95.15%
+2024-04-09 16:07:05:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:07:05:INFO:
+2024-04-09 16:07:05:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:07:05:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:07:05:INFO:
+2024-04-09 16:07:05:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:07:05:INFO:Optimize a model with 1601 rows, 25575 columns and 765142 nonzeros
+2024-04-09 16:07:06:INFO:Model fingerprint: 0x266f88eb
+2024-04-09 16:07:06:INFO:Model has 465 general constraints
+2024-04-09 16:07:06:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:07:06:INFO:Coefficient statistics:
+2024-04-09 16:07:06:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:07:06:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:07:06:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:07:06:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:07:11:INFO:Presolve removed 817 rows and 1127 columns (presolve time = 5s) ...
+2024-04-09 16:07:12:INFO:Presolve removed 352 rows and 1127 columns
+2024-04-09 16:07:12:INFO:Presolve time: 6.03s
+2024-04-09 16:07:12:INFO:Presolved: 1249 rows, 24448 columns, 743938 nonzeros
+2024-04-09 16:07:12:INFO:Variable types: 0 continuous, 24448 integer (23983 binary)
+2024-04-09 16:07:12:INFO:Found heuristic solution: objective -6222.257836
+2024-04-09 16:07:12:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:07:12:INFO:Showing barrier log only...
+2024-04-09 16:07:12:INFO:
+2024-04-09 16:07:13:INFO:Root barrier log...
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Ordering time: 0.01s
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Barrier performed 0 iterations in 7.18 seconds (3.87 work units)
+2024-04-09 16:07:13:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Solved with dual simplex
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Root simplex log...
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:07:13:INFO:      12    5.9515135e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Root relaxation: objective 5.951514e+01, 12 iterations, 0.33 seconds (0.20 work units)
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:07:13:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:     0     0   59.51514    0    4 -6222.2578   59.51514   101%     -    7s
+2024-04-09 16:07:13:INFO:H    0     0                      59.5057908   59.51514  0.02%     -    8s
+2024-04-09 16:07:13:INFO:H    0     0                      59.5116639   59.51514  0.01%     -    8s
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Explored 1 nodes (12 simplex iterations) in 8.06 seconds (4.66 work units)
+2024-04-09 16:07:13:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Solution count 3: 59.5117 59.5058 -6222.26 
+2024-04-09 16:07:13:INFO:
+2024-04-09 16:07:13:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:07:13:INFO:Best objective 5.951166392742e+01, best bound 5.951513514044e+01, gap 0.0058%
+2024-04-09 16:07:14:INFO:PK Accuracy = 95.85% -> 95.60%    Per_class_accuracy = 95.36% -> 94.92%
+2024-04-09 16:07:17:INFO:Task: amazon->webcam, Iter:104/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:07:21:INFO:Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.32% -> 95.36%
+2024-04-09 16:07:22:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:07:22:INFO:
+2024-04-09 16:07:22:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:07:22:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:07:22:INFO:
+2024-04-09 16:07:22:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:07:22:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:07:22:INFO:Model fingerprint: 0x88a6bea1
+2024-04-09 16:07:22:INFO:Model has 465 general constraints
+2024-04-09 16:07:22:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:07:22:INFO:Coefficient statistics:
+2024-04-09 16:07:22:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:07:22:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:07:22:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:07:22:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:07:27:INFO:Presolve removed 465 rows and 791 columns (presolve time = 5s) ...
+2024-04-09 16:07:29:INFO:Presolve removed 0 rows and 791 columns
+2024-04-09 16:07:29:INFO:Presolve time: 6.92s
+2024-04-09 16:07:29:INFO:Presolved: 1260 rows, 24784 columns, 754354 nonzeros
+2024-04-09 16:07:29:INFO:Variable types: 0 continuous, 24784 integer (24319 binary)
+2024-04-09 16:07:29:INFO:Found heuristic solution: objective -11098.47828
+2024-04-09 16:07:30:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:07:30:INFO:Showing barrier log only...
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Root barrier log...
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Ordering time: 0.00s
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Barrier performed 0 iterations in 8.06 seconds (3.93 work units)
+2024-04-09 16:07:30:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Solved with dual simplex
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Root simplex log...
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:07:30:INFO:      22    5.9704596e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:Root relaxation: objective 5.970460e+01, 22 iterations, 0.34 seconds (0.22 work units)
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:07:30:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:07:30:INFO:
+2024-04-09 16:07:30:INFO:     0     0   59.70460    0    6 -11098.478   59.70460   101%     -    8s
+2024-04-09 16:07:31:INFO:H    0     0                      59.6978259   59.70460  0.01%     -    8s
+2024-04-09 16:07:31:INFO:H    0     0                      59.7013783   59.70460  0.01%     -    8s
+2024-04-09 16:07:31:INFO:
+2024-04-09 16:07:31:INFO:Explored 1 nodes (22 simplex iterations) in 8.77 seconds (4.73 work units)
+2024-04-09 16:07:31:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:07:31:INFO:
+2024-04-09 16:07:31:INFO:Solution count 3: 59.7014 59.6978 -11098.5 
+2024-04-09 16:07:31:INFO:
+2024-04-09 16:07:31:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:07:31:INFO:Best objective 5.970137827105e+01, best bound 5.970459560651e+01, gap 0.0054%
+2024-04-09 16:07:31:INFO:PK Accuracy = 95.85% -> 95.60%    Per_class_accuracy = 95.36% -> 94.92%
+2024-04-09 16:07:32:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:07:32:INFO:
+2024-04-09 16:07:32:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:07:32:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:07:32:INFO:
+2024-04-09 16:07:32:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:07:32:INFO:Optimize a model with 1601 rows, 25575 columns and 765142 nonzeros
+2024-04-09 16:07:32:INFO:Model fingerprint: 0xc103256c
+2024-04-09 16:07:32:INFO:Model has 465 general constraints
+2024-04-09 16:07:32:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:07:32:INFO:Coefficient statistics:
+2024-04-09 16:07:32:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:07:32:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:07:32:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:07:32:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:07:37:INFO:Presolve removed 817 rows and 1124 columns (presolve time = 5s) ...
+2024-04-09 16:07:38:INFO:Presolve removed 352 rows and 1124 columns
+2024-04-09 16:07:38:INFO:Presolve time: 6.61s
+2024-04-09 16:07:38:INFO:Presolved: 1249 rows, 24451 columns, 744031 nonzeros
+2024-04-09 16:07:38:INFO:Variable types: 0 continuous, 24451 integer (23986 binary)
+2024-04-09 16:07:39:INFO:Found heuristic solution: objective -6771.332396
+2024-04-09 16:07:39:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:07:39:INFO:Showing barrier log only...
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Root barrier log...
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Ordering time: 0.00s
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Barrier performed 0 iterations in 7.69 seconds (3.87 work units)
+2024-04-09 16:07:39:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Concurrent spin time: 0.00s
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Solved with dual simplex
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Root simplex log...
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:07:39:INFO:      14    5.9683584e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:Root relaxation: objective 5.968358e+01, 14 iterations, 0.30 seconds (0.20 work units)
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:07:39:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:07:39:INFO:
+2024-04-09 16:07:39:INFO:     0     0   59.68358    0   14 -6771.3324   59.68358   101%     -    7s
+2024-04-09 16:07:40:INFO:H    0     0                      59.6688445   59.68358  0.02%     -    8s
+2024-04-09 16:07:40:INFO:H    0     0                      59.6784546   59.68358  0.01%     -    8s
+2024-04-09 16:07:40:INFO:
+2024-04-09 16:07:40:INFO:Explored 1 nodes (14 simplex iterations) in 8.43 seconds (4.67 work units)
+2024-04-09 16:07:40:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:07:40:INFO:
+2024-04-09 16:07:40:INFO:Solution count 3: 59.6785 59.6688 -6771.33 
+2024-04-09 16:07:40:INFO:
+2024-04-09 16:07:40:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:07:40:INFO:Best objective 5.967845461396e+01, best bound 5.968358447846e+01, gap 0.0086%
+2024-04-09 16:07:40:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.36% -> 95.14%
+2024-04-09 16:07:45:INFO:Task: amazon->webcam, Iter:117/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:07:49:INFO:Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.32% -> 95.36%
+2024-04-09 16:07:50:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:07:50:INFO:
+2024-04-09 16:07:50:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:07:50:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:07:50:INFO:
+2024-04-09 16:07:50:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:07:50:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:07:50:INFO:Model fingerprint: 0x7ed60afa
+2024-04-09 16:07:50:INFO:Model has 465 general constraints
+2024-04-09 16:07:50:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:07:50:INFO:Coefficient statistics:
+2024-04-09 16:07:50:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:07:50:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:07:50:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:07:50:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:07:55:INFO:Presolve removed 465 rows and 793 columns (presolve time = 5s) ...
+2024-04-09 16:07:55:INFO:Presolve removed 0 rows and 793 columns
+2024-04-09 16:07:55:INFO:Presolve time: 5.65s
+2024-04-09 16:07:55:INFO:Presolved: 1260 rows, 24782 columns, 754292 nonzeros
+2024-04-09 16:07:55:INFO:Variable types: 0 continuous, 24782 integer (24317 binary)
+2024-04-09 16:07:56:INFO:Found heuristic solution: objective -5641.517840
+2024-04-09 16:07:56:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:07:56:INFO:Showing barrier log only...
+2024-04-09 16:07:56:INFO:
+2024-04-09 16:07:56:INFO:Root barrier log...
+2024-04-09 16:07:56:INFO:
+2024-04-09 16:07:57:INFO:Ordering time: 0.02s
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Barrier performed 0 iterations in 6.78 seconds (3.93 work units)
+2024-04-09 16:07:57:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Concurrent spin time: 0.03s
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Solved with dual simplex
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Root simplex log...
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:07:57:INFO:      24    5.9842895e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:Root relaxation: objective 5.984289e+01, 24 iterations, 0.34 seconds (0.22 work units)
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:07:57:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:07:57:INFO:
+2024-04-09 16:07:57:INFO:     0     0   59.84289    0    6 -5641.5178   59.84289   101%     -    6s
+2024-04-09 16:07:57:INFO:H    0     0                      59.8352272   59.84289  0.01%     -    7s
+2024-04-09 16:07:58:INFO:H    0     0                      59.8355208   59.84154  0.01%     -    8s
+2024-04-09 16:07:58:INFO:H    0     0                      59.8356680   59.84154  0.01%     -    8s
+2024-04-09 16:07:58:INFO:
+2024-04-09 16:07:58:INFO:Cutting planes:
+2024-04-09 16:07:58:INFO:  Zero half: 1
+2024-04-09 16:07:58:INFO:
+2024-04-09 16:07:58:INFO:Explored 1 nodes (24 simplex iterations) in 8.15 seconds (4.81 work units)
+2024-04-09 16:07:58:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:07:58:INFO:
+2024-04-09 16:07:58:INFO:Solution count 4: 59.8357 59.8355 59.8352 -5641.52 
+2024-04-09 16:07:58:INFO:
+2024-04-09 16:07:58:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:07:58:INFO:Best objective 5.983566804364e+01, best bound 5.983841425901e+01, gap 0.0046%
+2024-04-09 16:07:58:INFO:PK Accuracy = 95.85% -> 95.97%    Per_class_accuracy = 95.36% -> 95.23%
+2024-04-09 16:07:59:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:07:59:INFO:
+2024-04-09 16:07:59:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:07:59:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:07:59:INFO:
+2024-04-09 16:07:59:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:07:59:INFO:Optimize a model with 1601 rows, 25575 columns and 765142 nonzeros
+2024-04-09 16:07:59:INFO:Model fingerprint: 0x4d1e0535
+2024-04-09 16:07:59:INFO:Model has 465 general constraints
+2024-04-09 16:07:59:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:07:59:INFO:Coefficient statistics:
+2024-04-09 16:07:59:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:07:59:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:07:59:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:07:59:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:08:04:INFO:Presolve removed 817 rows and 1125 columns (presolve time = 5s) ...
+2024-04-09 16:08:05:INFO:Presolve removed 352 rows and 1125 columns
+2024-04-09 16:08:05:INFO:Presolve time: 5.73s
+2024-04-09 16:08:05:INFO:Presolved: 1249 rows, 24450 columns, 744000 nonzeros
+2024-04-09 16:08:05:INFO:Variable types: 0 continuous, 24450 integer (23985 binary)
+2024-04-09 16:08:05:INFO:Found heuristic solution: objective -5093.798853
+2024-04-09 16:08:06:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:08:06:INFO:Showing barrier log only...
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Root barrier log...
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Ordering time: 0.01s
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Barrier performed 0 iterations in 6.91 seconds (3.87 work units)
+2024-04-09 16:08:06:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Solved with dual simplex
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Root simplex log...
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:08:06:INFO:      15    5.9821698e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:Root relaxation: objective 5.982170e+01, 15 iterations, 0.34 seconds (0.20 work units)
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:08:06:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:08:06:INFO:
+2024-04-09 16:08:06:INFO:     0     0   59.82170    0   12 -5093.7989   59.82170   101%     -    6s
+2024-04-09 16:08:07:INFO:H    0     0                      59.8041274   59.82170  0.03%     -    7s
+2024-04-09 16:08:07:INFO:H    0     0                      59.8109791   59.82170  0.02%     -    7s
+2024-04-09 16:08:07:INFO:H    0     0                      59.8161543   59.82170  0.01%     -    8s
+2024-04-09 16:08:07:INFO:
+2024-04-09 16:08:07:INFO:Cutting planes:
+2024-04-09 16:08:07:INFO:  Cover: 4
+2024-04-09 16:08:07:INFO:
+2024-04-09 16:08:07:INFO:Explored 1 nodes (15 simplex iterations) in 8.33 seconds (4.79 work units)
+2024-04-09 16:08:07:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:08:07:INFO:
+2024-04-09 16:08:07:INFO:Solution count 4: 59.8162 59.811 59.8041 -5093.8 
+2024-04-09 16:08:07:INFO:
+2024-04-09 16:08:07:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:08:07:INFO:Best objective 5.981615425150e+01, best bound 5.981639401366e+01, gap 0.0004%
+2024-04-09 16:08:07:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.36% -> 95.10%
+2024-04-09 16:08:13:INFO:Task: amazon->webcam, Iter:130/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:08:17:INFO:Accuracy = 95.85% -> 95.72%    Per_class_accuracy = 95.32% -> 95.25%
+2024-04-09 16:08:18:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:08:18:INFO:
+2024-04-09 16:08:18:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:08:18:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:08:18:INFO:
+2024-04-09 16:08:19:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:08:19:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:08:19:INFO:Model fingerprint: 0xdceb5aa6
+2024-04-09 16:08:19:INFO:Model has 465 general constraints
+2024-04-09 16:08:19:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:08:19:INFO:Coefficient statistics:
+2024-04-09 16:08:19:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:08:19:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:08:19:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:08:19:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:08:24:INFO:Presolve removed 465 rows and 781 columns (presolve time = 5s) ...
+2024-04-09 16:08:25:INFO:Presolve removed 0 rows and 781 columns
+2024-04-09 16:08:25:INFO:Presolve time: 6.20s
+2024-04-09 16:08:25:INFO:Presolved: 1260 rows, 24794 columns, 754664 nonzeros
+2024-04-09 16:08:25:INFO:Variable types: 0 continuous, 24794 integer (24329 binary)
+2024-04-09 16:08:25:INFO:Found heuristic solution: objective -4838.799208
+2024-04-09 16:08:26:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:08:26:INFO:Showing barrier log only...
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Root barrier log...
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Ordering time: 0.01s
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Barrier performed 0 iterations in 7.29 seconds (3.93 work units)
+2024-04-09 16:08:26:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Solved with dual simplex
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Root simplex log...
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:08:26:INFO:      16    5.9991766e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Root relaxation: objective 5.999177e+01, 16 iterations, 0.31 seconds (0.22 work units)
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:08:26:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:     0     0   59.99177    0    6 -4838.7992   59.99177   101%     -    7s
+2024-04-09 16:08:26:INFO:H    0     0                      59.9838376   59.99177  0.01%     -    7s
+2024-04-09 16:08:26:INFO:H    0     0                      59.9900676   59.99177  0.00%     -    8s
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Explored 1 nodes (16 simplex iterations) in 8.03 seconds (4.73 work units)
+2024-04-09 16:08:26:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Solution count 3: 59.9901 59.9838 -4838.8 
+2024-04-09 16:08:26:INFO:
+2024-04-09 16:08:26:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:08:26:INFO:Best objective 5.999006760303e+01, best bound 5.999176604150e+01, gap 0.0028%
+2024-04-09 16:08:27:INFO:PK Accuracy = 95.72% -> 96.10%    Per_class_accuracy = 95.25% -> 95.39%
+2024-04-09 16:08:28:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:08:28:INFO:
+2024-04-09 16:08:28:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:08:28:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:08:28:INFO:
+2024-04-09 16:08:28:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:08:28:INFO:Optimize a model with 1570 rows, 25575 columns and 765080 nonzeros
+2024-04-09 16:08:28:INFO:Model fingerprint: 0x068df0fd
+2024-04-09 16:08:28:INFO:Model has 465 general constraints
+2024-04-09 16:08:28:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:08:28:INFO:Coefficient statistics:
+2024-04-09 16:08:28:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:08:28:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:08:28:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:08:28:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:08:33:INFO:Presolve removed 785 rows and 1083 columns (presolve time = 5s) ...
+2024-04-09 16:08:35:INFO:Presolve removed 320 rows and 1083 columns
+2024-04-09 16:08:35:INFO:Presolve time: 7.17s
+2024-04-09 16:08:35:INFO:Presolved: 1250 rows, 24492 columns, 745302 nonzeros
+2024-04-09 16:08:35:INFO:Variable types: 0 continuous, 24492 integer (24027 binary)
+2024-04-09 16:08:36:INFO:Found heuristic solution: objective -8017.780355
+2024-04-09 16:08:36:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:08:36:INFO:Showing barrier log only...
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Root barrier log...
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Barrier performed 0 iterations in 8.39 seconds (3.87 work units)
+2024-04-09 16:08:36:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Solved with dual simplex
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Root simplex log...
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:08:36:INFO:      14    5.9979733e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:Root relaxation: objective 5.997973e+01, 14 iterations, 0.27 seconds (0.20 work units)
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:08:36:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:08:36:INFO:
+2024-04-09 16:08:36:INFO:     0     0   59.97973    0    6 -8017.7804   59.97973   101%     -    8s
+2024-04-09 16:08:37:INFO:H    0     0                      59.9571715   59.97973  0.04%     -    9s
+2024-04-09 16:08:37:INFO:H    0     0                      59.9733902   59.97973  0.01%     -    9s
+2024-04-09 16:08:37:INFO:
+2024-04-09 16:08:37:INFO:Cutting planes:
+2024-04-09 16:08:37:INFO:  Zero half: 1
+2024-04-09 16:08:37:INFO:
+2024-04-09 16:08:37:INFO:Explored 1 nodes (14 simplex iterations) in 9.58 seconds (4.83 work units)
+2024-04-09 16:08:37:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:08:37:INFO:
+2024-04-09 16:08:37:INFO:Solution count 3: 59.9734 59.9572 -8017.78 
+2024-04-09 16:08:37:INFO:
+2024-04-09 16:08:37:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:08:37:INFO:Best objective 5.997339016216e+01, best bound 5.997732956559e+01, gap 0.0066%
+2024-04-09 16:08:37:INFO:PK Accuracy = 95.72% -> 95.60%    Per_class_accuracy = 95.25% -> 94.87%
+2024-04-09 16:08:44:INFO:Task: amazon->webcam, Iter:143/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:08:47:INFO:Accuracy = 95.85% -> 95.72%    Per_class_accuracy = 95.32% -> 95.25%
+2024-04-09 16:08:49:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:08:49:INFO:
+2024-04-09 16:08:49:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:08:49:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:08:49:INFO:
+2024-04-09 16:08:49:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:08:49:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:08:49:INFO:Model fingerprint: 0x203037d0
+2024-04-09 16:08:49:INFO:Model has 465 general constraints
+2024-04-09 16:08:49:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:08:49:INFO:Coefficient statistics:
+2024-04-09 16:08:49:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:08:49:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:08:49:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:08:49:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:08:54:INFO:Presolve removed 465 rows and 775 columns (presolve time = 5s) ...
+2024-04-09 16:08:55:INFO:Presolve removed 0 rows and 775 columns
+2024-04-09 16:08:55:INFO:Presolve time: 6.23s
+2024-04-09 16:08:55:INFO:Presolved: 1260 rows, 24800 columns, 754850 nonzeros
+2024-04-09 16:08:55:INFO:Variable types: 0 continuous, 24800 integer (24335 binary)
+2024-04-09 16:08:56:INFO:Found heuristic solution: objective -13237.12003
+2024-04-09 16:08:56:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:08:56:INFO:Showing barrier log only...
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Root barrier log...
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Ordering time: 0.03s
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Barrier performed 0 iterations in 7.57 seconds (3.93 work units)
+2024-04-09 16:08:56:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Concurrent spin time: 0.06s
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Solved with dual simplex
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Root simplex log...
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:08:56:INFO:      21    6.0072290e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:Root relaxation: objective 6.007229e+01, 21 iterations, 0.43 seconds (0.22 work units)
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:08:56:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:08:56:INFO:
+2024-04-09 16:08:56:INFO:     0     0   60.07229    0    4 -13237.120   60.07229   100%     -    7s
+2024-04-09 16:08:57:INFO:H    0     0                      60.0647749   60.07229  0.01%     -    8s
+2024-04-09 16:08:57:INFO:H    0     0                      60.0706976   60.07229  0.00%     -    8s
+2024-04-09 16:08:57:INFO:
+2024-04-09 16:08:57:INFO:Explored 1 nodes (21 simplex iterations) in 8.52 seconds (4.74 work units)
+2024-04-09 16:08:57:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:08:57:INFO:
+2024-04-09 16:08:57:INFO:Solution count 3: 60.0707 60.0648 -13237.1 
+2024-04-09 16:08:57:INFO:
+2024-04-09 16:08:57:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:08:57:INFO:Best objective 6.007069761449e+01, best bound 6.007229033045e+01, gap 0.0027%
+2024-04-09 16:08:57:INFO:PK Accuracy = 95.72% -> 95.85%    Per_class_accuracy = 95.25% -> 95.16%
+2024-04-09 16:08:58:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:08:58:INFO:
+2024-04-09 16:08:58:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:08:58:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:08:58:INFO:
+2024-04-09 16:08:58:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:08:58:INFO:Optimize a model with 1570 rows, 25575 columns and 765080 nonzeros
+2024-04-09 16:08:58:INFO:Model fingerprint: 0x12ccd0c6
+2024-04-09 16:08:58:INFO:Model has 465 general constraints
+2024-04-09 16:08:58:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:08:58:INFO:Coefficient statistics:
+2024-04-09 16:08:58:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:08:58:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:08:58:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:08:58:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:09:03:INFO:Presolve removed 785 rows and 1078 columns (presolve time = 5s) ...
+2024-04-09 16:09:04:INFO:Presolve removed 320 rows and 1078 columns
+2024-04-09 16:09:04:INFO:Presolve time: 5.68s
+2024-04-09 16:09:04:INFO:Presolved: 1250 rows, 24497 columns, 745457 nonzeros
+2024-04-09 16:09:04:INFO:Variable types: 0 continuous, 24497 integer (24032 binary)
+2024-04-09 16:09:05:INFO:Found heuristic solution: objective -4942.031209
+2024-04-09 16:09:05:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:09:05:INFO:Showing barrier log only...
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Root barrier log...
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Barrier performed 0 iterations in 6.94 seconds (3.86 work units)
+2024-04-09 16:09:05:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Concurrent spin time: 0.02s
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Solved with dual simplex
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Root simplex log...
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:09:05:INFO:      16    6.0061076e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:Root relaxation: objective 6.006108e+01, 16 iterations, 0.28 seconds (0.20 work units)
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:09:05:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:09:05:INFO:
+2024-04-09 16:09:05:INFO:     0     0   60.06108    0    6 -4942.0312   60.06108   101%     -    6s
+2024-04-09 16:09:06:INFO:H    0     0                      60.0395464   60.06108  0.04%     -    7s
+2024-04-09 16:09:06:INFO:H    0     0                      60.0578754   60.06108  0.01%     -    7s
+2024-04-09 16:09:06:INFO:
+2024-04-09 16:09:06:INFO:Explored 1 nodes (16 simplex iterations) in 7.81 seconds (4.76 work units)
+2024-04-09 16:09:06:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:09:06:INFO:
+2024-04-09 16:09:06:INFO:Solution count 3: 60.0579 60.0395 -4942.03 
+2024-04-09 16:09:06:INFO:
+2024-04-09 16:09:06:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:09:06:INFO:Best objective 6.005787542129e+01, best bound 6.006107555904e+01, gap 0.0053%
+2024-04-09 16:09:06:INFO:PK Accuracy = 95.72% -> 95.85%    Per_class_accuracy = 95.25% -> 95.10%
+2024-04-09 16:09:12:INFO:Task: amazon->webcam, Iter:156/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:09:15:INFO:Accuracy = 95.85% -> 95.72%    Per_class_accuracy = 95.32% -> 95.25%
+2024-04-09 16:09:16:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:09:16:INFO:
+2024-04-09 16:09:16:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:09:16:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:09:16:INFO:
+2024-04-09 16:09:16:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:09:16:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:09:16:INFO:Model fingerprint: 0x13410584
+2024-04-09 16:09:16:INFO:Model has 465 general constraints
+2024-04-09 16:09:16:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:09:16:INFO:Coefficient statistics:
+2024-04-09 16:09:16:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:09:16:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:09:16:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:09:16:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:09:21:INFO:Presolve removed 465 rows and 795 columns (presolve time = 5s) ...
+2024-04-09 16:09:24:INFO:Presolve removed 0 rows and 795 columns
+2024-04-09 16:09:24:INFO:Presolve time: 8.26s
+2024-04-09 16:09:24:INFO:Presolved: 1260 rows, 24780 columns, 754230 nonzeros
+2024-04-09 16:09:24:INFO:Variable types: 0 continuous, 24780 integer (24315 binary)
+2024-04-09 16:09:26:INFO:Found heuristic solution: objective -13459.82632
+2024-04-09 16:09:26:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:09:26:INFO:Showing barrier log only...
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Root barrier log...
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Ordering time: 0.04s
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Barrier statistics:
+2024-04-09 16:09:26:INFO: AA' NZ     : 3.832e+05
+2024-04-09 16:09:26:INFO: Factor NZ  : 5.909e+05 (roughly 15 MB of memory)
+2024-04-09 16:09:26:INFO: Factor Ops : 3.444e+08 (less than 1 second per iteration)
+2024-04-09 16:09:26:INFO: Threads    : 30
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Barrier performed 0 iterations in 10.11 seconds (3.93 work units)
+2024-04-09 16:09:26:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Concurrent spin time: 0.09s
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Solved with dual simplex
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Root simplex log...
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:09:26:INFO:      18    6.0163080e+01   0.000000e+00   0.000000e+00     10s
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:Root relaxation: objective 6.016308e+01, 18 iterations, 0.55 seconds (0.22 work units)
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:09:26:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:09:26:INFO:
+2024-04-09 16:09:26:INFO:     0     0   60.16308    0    4 -13459.826   60.16308   100%     -   10s
+2024-04-09 16:09:27:INFO:H    0     0                      60.1551543   60.16308  0.01%     -   11s
+2024-04-09 16:09:27:INFO:H    0     0                      60.1554958   60.16308  0.01%     -   11s
+2024-04-09 16:09:27:INFO:H    0     0                      60.1595051   60.16308  0.01%     -   11s
+2024-04-09 16:09:27:INFO:
+2024-04-09 16:09:27:INFO:Cutting planes:
+2024-04-09 16:09:27:INFO:  Zero half: 1
+2024-04-09 16:09:27:INFO:
+2024-04-09 16:09:27:INFO:Explored 1 nodes (18 simplex iterations) in 11.22 seconds (4.81 work units)
+2024-04-09 16:09:27:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:09:27:INFO:
+2024-04-09 16:09:27:INFO:Solution count 4: 60.1595 60.1555 60.1552 -13459.8 
+2024-04-09 16:09:27:INFO:
+2024-04-09 16:09:27:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:09:27:INFO:Best objective 6.015950514796e+01, best bound 6.016237382007e+01, gap 0.0048%
+2024-04-09 16:09:27:INFO:PK Accuracy = 95.72% -> 95.85%    Per_class_accuracy = 95.25% -> 95.16%
+2024-04-09 16:09:28:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:09:28:INFO:
+2024-04-09 16:09:28:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:09:28:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:09:28:INFO:
+2024-04-09 16:09:28:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:09:28:INFO:Optimize a model with 1570 rows, 25575 columns and 765080 nonzeros
+2024-04-09 16:09:28:INFO:Model fingerprint: 0xfa93c53c
+2024-04-09 16:09:28:INFO:Model has 465 general constraints
+2024-04-09 16:09:28:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:09:28:INFO:Coefficient statistics:
+2024-04-09 16:09:28:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:09:28:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:09:28:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:09:28:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:09:34:INFO:Presolve removed 785 rows and 1098 columns (presolve time = 5s) ...
+2024-04-09 16:09:34:INFO:Presolve removed 320 rows and 1098 columns
+2024-04-09 16:09:34:INFO:Presolve time: 5.37s
+2024-04-09 16:09:34:INFO:Presolved: 1250 rows, 24477 columns, 744837 nonzeros
+2024-04-09 16:09:34:INFO:Variable types: 0 continuous, 24477 integer (24012 binary)
+2024-04-09 16:09:35:INFO:Found heuristic solution: objective -12860.47237
+2024-04-09 16:09:35:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:09:35:INFO:Showing barrier log only...
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Root barrier log...
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Ordering time: 0.02s
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Barrier performed 0 iterations in 6.50 seconds (3.88 work units)
+2024-04-09 16:09:35:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Concurrent spin time: 0.03s
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Solved with dual simplex
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Root simplex log...
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:09:35:INFO:      17    6.0140050e+01   0.000000e+00   0.000000e+00      7s
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:Root relaxation: objective 6.014005e+01, 17 iterations, 0.33 seconds (0.20 work units)
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:09:35:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:09:35:INFO:
+2024-04-09 16:09:35:INFO:     0     0   60.14005    0    9 -12860.472   60.14005   100%     -    6s
+2024-04-09 16:09:36:INFO:H    0     0                      60.1265552   60.14005  0.02%     -    7s
+2024-04-09 16:09:36:INFO:H    0     0                      60.1277524   60.14005  0.02%     -    7s
+2024-04-09 16:09:37:INFO:
+2024-04-09 16:09:37:INFO:Cutting planes:
+2024-04-09 16:09:37:INFO:  Cover: 3
+2024-04-09 16:09:37:INFO:  MIR: 2
+2024-04-09 16:09:37:INFO:  GUB cover: 2
+2024-04-09 16:09:37:INFO:
+2024-04-09 16:09:37:INFO:Explored 1 nodes (17 simplex iterations) in 8.13 seconds (4.76 work units)
+2024-04-09 16:09:37:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:09:37:INFO:
+2024-04-09 16:09:37:INFO:Solution count 3: 60.1278 60.1266 -12860.5 
+2024-04-09 16:09:37:INFO:
+2024-04-09 16:09:37:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:09:37:INFO:Best objective 6.012775243747e+01, best bound 6.013085579268e+01, gap 0.0052%
+2024-04-09 16:09:37:INFO:PK Accuracy = 95.72% -> 95.47%    Per_class_accuracy = 95.25% -> 94.72%
+2024-04-09 16:09:41:INFO:Task: amazon->webcam, Iter:169/195; Accuracy = 95.85%    Per_class_accuracy=95.32
+2024-04-09 16:09:44:INFO:Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.32% -> 95.32%
+2024-04-09 16:09:46:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:09:46:INFO:
+2024-04-09 16:09:46:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:09:46:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:09:46:INFO:
+2024-04-09 16:09:46:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:09:46:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:09:46:INFO:Model fingerprint: 0x31398b27
+2024-04-09 16:09:46:INFO:Model has 465 general constraints
+2024-04-09 16:09:46:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:09:46:INFO:Coefficient statistics:
+2024-04-09 16:09:46:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:09:46:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:09:46:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:09:46:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:09:51:INFO:Presolve removed 465 rows and 797 columns (presolve time = 5s) ...
+2024-04-09 16:09:52:INFO:Presolve removed 0 rows and 797 columns
+2024-04-09 16:09:52:INFO:Presolve time: 6.50s
+2024-04-09 16:09:52:INFO:Presolved: 1260 rows, 24778 columns, 754168 nonzeros
+2024-04-09 16:09:52:INFO:Variable types: 0 continuous, 24778 integer (24313 binary)
+2024-04-09 16:09:53:INFO:Found heuristic solution: objective -10637.30765
+2024-04-09 16:09:53:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:09:53:INFO:Showing barrier log only...
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Root barrier log...
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Ordering time: 0.03s
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Barrier performed 0 iterations in 7.54 seconds (3.93 work units)
+2024-04-09 16:09:53:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Solved with dual simplex
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Root simplex log...
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:09:53:INFO:      14    6.0247891e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:Root relaxation: objective 6.024789e+01, 14 iterations, 0.29 seconds (0.22 work units)
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:09:53:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:09:53:INFO:
+2024-04-09 16:09:53:INFO:     0     0   60.24789    0    4 -10637.308   60.24789   101%     -    7s
+2024-04-09 16:09:54:INFO:H    0     0                      60.2404635   60.24789  0.01%     -    8s
+2024-04-09 16:09:54:INFO:H    0     0                      60.2427006   60.24789  0.01%     -    8s
+2024-04-09 16:09:54:INFO:
+2024-04-09 16:09:54:INFO:Cutting planes:
+2024-04-09 16:09:54:INFO:  Zero half: 1
+2024-04-09 16:09:54:INFO:
+2024-04-09 16:09:54:INFO:Explored 1 nodes (14 simplex iterations) in 8.24 seconds (4.80 work units)
+2024-04-09 16:09:54:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:09:54:INFO:
+2024-04-09 16:09:54:INFO:Solution count 3: 60.2427 60.2405 -10637.3 
+2024-04-09 16:09:54:INFO:
+2024-04-09 16:09:54:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:09:54:INFO:Best objective 6.024270058742e+01, best bound 6.024681929767e+01, gap 0.0068%
+2024-04-09 16:09:54:INFO:PK Accuracy = 95.85% -> 95.85%    Per_class_accuracy = 95.32% -> 95.16%
+2024-04-09 16:09:55:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:09:55:INFO:
+2024-04-09 16:09:55:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:09:55:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:09:55:INFO:
+2024-04-09 16:09:55:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:09:55:INFO:Optimize a model with 1539 rows, 25575 columns and 765018 nonzeros
+2024-04-09 16:09:55:INFO:Model fingerprint: 0xfae3fe90
+2024-04-09 16:09:55:INFO:Model has 465 general constraints
+2024-04-09 16:09:55:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:09:55:INFO:Coefficient statistics:
+2024-04-09 16:09:55:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:09:55:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:09:55:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:09:55:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:09:59:INFO:Presolve removed 288 rows and 1070 columns
+2024-04-09 16:09:59:INFO:Presolve time: 4.72s
+2024-04-09 16:09:59:INFO:Presolved: 1251 rows, 24505 columns, 745705 nonzeros
+2024-04-09 16:09:59:INFO:Variable types: 0 continuous, 24505 integer (24040 binary)
+2024-04-09 16:10:00:INFO:Found heuristic solution: objective -13646.04445
+2024-04-09 16:10:00:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:10:00:INFO:Showing barrier log only...
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Root barrier log...
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Ordering time: 0.01s
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Barrier performed 0 iterations in 5.72 seconds (3.88 work units)
+2024-04-09 16:10:00:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Concurrent spin time: 0.00s
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Solved with dual simplex
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Root simplex log...
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:10:00:INFO:      17    6.0225089e+01   0.000000e+00   0.000000e+00      6s
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:Root relaxation: objective 6.022509e+01, 17 iterations, 0.25 seconds (0.20 work units)
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:10:00:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:10:00:INFO:
+2024-04-09 16:10:00:INFO:     0     0   60.22509    0    6 -13646.044   60.22509   100%     -    5s
+2024-04-09 16:10:01:INFO:H    0     0                      60.2136699   60.22509  0.02%     -    6s
+2024-04-09 16:10:01:INFO:H    0     0                      60.2187035   60.22509  0.01%     -    6s
+2024-04-09 16:10:02:INFO:
+2024-04-09 16:10:02:INFO:Cutting planes:
+2024-04-09 16:10:02:INFO:  Zero half: 1
+2024-04-09 16:10:02:INFO:  RLT: 1
+2024-04-09 16:10:02:INFO:
+2024-04-09 16:10:02:INFO:Explored 1 nodes (17 simplex iterations) in 6.97 seconds (4.74 work units)
+2024-04-09 16:10:02:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:10:02:INFO:
+2024-04-09 16:10:02:INFO:Solution count 3: 60.2187 60.2137 -13646 
+2024-04-09 16:10:02:INFO:
+2024-04-09 16:10:02:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:10:02:INFO:Best objective 6.021870352943e+01, best bound 6.022386405034e+01, gap 0.0086%
+2024-04-09 16:10:02:INFO:PK Accuracy = 95.85% -> 95.47%    Per_class_accuracy = 95.32% -> 94.74%
+2024-04-09 16:10:06:INFO:Task: amazon->webcam, Iter:182/195; Accuracy = 95.72%    Per_class_accuracy=95.22
+2024-04-09 16:10:09:INFO:Accuracy = 95.72% -> 95.85%    Per_class_accuracy = 95.22% -> 95.32%
+2024-04-09 16:10:10:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:10:10:INFO:
+2024-04-09 16:10:10:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:10:10:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:10:10:INFO:
+2024-04-09 16:10:10:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:10:10:INFO:Optimize a model with 1260 rows, 25575 columns and 764460 nonzeros
+2024-04-09 16:10:10:INFO:Model fingerprint: 0xef7af38d
+2024-04-09 16:10:10:INFO:Model has 465 general constraints
+2024-04-09 16:10:10:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:10:10:INFO:Coefficient statistics:
+2024-04-09 16:10:10:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:10:10:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:10:10:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:10:10:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:10:15:INFO:Presolve removed 465 rows and 796 columns (presolve time = 5s) ...
+2024-04-09 16:10:19:INFO:Presolve removed 0 rows and 796 columns
+2024-04-09 16:10:19:INFO:Presolve time: 8.94s
+2024-04-09 16:10:19:INFO:Presolved: 1260 rows, 24779 columns, 754199 nonzeros
+2024-04-09 16:10:19:INFO:Variable types: 0 continuous, 24779 integer (24314 binary)
+2024-04-09 16:10:20:INFO:Found heuristic solution: objective -6582.904727
+2024-04-09 16:10:20:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:10:20:INFO:Showing barrier log only...
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Root barrier log...
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Ordering time: 0.01s
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Barrier performed 0 iterations in 10.05 seconds (3.92 work units)
+2024-04-09 16:10:20:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Solved with dual simplex
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Root simplex log...
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:10:20:INFO:      12    6.0285510e+01   0.000000e+00   0.000000e+00     10s
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:Root relaxation: objective 6.028551e+01, 12 iterations, 0.30 seconds (0.22 work units)
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:10:20:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:10:20:INFO:
+2024-04-09 16:10:20:INFO:     0     0   60.28551    0    4 -6582.9047   60.28551   101%     -   10s
+2024-04-09 16:10:21:INFO:H    0     0                      60.2777423   60.28551  0.01%     -   10s
+2024-04-09 16:10:21:INFO:H    0     0                      60.2802814   60.28551  0.01%     -   10s
+2024-04-09 16:10:21:INFO:
+2024-04-09 16:10:21:INFO:Explored 1 nodes (12 simplex iterations) in 10.75 seconds (4.73 work units)
+2024-04-09 16:10:21:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:10:21:INFO:
+2024-04-09 16:10:21:INFO:Solution count 3: 60.2803 60.2777 -6582.9 
+2024-04-09 16:10:21:INFO:
+2024-04-09 16:10:21:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:10:21:INFO:Best objective 6.028028144010e+01, best bound 6.028550985131e+01, gap 0.0087%
+2024-04-09 16:10:21:INFO:PK Accuracy = 95.85% -> 95.47%    Per_class_accuracy = 95.32% -> 94.80%
+2024-04-09 16:10:22:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:10:22:INFO:
+2024-04-09 16:10:22:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:10:22:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:10:22:INFO:
+2024-04-09 16:10:22:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:10:22:INFO:Optimize a model with 1570 rows, 25575 columns and 765080 nonzeros
+2024-04-09 16:10:22:INFO:Model fingerprint: 0xe6c524ec
+2024-04-09 16:10:22:INFO:Model has 465 general constraints
+2024-04-09 16:10:22:INFO:Variable types: 930 continuous, 24645 integer (24645 binary)
+2024-04-09 16:10:22:INFO:Coefficient statistics:
+2024-04-09 16:10:22:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:10:22:INFO:  Objective range  [2e-02, 2e+01]
+2024-04-09 16:10:22:INFO:  Bounds range     [1e+00, 2e+03]
+2024-04-09 16:10:22:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:10:27:INFO:Presolve removed 785 rows and 1101 columns (presolve time = 5s) ...
+2024-04-09 16:10:28:INFO:Presolve removed 320 rows and 1101 columns
+2024-04-09 16:10:28:INFO:Presolve time: 6.53s
+2024-04-09 16:10:28:INFO:Presolved: 1250 rows, 24474 columns, 744744 nonzeros
+2024-04-09 16:10:29:INFO:Variable types: 0 continuous, 24474 integer (24009 binary)
+2024-04-09 16:10:29:INFO:Found heuristic solution: objective -6069.978635
+2024-04-09 16:10:29:INFO:Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+2024-04-09 16:10:29:INFO:Showing barrier log only...
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Root barrier log...
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Ordering time: 0.00s
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Barrier performed 0 iterations in 7.56 seconds (3.87 work units)
+2024-04-09 16:10:29:INFO:Barrier solve interrupted - model solved by another algorithm
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Concurrent spin time: 0.01s
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Solved with dual simplex
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Root simplex log...
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Iteration    Objective       Primal Inf.    Dual Inf.      Time
+2024-04-09 16:10:29:INFO:      12    6.0252691e+01   0.000000e+00   0.000000e+00      8s
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:Root relaxation: objective 6.025269e+01, 12 iterations, 0.25 seconds (0.20 work units)
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:10:29:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:10:29:INFO:
+2024-04-09 16:10:29:INFO:     0     0   60.25269    0   10 -6069.9786   60.25269   101%     -    7s
+2024-04-09 16:10:30:INFO:H    0     0                      60.2337398   60.25269  0.03%     -    8s
+2024-04-09 16:10:30:INFO:H    0     0                      60.2501334   60.25269  0.00%     -    8s
+2024-04-09 16:10:30:INFO:
+2024-04-09 16:10:30:INFO:Explored 1 nodes (12 simplex iterations) in 8.26 seconds (4.72 work units)
+2024-04-09 16:10:30:INFO:Thread count was 32 (of 104 available processors)
+2024-04-09 16:10:30:INFO:
+2024-04-09 16:10:30:INFO:Solution count 3: 60.2501 60.2337 -6069.98 
+2024-04-09 16:10:30:INFO:
+2024-04-09 16:10:30:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-04-09 16:10:30:INFO:Best objective 6.025013338180e+01, best bound 6.025269092661e+01, gap 0.0042%
+2024-04-09 16:10:30:INFO:PK Accuracy = 95.85% -> 95.97%    Per_class_accuracy = 95.32% -> 95.23%
+2024-04-09 16:10:34:INFO:Task: amazon->webcam, Iter:195/195; Accuracy = 95.72%    Per_class_accuracy=95.22
+2024-04-09 16:10:34:INFO:==========================================
+gpu_id:0
+s:amazon
+t:dslr
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-09_15.41.31
+use_file_logger:True
+names:['webcam', 'amazon', 'dslr']
+use_train_transform:False
+pk_uconf:1.0
+pk_type:br
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+pk_NC:None
+pk_noise:0.0
+pk_dratio:1.0
+method:kshot
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/dslr.txt
+test_dset_path:../data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target_kshot/
+savename:par_0.3
+
+2024-04-09 16:10:47:INFO:Accuracy = 81.53% -> 91.77%    Per_class_accuracy = 84.02% -> 92.50%
+2024-04-09 16:10:48:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-09 16:10:48:INFO:
+2024-04-09 16:10:48:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-09 16:10:48:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-09 16:10:48:INFO:
+2024-04-09 16:10:48:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-09 16:10:48:INFO:Optimize a model with 1428 rows, 17298 columns and 942648 nonzeros
+2024-04-09 16:10:48:INFO:Model fingerprint: 0xd8673e61
+2024-04-09 16:10:48:INFO:Model has 930 general constraints
+2024-04-09 16:10:48:INFO:Variable types: 1860 continuous, 15438 integer (15438 binary)
+2024-04-09 16:10:48:INFO:Coefficient statistics:
+2024-04-09 16:10:48:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-09 16:10:48:INFO:  Objective range  [2e-02, 5e+00]
+2024-04-09 16:10:48:INFO:  Bounds range     [1e+00, 1e+03]
+2024-04-09 16:10:48:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-09 16:10:52:INFO:Presolve removed 465 rows and 1186 columns
+2024-04-09 16:10:52:INFO:Presolve time: 4.45s
+2024-04-09 16:10:53:INFO:Presolved: 963 rows, 16112 columns, 479252 nonzeros
+2024-04-09 16:10:53:INFO:Variable types: 418 continuous, 15694 integer (15438 binary)
+2024-04-09 16:10:53:INFO:Found heuristic solution: objective -31403.15169
+2024-04-09 16:10:53:INFO:
+2024-04-09 16:10:53:INFO:Root relaxation: objective 2.866398e+01, 1437 iterations, 0.09 seconds (0.08 work units)
+2024-04-09 16:10:53:INFO:
+2024-04-09 16:10:53:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-04-09 16:10:53:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-04-09 16:10:53:INFO:
+2024-04-09 16:10:53:INFO:     0     0   28.66398    0   54 -31403.152   28.66398   100%     -    4s
+2024-04-09 16:10:53:INFO:H    0     0                    -2949.037797   28.66398   101%     -    5s
+2024-04-09 16:10:54:INFO:H    0     0                    -1481.874549   28.66398   102%     -    5s
+2024-04-09 16:10:55:INFO:H    0     0                    -100.4063066   28.66398   129%     -    6s
+2024-04-09 16:10:55:INFO:H    0     0                    -100.0639765   28.66398   129%     -    7s
+2024-04-09 16:10:55:INFO:H    0     0                    -100.0316000   28.66398   129%     -    7s
+2024-04-09 16:10:56:INFO:H    0     0                     -41.1379524   28.66179   170%     -    8s
+2024-04-09 16:10:57:INFO:H    0     0                     -30.4549273   28.66179   194%     -    8s
+2024-04-09 16:10:57:INFO:H    0     0                     -19.7426578   28.66179   245%     -    9s
+2024-04-09 16:10:57:INFO:     0     0   28.66157    0   64  -19.74266   28.66157   245%     -    9s
+2024-04-09 16:11:00:INFO:H    0     0                     -19.7272513   28.66157   245%     -   11s
+2024-04-09 16:11:01:INFO:H    0     0                     -19.6858397   28.66157   246%     -   12s
+2024-04-09 16:11:01:INFO:H    0     0                     -19.6565315   28.66157   246%     -   13s
+2024-04-09 16:11:01:INFO:H    0     0                     -19.5846412   28.66157   246%     -   13s
+2024-04-09 16:11:01:INFO:     0     0   28.66157    0   65  -19.58464   28.66157   246%     -   13s
+2024-04-09 16:11:03:INFO:     0     0   28.66154    0   70  -19.58464   28.66154   246%     -   15s
+2024-04-09 16:11:03:INFO:     0     0   28.66105    0   73  -19.58464   28.66105   246%     -   15s
+2024-04-09 16:11:04:INFO:     0     0   28.66105    0   67  -19.58464   28.66105   246%     -   16s
+2024-04-09 16:11:04:INFO:     0     0   28.66105    0   71  -19.58464   28.66105   246%     -   16s
+2024-04-09 16:11:05:INFO:     0     0   28.66105    0   69  -19.58464   28.66105   246%     -   16s
+2024-04-09 16:11:06:INFO:     0     0   28.66105    0   69  -19.58464   28.66105   246%     -   17s
+2024-04-09 16:11:06:INFO:     0     2   28.65457    0   69  -19.58464   28.65457   246%     -   18s
+2024-04-09 16:11:08:INFO:    40    64   28.65457    5   62  -19.58464   28.65457   246%  22.1   20s
+2024-04-09 16:11:12:INFO:H   63    96                     -19.5833739   28.65457   246%  20.2   23s
+2024-04-09 16:11:23:INFO:    95   128   28.65457    7   73  -19.58337   28.65457   246%  18.1   34s
+2024-04-09 16:11:23:INFO:H  100   128                     -19.5803219   28.65457   246%  18.0   35s
+2024-04-09 16:11:29:INFO:  1238  1262   28.63186   41   65  -19.58032   28.65457   246%  14.1   41s
+2024-04-09 16:11:33:INFO:  4178  4466   28.56564  129   51  -19.58032   28.65457   246%  13.5   45s
+2024-04-09 16:11:38:INFO:  7020  7469   28.53341  200   51  -19.58032   28.65457   246%  14.4   50s
+2024-04-09 16:11:44:INFO:  9935 10392   28.52374  269   49  -19.58032   28.65457   246%  14.8   56s
+2024-04-09 16:11:49:INFO: 12663 13161   28.51702  327   42  -19.58032   28.65457   246%  16.3   61s
+2024-04-09 16:11:53:INFO: 13337 13859   28.50884  350   41  -19.58032   28.65457   246%  16.7   65s
+2024-04-09 16:11:58:INFO: 14636 14439   28.45074  427   54  -19.58032   28.65457   246%  17.3   70s
+2024-04-09 16:12:00:INFO:H14637 13717                     -19.5802664   28.57802   246%  17.3   72s
+2024-04-09 16:12:09:INFO: 14639 13718   25.70105  373   72  -19.58027   25.70105   231%  17.3   81s
+2024-04-09 16:12:13:INFO: 14645 13723   25.70105   83   54  -19.58027   25.70105   231%  17.4   85s
+2024-04-09 16:12:19:INFO: 14647 13725   25.70105   49   72  -19.58027   25.70105   231%  17.4   91s
+2024-04-09 16:12:24:INFO: 14648 13725   25.70105  381   74  -19.58027   25.70105   231%  17.4   95s
+2024-04-09 16:12:29:INFO: 14653 13732   25.69978   23   85  -19.58027   25.69978   231%  17.5  100s
+2024-04-09 16:12:33:INFO: 14883 13907   25.69978   33   67  -19.58027   25.69978   231%  17.5  105s
+2024-04-09 16:12:39:INFO: 14902 13901   25.69978   33   60  -19.58027   25.69978   231%  17.5  111s
+2024-04-09 16:12:43:INFO: 15470 14375   25.69978   39   65  -19.58027   25.69978   231%  17.5  115s
+2024-04-09 16:12:49:INFO: 15683 14451   25.69978   42   63  -19.58027   25.69978   231%  17.5  120s
+2024-04-09 16:12:55:INFO: 15706 14444   25.69978   59   61  -19.58027   25.69978   231%  17.5  126s
+2024-04-09 16:13:01:INFO: 15718 14472   25.69978   42   61  -19.58027   25.69978   231%  17.5  132s
+2024-04-09 16:13:07:INFO: 15737 14465   25.69978   60   57  -19.58027   25.69978   231%  17.5  139s
+2024-04-09 16:13:11:INFO: 15750 14614   25.69978   43   62  -19.58027   25.69978   231%  17.5  143s
+2024-04-09 16:13:13:INFO: 16167 14896   25.69978   50   65  -19.58027   25.69978   231%  17.5  145s
+2024-04-09 16:13:18:INFO: 18445 16535   25.69978   82   66  -19.58027   25.69978   231%  17.2  150s
+2024-04-09 16:13:31:INFO: 21245 18126   25.69978  105   66  -19.58027   25.69978   231%  17.5  163s
+2024-04-09 16:13:40:INFO: 21275 18116   25.69978  224   50  -19.58027   25.69978   231%  17.5  171s
+2024-04-09 16:13:43:INFO: 23090 19526   25.69978  118   67  -19.58027   25.69978   231%  17.8  175s
+2024-04-09 16:13:48:INFO: 25282 21348   25.69978  131   66  -19.58027   25.69978   231%  18.6  180s
+2024-04-09 16:13:56:INFO: 27908 22466   25.69978  146   66  -19.58027   25.69978   231%  19.1  188s
+2024-04-09 16:14:06:INFO: 27940 22764   25.69978  146   58  -19.58027   25.69978   231%  19.1  197s
+2024-04-09 16:14:11:INFO: 29691 25255   25.69978  155   66  -19.58027   25.69978   231%  19.6  203s
+2024-04-09 16:14:13:INFO: 32799 26192   25.69978  170   66  -19.58027   25.69978   231%  20.1  205s
+2024-04-09 16:14:19:INFO: 36175 28615   25.69978  187   66  -19.58027   25.69978   231%  20.7  210s
+2024-04-09 16:14:23:INFO: 39517 30831   25.69978  206   66  -19.58027   25.69978   231%  21.9  215s
+2024-04-09 16:14:29:INFO: 44120 34174   25.69978  226   66  -19.58027   25.69978   231%  22.7  221s
+2024-04-09 16:14:34:INFO: 47340 36815   25.69978  237   66  -19.58027   25.69978   231%  22.9  225s
+2024-04-09 16:14:39:INFO: 51974 39722   25.69978  247   66  -19.58027   25.69978   231%  22.6  231s
+2024-04-09 16:14:44:INFO: 56619 42759   25.69978  257   66  -19.58027   25.69978   231%  22.1  236s
+2024-04-09 16:15:07:INFO: 58979 42760   25.69978 1319   69  -19.58027   25.69978   231%  21.9  259s
+2024-04-09 16:15:10:INFO: 58981 42761   25.69978 1444   54  -19.58027   25.69978   231%  21.9  262s
+2024-04-09 16:15:15:INFO: 58982 42762   25.69978 1248   62  -19.58027   25.69978   231%  21.9  266s
+2024-04-09 16:15:18:INFO: 58986 42765   25.69978 1537   70  -19.58027   25.69978   231%  21.9  270s
+2024-04-09 16:15:25:INFO: 58989 42767   11.35686 1788   78  -19.58027   23.31094   219%  21.9  276s
+2024-04-09 16:15:28:INFO: 58991 42768   23.31081  261   80  -19.58027   23.31081   219%  21.9  280s
+2024-04-09 16:15:36:INFO: 58995 42771   -0.51609 2098   88  -19.58027   23.31081   219%  21.9  287s
+2024-04-09 16:15:40:INFO: 58996 42771   23.31081 1394   80  -19.58027   23.31081   219%  21.9  292s
+2024-04-09 16:15:49:INFO: 58997 42772   23.31081  994   82  -19.58027   23.31081   219%  21.9  300s
+2024-04-09 16:15:55:INFO: 59001 42775   23.31081  229   91  -19.58027   23.31081   219%  21.9  307s
+2024-04-09 16:16:01:INFO: 59002 42775   -0.76880 1894   89  -19.58027   23.31081   219%  21.9  313s
+2024-04-09 16:16:06:INFO: 59003 42776  -19.55672 1434   96  -19.58027   23.31081   219%  21.9  318s
+2024-04-09 16:16:11:INFO: 59005 42777   23.31081 1640   91  -19.58027   23.31081   219%  21.9  322s
+2024-04-09 16:16:15:INFO: 59007 42779   23.31081  435   91  -19.58027   23.31081   219%  21.9  326s
+2024-04-09 16:16:19:INFO: 59009 42780   23.31081 1009  103  -19.58027   23.31081   219%  21.9  330s
+2024-04-09 16:16:24:INFO: 59011 42781   23.31081 1525  101  -19.58027   23.31081   219%  21.9  335s
+2024-04-09 16:16:29:INFO: 59013 42783   23.31081  600  101  -19.58027   23.31081   219%  21.9  340s
+2024-04-09 16:16:34:INFO: 59015 42784   23.31081  931   99  -19.58027   23.31081   219%  21.9  345s
+2024-04-09 16:16:39:INFO: 59016 42785   23.31081  393  108  -19.58027   23.31081   219%  21.9  350s
+2024-04-09 16:16:44:INFO: 59019 42787   16.12495 1947  101  -19.58027   23.31081   219%  21.9  355s
+2024-04-09 16:16:48:INFO: 59020 42787   23.31081 1437   96  -19.58027   23.31081   219%  21.9  360s
+2024-04-09 16:16:54:INFO: 59022 42789   23.31081  224   96  -19.58027   23.31081   219%  21.9  365s
+2024-04-09 16:16:59:INFO: 59025 42791   12.38707 1131   96  -19.58027   23.31081   219%  21.9  371s
+2024-04-09 16:17:05:INFO: 59028 42793   23.31081  290   94  -19.58027   23.31081   219%  21.9  377s
+2024-04-09 16:17:09:INFO: 59030 42794   23.31081 1458   97  -19.58027   23.31081   219%  21.9  381s
+2024-04-09 16:17:13:INFO: 59033 42796   23.31081  472   86  -19.58027   23.31081   219%  21.9  385s
+2024-04-09 16:17:19:INFO: 59036 42798   23.31081   92   95  -19.58027   23.31081   219%  21.9  391s
+2024-04-09 16:17:25:INFO: 59040 42801   23.31081  538   97  -19.58027   23.31081   219%  21.9  397s
+2024-04-09 16:17:29:INFO: 59042 42802   23.31081  827   99  -19.58027   23.31081   219%  21.9  401s
+2024-04-09 16:17:34:INFO: 59044 42803   23.31081  659  102  -19.58027   23.31081   219%  21.9  405s
+2024-04-09 16:17:38:INFO: 59046 42805  -12.17480 1892  102  -19.58027   23.31081   219%  21.9  410s
+2024-04-09 16:17:46:INFO: 59049 42807   23.31081 1327  105  -19.58027   23.31081   219%  21.9  418s
+2024-04-09 16:17:50:INFO: 59051 42808   23.31081   54  101  -19.58027   23.31081   219%  21.9  422s
+2024-04-09 16:17:54:INFO: 59053 42809   23.31081  665  107  -19.58027   23.31081   219%  21.9  425s
+2024-04-09 16:17:59:INFO: 59056 42811   23.31081  632  104  -19.58027   23.31081   219%  21.9  430s
+2024-04-09 16:18:05:INFO: 59058 42813   23.31081  543  105  -19.58027   23.31081   219%  21.9  437s
+2024-04-09 16:18:08:INFO: 59060 42814   23.31081 1221  104  -19.58027   23.31081   219%  21.9  440s
+2024-04-09 16:18:15:INFO: 59064 42817   23.31081 1010  112  -19.58027   23.31081   219%  21.9  446s
+2024-04-09 16:18:18:INFO: 59067 42819   11.13670 1004   99  -19.58027   23.31081   219%  21.9  450s
+2024-04-09 16:18:25:INFO: 59070 42821   23.31081 1095  110  -19.58027   23.31081   219%  21.9  456s
+2024-04-09 16:18:31:INFO: 59072 42822   23.31081  215  112  -19.58027   23.31081   219%  21.9  462s
+2024-04-09 16:18:36:INFO: 59074 42823   23.31081  165  104  -19.58027   23.31081   219%  21.9  467s
+2024-04-09 16:18:41:INFO: 59076 42825   23.31081  630  106  -19.58027   23.31081   219%  21.9  472s
+2024-04-09 16:18:46:INFO: 59078 42826   23.31081  142  107  -19.58027   23.31081   219%  21.9  478s
+2024-04-09 16:18:50:INFO: 59080 42827   23.31081  227  109  -19.58027   23.31081   219%  21.9  482s
+2024-04-09 16:18:54:INFO: 59082 42829   23.31081 1248  106  -19.58027   23.31081   219%  21.9  486s
+2024-04-09 16:18:59:INFO: 59084 42830   12.41789 1020  107  -19.58027   23.31081   219%  21.9  491s
+2024-04-09 16:19:05:INFO: 59085 42831   23.31081 1174  110  -19.58027   23.31081   219%  21.9  496s
+2024-04-09 16:19:11:INFO: 59086 42831   23.31081 1537  108  -19.58027   23.31081   219%  21.9  502s
+2024-04-09 16:19:13:INFO: 59087 42832   -5.90018 1409  107  -19.58027   23.31081   219%  21.9  505s
+2024-04-09 16:19:20:INFO: 59089 42833   11.35686 1788  107  -19.58027   23.31081   219%  21.9  512s
+2024-04-09 16:19:24:INFO: 59091 42835   23.31081  261  112  -19.58027   23.31081   219%  21.9  515s
+2024-04-09 16:19:33:INFO: 59093 42836   23.31081  230  113  -19.58027   23.31081   219%  21.9  525s
+2024-04-09 16:19:39:INFO: 59095 42837   -0.51609 2098  113  -19.58027   23.31081   219%  21.9  530s
+2024-04-09 16:19:43:INFO: 59102 42851   23.31081   36   86  -19.58027   23.31081   219%  21.9  535s
+2024-04-09 16:19:48:INFO: 59545 43171   23.31081   45   86  -19.58027   23.31081   219%  22.0  540s
+2024-04-09 16:19:53:INFO: 60008 43483   23.31081   50   81  -19.58027   23.31081   219%  22.0  545s
+2024-04-09 16:20:01:INFO: 60044 43588   23.31081   51   95  -19.58027   23.31081   219%  22.0  552s
+2024-04-09 16:20:03:INFO: 60464 43900   23.31081   55   92  -19.58027   23.31081   219%  22.0  555s
+2024-04-09 16:20:08:INFO: 61985 44989   23.31081   81   91  -19.58027   23.31081   219%  22.2  560s
+2024-04-09 16:20:13:INFO: 63445 46038   23.31081  100   88  -19.58027   23.31081   219%  22.5  565s
+2024-04-09 16:20:19:INFO: 65106 47108   23.31081  115   88  -19.58027   23.31081   219%  22.8  570s
+2024-04-09 16:20:23:INFO: 66601 48196   23.31081  129   89  -19.58027   23.31081   219%  23.3  575s
+2024-04-09 16:20:30:INFO: 68386 49395   23.31081  146   85  -19.58027   23.31081   219%  23.9  581s
+2024-04-09 16:20:34:INFO: 69472 50143   23.31081  154   77  -19.58027   23.31081   219%  24.2  585s
+2024-04-09 16:20:39:INFO: 71337 51323   23.31081  174   79  -19.58027   23.31081   219%  24.5  591s
+2024-04-09 16:20:52:INFO: 72327 52123   23.31081  188   77  -19.58027   23.31081   219%  24.7  603s
+2024-04-09 16:20:54:INFO: 73138 52630   23.31081  200   79  -19.58027   23.31081   219%  24.8  606s
+2024-04-09 16:20:58:INFO: 74671 53568   23.31081  221   75  -19.58027   23.31081   219%  25.1  610s
+2024-04-09 16:21:05:INFO: 77481 55481   23.31081  253   74  -19.58027   23.31081   219%  25.4  616s
+2024-04-09 16:21:09:INFO: 79299 56845   23.31081  271   75  -19.58027   23.31081   219%  25.7  621s
+2024-04-09 16:21:13:INFO: 81456 58089   23.31081  287   76  -19.58027   23.31081   219%  25.8  625s
+2024-04-09 16:21:29:INFO: 83747 60011   23.31081  303   76  -19.58027   23.31081   219%  26.1  640s
+2024-04-09 16:21:38:INFO: 88377 63417   23.31081  321   75  -19.58027   23.31081   219%  25.9  649s
+2024-04-09 16:21:41:INFO: 91187 64347   23.31081  331   76  -19.58027   23.31081   219%  25.8  653s
+2024-04-09 16:21:47:INFO: 92534 63898   23.31081 1004   56  -19.58027   23.31081   219%  25.6  659s
+2024-04-09 16:21:55:INFO: 93288 65035   23.31081  336   75  -19.58027   23.31081   219%  25.5  667s
+2024-04-09 16:21:59:INFO: 95001 67109   23.31081  341   75  -19.58027   23.31081   219%  25.3  671s
+2024-04-09 16:22:06:INFO: 100434 68625   23.31081  353   75  -19.58027   23.31081   219%  24.6  677s
+2024-04-09 16:22:08:INFO: 100474 68611    8.54010 1767   64  -19.58027   23.31081   219%  24.6  680s
+2024-04-09 16:22:14:INFO: 101245 68354   -3.40963 1250   61  -19.58027   23.31081   219%  24.5  686s
+2024-04-09 16:22:19:INFO: 101529 70999   23.31081  355   76  -19.58027   23.31081   219%  24.4  691s
+2024-04-09 16:22:26:INFO: 107489 74696   23.31081  367   70  -19.58027   23.31081   219%  23.7  698s
+2024-04-09 16:22:30:INFO: 110909 76048   23.31081  373   68  -19.58027   23.31081   219%  23.3  701s
+2024-04-09 16:22:35:INFO: 116233 78810   23.31081  385   69  -19.58027   23.31081   219%  22.8  706s
+2024-04-09 16:22:41:INFO: 117184 78493   23.31081  104   58  -19.58027   23.31081   219%  22.8  712s
+2024-04-09 16:22:51:INFO: 118368 81835   23.31081  391   68  -19.58027   23.31081   219%  22.7  723s
+2024-04-09 16:22:56:INFO: 122530 84000   23.31081  406   67  -19.58027   23.31081   219%  22.7  727s
+2024-04-09 16:22:59:INFO: 126330 86230   23.31081  416   70  -19.58027   23.31081   219%  22.5  730s
+2024-04-09 16:23:06:INFO: 132585 88550   23.31081  435   69  -19.58027   23.31081   219%  22.5  737s
+2024-04-09 16:23:09:INFO: 134994 89250   23.31081  446   68  -19.58027   23.31081   219%  22.6  740s
+2024-04-09 16:23:16:INFO: 139541 92747   23.31081  472   63  -19.58027   23.31081   219%  23.1  748s
+2024-04-09 16:23:19:INFO: 142310 94681   23.31081  488   64  -19.58027   23.31081   219%  23.3  751s
+2024-04-09 16:23:24:INFO: 145491 98273   23.31081  501   66  -19.58027   23.31081   219%  23.3  756s
+2024-04-09 16:23:36:INFO: 150870 105040   23.31081  521   66  -19.58027   23.31081   219%  23.1  768s
+2024-04-09 16:23:50:INFO: 160435 107164   23.31081  559   56  -19.58027   23.31081   219%  22.5  781s
+2024-04-09 16:23:55:INFO: 166284 109701   23.31081  588   57  -19.58027   23.31081   219%  22.0  786s
+2024-04-09 16:23:58:INFO: 171065 110334   23.31081  597   58  -19.58027   23.31081   219%  21.6  790s
+2024-04-09 16:24:08:INFO: 175996 111247   23.31081  393   52  -19.58027   23.31081   219%  21.3  800s
+2024-04-09 16:24:14:INFO: 176634 114153   23.31081  615   56  -19.58027   23.31081   219%  21.2  806s
+2024-04-09 16:24:25:INFO: 180330 120182   23.31081  627   57  -19.58027   23.31081   219%  21.0  816s
+2024-04-09 16:24:29:INFO: 188450 121014   16.05360  721   63  -19.58027   23.31081   219%  20.4  820s
+2024-04-09 16:24:33:INFO: 192136 124838   16.05641  773   66  -19.58027   23.31081   219%  20.2  825s
+2024-04-09 16:24:41:INFO: 199650 130769   16.05589  870   67  -19.58027   23.31081   219%  19.8  832s
+2024-04-09 16:24:44:INFO: 203170 133170   16.04011  918   64  -19.58027   23.31081   219%  19.6  836s
+2024-04-09 16:24:48:INFO: 206040 135374   16.05527  965   67  -19.58027   23.31081   219%  19.4  840s
+2024-04-09 16:25:02:INFO: 212006 143817   15.94821 1065   63  -19.58027   23.31081   219%  19.2  853s
+2024-04-09 16:25:04:INFO: 213249 143817   -8.82581 1407   81  -19.58027   23.31081   219%  19.2  855s
+2024-04-09 16:25:08:INFO: 215807 143817   -3.48555 1073   61  -19.58027   23.31081   219%  19.2  860s
+2024-04-09 16:25:20:INFO: 218089 146425   -3.90980 1158   64  -19.58027   23.31081   219%  19.1  872s
+2024-04-09 16:25:30:INFO: 221098 152884   -3.93027 1229   63  -19.58027   23.31081   219%  19.1  882s
+2024-04-09 16:25:38:INFO: 228133 156270   -3.93052 1346   64  -19.58027   23.31081   219%  18.9  889s
+2024-04-09 16:25:38:INFO: 228391 156270   23.31081  439   66  -19.58027   23.31081   219%  18.8  890s
+2024-04-09 16:25:43:INFO: 230159 156270   23.31081  386   59  -19.58027   23.31081   219%  18.8  895s
+2024-04-09 16:25:53:INFO: 232051 161333   -3.93079 1412   64  -19.58027   23.31081   219%  18.7  905s
+2024-04-09 16:26:00:INFO: 237920 165928   -3.93113 1505   64  -19.58027   23.31081   219%  18.6  912s
+2024-04-09 16:26:10:INFO: 243297 173203   -7.75469 1581   64  -19.58027   23.31081   219%  18.4  922s
+2024-04-09 16:26:14:INFO: 252152 175088   -7.79327 1686   63  -19.58027   23.31081   219%  18.0  926s
+2024-04-09 16:26:19:INFO: 257730 179485   -7.76738 1771   63  -19.58027   23.31081   219%  17.9  931s
+2024-04-09 16:26:26:INFO: 262951 183679   -7.76785 1870   63  -19.58027   23.31081   219%  17.8  937s
+2024-04-09 16:26:29:INFO: 265222 185986   -7.76813 1924   63  -19.58027   23.31081   219%  17.8  940s
+2024-04-09 16:26:34:INFO: 271083 191567  -11.05168 2043   62  -19.58027   23.31081   219%  17.8  946s
+2024-04-09 16:26:42:INFO: 274591 196325  -11.07390 2107   62  -19.58027   23.31081   219%  17.7  953s
+2024-04-09 16:26:46:INFO: 280197 198823  -11.07834 2207   62  -19.58027   23.31081   219%  17.6  957s
+2024-04-09 16:26:49:INFO: 283211 200857  -11.14008 2266   63  -19.58027   23.31081   219%  17.6  961s
+2024-04-09 16:27:01:INFO: 285787 204098     cutoff 2319       -19.58027   23.31081   219%  17.6  973s
+2024-04-09 16:27:05:INFO: 289696 208166   23.31081   74   63  -19.58027   23.31081   219%  17.6  976s
+2024-04-09 16:27:08:INFO: 294214 211342   23.31081  153   53  -19.58027   23.31081   219%  17.5  980s
+2024-04-09 16:27:15:INFO: 301162 217712   23.31081  256   55  -19.58027   23.31081   219%  17.5  987s
+2024-04-09 16:27:31:INFO: 304793 222103   23.31081  304   54  -19.58027   23.31081   219%  17.5 1002s
+2024-04-09 16:27:34:INFO: 309621 225889   23.31081  323   56  -19.58027   23.31081   219%  17.5 1005s
+2024-04-09 16:27:39:INFO: 316293 229737   23.31081  436   56  -19.58027   23.31081   219%  17.5 1010s
+2024-04-09 16:27:45:INFO: 317395 229737   23.31081  322   56  -19.58027   23.31081   219%  17.6 1016s
+2024-04-09 16:27:58:INFO: 318057 229768   23.31081  466   56  -19.58027   23.31081   219%  17.6 1030s
+2024-04-09 16:28:10:INFO: 318090 233045     cutoff  467       -19.58027   23.31081   219%  17.6 1042s
+2024-04-09 16:28:15:INFO: 326554 242797   20.20675  676   53  -19.58027   23.31081   219%  17.6 1046s
+2024-04-09 16:28:24:INFO: 337558 254133    8.44464 1212   60  -19.58027   23.31081   219%  17.4 1056s
+2024-04-09 16:28:28:INFO: 345468 257501    2.69481 1546   61  -19.58027   23.31081   219%  17.2 1060s
+2024-04-09 16:28:39:INFO: 348424 260746    2.35670 1721   61  -19.58027   23.31081   219%  17.2 1070s
+2024-04-09 16:28:44:INFO: 355492 266565   23.31081   43   87  -19.58027   23.31081   219%  17.1 1075s
+2024-04-09 16:28:49:INFO: 361679 272616   23.31081  143   87  -19.58027   23.31081   219%  17.0 1081s
+2024-04-09 16:28:53:INFO: 363560 272616   23.31081  193   52  -19.58027   23.31081   219%  17.0 1085s
+2024-04-09 16:29:03:INFO: 365455 277390   23.31081  220   86  -19.58027   23.31081   219%  17.0 1094s
+2024-04-09 16:29:11:INFO: 370571 282954   23.31081  352   86  -19.58027   23.31081   219%  16.9 1102s
+2024-04-09 16:29:15:INFO: 376800 286732   16.37845  586   68  -19.58027   23.31081   219%  16.8 1106s
+2024-04-09 16:29:19:INFO: 384941 293549   -7.17428 1251   61  -19.58027   23.31081   219%  16.6 1111s
+2024-04-09 16:29:26:INFO: 387720 293549   23.31081  363   61  -19.58027   23.31081   219%  16.6 1117s
+2024-04-09 16:29:32:INFO: 388075 296158  -10.40062 1622   62  -19.58027   23.31081   219%  16.6 1124s
+2024-04-09 16:29:35:INFO: 391010 298684  -13.84730 2009   52  -19.58027   23.31081   219%  16.6 1127s
+2024-04-09 16:29:40:INFO: 396433 302936   23.31081  101   55  -19.58027   23.31081   219%  16.6 1131s
+2024-04-09 16:29:43:INFO: 399030 304669   23.31081   80   79  -19.58027   23.31081   219%  16.6 1135s
+2024-04-09 16:29:48:INFO: 399863 304669   23.31081  339   60  -19.58027   23.31081   219%  16.7 1140s
+2024-04-09 16:29:58:INFO: 400591 308065   23.31081  205   55  -19.58027   23.31081   219%  16.7 1150s
+2024-04-09 16:30:06:INFO: 407505 313430   23.31081  348   55  -19.58027   23.31081   219%  16.8 1157s
+2024-04-09 16:30:10:INFO: 411129 314881   23.31081  398   54  -19.58027   23.31081   219%  16.8 1161s
+2024-04-09 16:30:16:INFO: 412618 314881   23.31081  137   59  -19.58027   23.31081   219%  16.8 1168s
+2024-04-09 16:30:23:INFO: 413087 318489   23.31081  444   54  -19.58027   23.31081   219%  16.9 1175s
+2024-04-09 16:30:30:INFO: 421599 324950   15.90830  645   63  -19.58027   23.31081   219%  16.9 1182s
+2024-04-09 16:30:35:INFO: 424329 324950   23.31081  204   54  -19.58027   23.31081   219%  16.9 1187s
+2024-04-09 16:30:47:INFO: 425365 327608   15.90667  938   63  -19.58027   23.31081   219%  16.9 1199s
+2024-04-09 16:30:53:INFO: 428529 333279    8.53089 1104   61  -19.58027   23.31081   219%  17.0 1204s
+2024-04-09 16:30:59:INFO: 434799 337427   -8.61823 1481   74  -19.58027   23.31081   219%  16.9 1211s
+2024-04-09 16:31:11:INFO: 439704 341604  -16.92511 1891   71  -19.58027   23.31081   219%  16.9 1223s
+2024-04-09 16:31:14:INFO: 444690 344925   23.31081  111   78  -19.58027   23.31081   219%  16.9 1226s
+2024-04-09 16:31:18:INFO: 448810 347364   23.31081  232   56  -19.58027   23.31081   219%  16.9 1230s
+2024-04-09 16:31:30:INFO: 451479 350247   23.31081  343   81  -19.58027   23.31081   219%  16.9 1242s
+2024-04-09 16:31:35:INFO: 454858 353670   23.31081  497   82  -19.58027   23.31081   219%  17.0 1246s
+2024-04-09 16:31:38:INFO: 458781 356599   16.15902  561   67  -19.58027   23.31081   219%  17.0 1250s
+2024-04-09 16:31:44:INFO: 462808 359462   16.17351  567   67  -19.58027   23.31081   219%  17.0 1256s
+2024-04-09 16:31:58:INFO: 465820 364177    8.74519 1065   62  -19.58027   23.31081   219%  17.1 1269s
+2024-04-09 16:32:00:INFO: 471154 366872     cutoff 1501       -19.58027   23.31081   219%  17.0 1271s

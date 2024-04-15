@@ -1,0 +1,102 @@
+2024-04-12 11:25:09:INFO:visdom:799406
+2024-04-12 11:25:09:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Art
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-10_14.49.19
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+pk_uconf:1.0
+pk_type:br
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+pk_NC:None
+pk_noise:0.0
+pk_dratio:1.0
+method:kshot
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Art.txt
+test_dset_path:../data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target_kshot/
+savename:par_0.3
+
+2024-04-12 11:25:46:INFO:Accuracy = 64.81% -> 68.93%    Per_class_accuracy = 62.16% -> 66.31%
+2024-04-12 11:25:46:INFO:Set parameter WLSAccessID
+2024-04-12 11:25:46:INFO:Set parameter WLSSecret
+2024-04-12 11:25:46:INFO:Set parameter LicenseID to value 2487155
+2024-04-12 11:25:46:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-12 11:25:59:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-04-12 11:25:59:INFO:
+2024-04-12 11:25:59:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-04-12 11:25:59:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-04-12 11:25:59:INFO:
+2024-04-12 11:25:59:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-04-12 11:25:59:INFO:Optimize a model with 4507 rows, 161915 columns and 10256155 nonzeros
+2024-04-12 11:25:59:INFO:Model fingerprint: 0x604557af
+2024-04-12 11:25:59:INFO:Model has 2080 general constraints
+2024-04-12 11:25:59:INFO:Variable types: 4160 continuous, 157755 integer (157755 binary)
+2024-04-12 11:25:59:INFO:Coefficient statistics:
+2024-04-12 11:25:59:INFO:  Matrix range     [1e+00, 1e+00]
+2024-04-12 11:25:59:INFO:  Objective range  [1e-02, 1e+01]
+2024-04-12 11:25:59:INFO:  Bounds range     [1e+00, 5e+03]
+2024-04-12 11:25:59:INFO:  RHS range        [1e+00, 1e+00]
+2024-04-12 11:26:05:INFO:Presolve removed 0 rows and 0 columns (presolve time = 6s) ...
+2024-04-12 11:26:14:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 15s) ...
+2024-04-12 11:26:16:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 16s) ...
+2024-04-12 11:26:20:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 20s) ...
+2024-04-12 11:26:25:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 25s) ...
+2024-04-12 11:26:30:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 30s) ...
+2024-04-12 11:26:35:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 35s) ...
+2024-04-12 11:26:40:INFO:Presolve removed 2080 rows and 2080 columns (presolve time = 40s) ...
+2024-04-12 11:26:45:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 46s) ...
+2024-04-12 11:26:50:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 50s) ...
+2024-04-12 11:26:55:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 55s) ...
+2024-04-12 11:27:00:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 61s) ...
+2024-04-12 11:27:06:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 66s) ...
+2024-04-12 11:27:10:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 71s) ...
+2024-04-12 11:27:15:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 76s) ...
+2024-04-12 11:27:20:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 80s) ...
+2024-04-12 11:27:25:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 85s) ...
+2024-04-12 11:27:32:INFO:Presolve removed 2080 rows and 3416 columns (presolve time = 92s) ...
+2024-04-12 11:27:32:INFO:Presolve removed 0 rows and 3416 columns
+2024-04-12 11:27:32:INFO:Presolve time: 92.37s
+2024-04-12 11:27:32:INFO:Presolved: 4507 rows, 158499 columns, 10169315 nonzeros
+2024-04-12 11:27:32:INFO:Variable types: 0 continuous, 158499 integer (156419 binary)
+2024-04-12 11:27:33:INFO:
+2024-04-12 11:27:33:INFO:Explored 0 nodes (0 simplex iterations) in 93.20 seconds (45.14 work units)
+2024-04-12 11:27:33:INFO:Thread count was 32 (of 104 available processors)
+2024-04-12 11:27:33:INFO:
+2024-04-12 11:27:33:INFO:Solution count 0
+2024-04-12 11:27:33:INFO:
+2024-04-12 11:27:33:INFO:Solve interrupted
+2024-04-12 11:27:33:INFO:Best objective -, best bound 2.407987341902e+03, gap -
+2024-04-12 11:27:33:INFO:Warning: environment still referenced so free is deferred (Continue to use WLS)
