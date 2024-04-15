@@ -1,0 +1,1845 @@
+2024-03-20 08:59:15:INFO:visdom:3029743
+2024-03-20 08:59:15:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.0
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 08:59:31:INFO:Set parameter WLSAccessID
+2024-03-20 08:59:31:INFO:Set parameter WLSSecret
+2024-03-20 08:59:31:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 08:59:31:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 08:59:34:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 08:59:34:INFO:
+2024-03-20 08:59:34:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 08:59:34:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 08:59:34:INFO:
+2024-03-20 08:59:34:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 08:59:34:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 08:59:34:INFO:Model fingerprint: 0x6fe7540a
+2024-03-20 08:59:34:INFO:Model has 62 general constraints
+2024-03-20 08:59:34:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 08:59:34:INFO:Coefficient statistics:
+2024-03-20 08:59:34:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 08:59:34:INFO:  Objective range  [1e-04, 5e+02]
+2024-03-20 08:59:34:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 08:59:34:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 08:59:35:INFO:Presolve removed 31 rows and 62 columns
+2024-03-20 08:59:35:INFO:Presolve time: 1.33s
+2024-03-20 08:59:35:INFO:Presolved: 2848 rows, 87389 columns, 174716 nonzeros
+2024-03-20 08:59:35:INFO:Variable types: 62 continuous, 87327 integer (87327 binary)
+2024-03-20 08:59:36:INFO:Found heuristic solution: objective -2016372.032
+2024-03-20 08:59:36:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 08:59:36:INFO:Showing primal log only...
+2024-03-20 08:59:36:INFO:
+2024-03-20 08:59:36:INFO:Concurrent spin time: 0.02s
+2024-03-20 08:59:36:INFO:
+2024-03-20 08:59:36:INFO:Solved with dual simplex
+2024-03-20 08:59:36:INFO:
+2024-03-20 08:59:36:INFO:Root relaxation: objective 1.089724e+03, 2998 iterations, 0.49 seconds (0.25 work units)
+2024-03-20 08:59:36:INFO:
+2024-03-20 08:59:36:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 08:59:36:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 08:59:36:INFO:
+2024-03-20 08:59:36:INFO:     0     0 1089.72378    0    2 -2016372.0 1089.72378   100%     -    2s
+2024-03-20 08:59:37:INFO:H    0     0                    1089.7237687 1089.72378  0.00%     -    3s
+2024-03-20 08:59:37:INFO:
+2024-03-20 08:59:37:INFO:Explored 1 nodes (6264 simplex iterations) in 3.38 seconds (1.24 work units)
+2024-03-20 08:59:37:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 08:59:37:INFO:
+2024-03-20 08:59:37:INFO:Solution count 2: 1089.72 -2.01637e+06 
+2024-03-20 08:59:37:INFO:
+2024-03-20 08:59:37:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 08:59:37:INFO:Best objective 1.089723768744e+03, best bound 1.089723777977e+03, gap 0.0000%
+2024-03-20 08:59:37:INFO:PK Accuracy = 61.48% -> 59.14%    Per_class_accuracy = 61.33% -> 59.08%
+2024-03-20 09:00:37:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 70.07%, Ent = 0.1244
+2024-03-20 09:00:48:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:00:48:INFO:
+2024-03-20 09:00:48:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:00:48:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:00:48:INFO:
+2024-03-20 09:00:48:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:00:48:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:00:48:INFO:Model fingerprint: 0x9437c363
+2024-03-20 09:00:48:INFO:Model has 62 general constraints
+2024-03-20 09:00:48:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:00:48:INFO:Coefficient statistics:
+2024-03-20 09:00:48:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:00:48:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:00:48:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:00:48:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:00:49:INFO:Presolve removed 31 rows and 62 columns
+2024-03-20 09:00:49:INFO:Presolve time: 1.51s
+2024-03-20 09:00:49:INFO:Presolved: 2848 rows, 87389 columns, 174716 nonzeros
+2024-03-20 09:00:49:INFO:Variable types: 62 continuous, 87327 integer (87327 binary)
+2024-03-20 09:00:50:INFO:Found heuristic solution: objective -729660.1813
+2024-03-20 09:00:50:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:00:50:INFO:Showing primal log only...
+2024-03-20 09:00:50:INFO:
+2024-03-20 09:00:50:INFO:Concurrent spin time: 0.05s
+2024-03-20 09:00:50:INFO:
+2024-03-20 09:00:50:INFO:Solved with dual simplex
+2024-03-20 09:00:50:INFO:
+2024-03-20 09:00:50:INFO:Root relaxation: objective 1.453077e+03, 739 iterations, 0.31 seconds (0.12 work units)
+2024-03-20 09:00:50:INFO:
+2024-03-20 09:00:50:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:00:50:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:00:50:INFO:
+2024-03-20 09:00:50:INFO:     0     0 1453.07678    0    8 -729660.18 1453.07678   100%     -    2s
+2024-03-20 09:00:51:INFO:H    0     0                    1453.0767709 1453.07678  0.00%     -    3s
+2024-03-20 09:00:51:INFO:
+2024-03-20 09:00:51:INFO:Explored 1 nodes (739 simplex iterations) in 3.64 seconds (1.04 work units)
+2024-03-20 09:00:51:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:00:51:INFO:
+2024-03-20 09:00:51:INFO:Solution count 2: 1453.08 -729660 
+2024-03-20 09:00:51:INFO:
+2024-03-20 09:00:51:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:00:51:INFO:Best objective 1.453076770938e+03, best bound 1.453076783097e+03, gap 0.0000%
+2024-03-20 09:00:52:INFO:PK Accuracy = 67.73% -> 68.34%    Per_class_accuracy = 67.58% -> 68.30%
+2024-03-20 09:00:54:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:00:54:INFO:
+2024-03-20 09:00:54:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:00:54:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:00:54:INFO:
+2024-03-20 09:00:54:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:00:54:INFO:Optimize a model with 14504 rows, 87451 columns and 285293 nonzeros
+2024-03-20 09:00:54:INFO:Model fingerprint: 0x2412d907
+2024-03-20 09:00:54:INFO:Model has 62 general constraints
+2024-03-20 09:00:54:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:00:54:INFO:Coefficient statistics:
+2024-03-20 09:00:54:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:00:54:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:00:54:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:00:54:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:00:56:INFO:Presolve removed 12031 rows and 11687 columns
+2024-03-20 09:00:56:INFO:Presolve time: 1.27s
+2024-03-20 09:00:56:INFO:Presolved: 2473 rows, 75764 columns, 151466 nonzeros
+2024-03-20 09:00:56:INFO:Variable types: 62 continuous, 75702 integer (75702 binary)
+2024-03-20 09:00:56:INFO:Found heuristic solution: objective -701490.1298
+2024-03-20 09:00:56:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:00:56:INFO:Showing primal log only...
+2024-03-20 09:00:56:INFO:
+2024-03-20 09:00:57:INFO:Concurrent spin time: 0.09s
+2024-03-20 09:00:57:INFO:
+2024-03-20 09:00:57:INFO:Solved with dual simplex
+2024-03-20 09:00:57:INFO:
+2024-03-20 09:00:57:INFO:Root relaxation: objective 1.432948e+03, 468 iterations, 0.42 seconds (0.12 work units)
+2024-03-20 09:00:57:INFO:
+2024-03-20 09:00:57:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:00:57:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:00:57:INFO:
+2024-03-20 09:00:57:INFO:     0     0 1432.94832    0   18 -701490.13 1432.94832   100%     -    2s
+2024-03-20 09:00:57:INFO:H    0     0                    -1293.692493 1432.94832   211%     -    3s
+2024-03-20 09:00:59:INFO:H    0     0                    1432.7331243 1432.94832  0.02%     -    4s
+2024-03-20 09:00:59:INFO:H    0     0                    1432.7335173 1432.94832  0.01%     -    4s
+2024-03-20 09:00:59:INFO:H    0     0                    1432.7750094 1432.91934  0.01%     -    4s
+2024-03-20 09:00:59:INFO:
+2024-03-20 09:00:59:INFO:Cutting planes:
+2024-03-20 09:00:59:INFO:  MIR: 13
+2024-03-20 09:00:59:INFO:  RLT: 7
+2024-03-20 09:00:59:INFO:
+2024-03-20 09:00:59:INFO:Explored 1 nodes (468 simplex iterations) in 4.65 seconds (1.74 work units)
+2024-03-20 09:00:59:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:00:59:INFO:
+2024-03-20 09:00:59:INFO:Solution count 5: 1432.78 1432.73 1432.73 ... -701490
+2024-03-20 09:00:59:INFO:
+2024-03-20 09:00:59:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:00:59:INFO:Best objective 1.432775009439e+03, best bound 1.432798885634e+03, gap 0.0017%
+2024-03-20 09:00:59:INFO:PK Accuracy = 67.73% -> 69.44%    Per_class_accuracy = 67.58% -> 69.45%
+2024-03-20 09:01:07:INFO:visdom:3037112
+2024-03-20 09:01:07:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:01:19:INFO:visdom:3038105
+2024-03-20 09:01:19:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.1
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:01:34:INFO:Set parameter WLSAccessID
+2024-03-20 09:01:34:INFO:Set parameter WLSSecret
+2024-03-20 09:01:34:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:01:35:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:01:37:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:01:37:INFO:
+2024-03-20 09:01:37:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:01:37:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:01:37:INFO:
+2024-03-20 09:01:37:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:01:37:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:01:37:INFO:Model fingerprint: 0xd8753297
+2024-03-20 09:01:37:INFO:Model has 62 general constraints
+2024-03-20 09:01:37:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:01:37:INFO:Coefficient statistics:
+2024-03-20 09:01:37:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:01:37:INFO:  Objective range  [1e-04, 5e+02]
+2024-03-20 09:01:37:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:01:37:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:01:38:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:01:38:INFO:Presolve time: 0.94s
+2024-03-20 09:01:38:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:01:38:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:01:38:INFO:Found heuristic solution: objective -1888380.222
+2024-03-20 09:01:38:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:01:38:INFO:Showing primal log only...
+2024-03-20 09:01:38:INFO:
+2024-03-20 09:01:38:INFO:Concurrent spin time: 0.01s
+2024-03-20 09:01:38:INFO:
+2024-03-20 09:01:38:INFO:Solved with dual simplex
+2024-03-20 09:01:38:INFO:
+2024-03-20 09:01:38:INFO:Root relaxation: objective 1.111011e+03, 1894 iterations, 0.48 seconds (0.24 work units)
+2024-03-20 09:01:39:INFO:
+2024-03-20 09:01:39:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:01:39:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:01:39:INFO:
+2024-03-20 09:01:39:INFO:     0     0 1111.01067    0   20 -1888380.2 1111.01067   100%     -    2s
+2024-03-20 09:01:39:INFO:H    0     0                     837.4976388 1111.01067  32.7%     -    2s
+2024-03-20 09:01:40:INFO:H    0     0                    1019.3132271 1111.01067  9.00%     -    3s
+2024-03-20 09:01:42:INFO:H    0     0                    1109.9913764 1111.01067  0.09%     -    4s
+2024-03-20 09:01:42:INFO:H    0     0                    1110.0133028 1111.01067  0.09%     -    5s
+2024-03-20 09:01:42:INFO:
+2024-03-20 09:01:42:INFO:Cutting planes:
+2024-03-20 09:01:42:INFO:  MIR: 15
+2024-03-20 09:01:42:INFO:  RLT: 18
+2024-03-20 09:01:42:INFO:
+2024-03-20 09:01:42:INFO:Explored 1 nodes (4851 simplex iterations) in 5.44 seconds (1.99 work units)
+2024-03-20 09:01:42:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:01:42:INFO:
+2024-03-20 09:01:42:INFO:Solution count 5: 1110.01 1109.99 1019.31 ... -1.88838e+06
+2024-03-20 09:01:42:INFO:
+2024-03-20 09:01:42:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:01:42:INFO:Best objective 1.110013302771e+03, best bound 1.110013302771e+03, gap 0.0000%
+2024-03-20 09:01:42:INFO:PK Accuracy = 61.48% -> 59.85%    Per_class_accuracy = 61.33% -> 59.77%
+2024-03-20 09:02:39:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 69.97%, Ent = 0.1227
+2024-03-20 09:02:47:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:02:47:INFO:
+2024-03-20 09:02:47:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:02:47:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:02:47:INFO:
+2024-03-20 09:02:47:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:02:47:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:02:47:INFO:Model fingerprint: 0x99cd9909
+2024-03-20 09:02:47:INFO:Model has 62 general constraints
+2024-03-20 09:02:47:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:02:47:INFO:Coefficient statistics:
+2024-03-20 09:02:47:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:02:47:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:02:47:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:02:47:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:02:48:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:02:48:INFO:Presolve time: 1.27s
+2024-03-20 09:02:48:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:02:48:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:02:49:INFO:Found heuristic solution: objective -614935.5776
+2024-03-20 09:02:49:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:02:49:INFO:Showing primal log only...
+2024-03-20 09:02:49:INFO:
+2024-03-20 09:02:49:INFO:Concurrent spin time: 0.04s
+2024-03-20 09:02:49:INFO:
+2024-03-20 09:02:49:INFO:Solved with dual simplex
+2024-03-20 09:02:49:INFO:
+2024-03-20 09:02:49:INFO:Root relaxation: objective 1.474066e+03, 522 iterations, 0.25 seconds (0.11 work units)
+2024-03-20 09:02:49:INFO:
+2024-03-20 09:02:49:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:02:49:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:02:49:INFO:
+2024-03-20 09:02:49:INFO:     0     0 1474.06597    0   32 -614935.58 1474.06597   100%     -    2s
+2024-03-20 09:02:50:INFO:H    0     0                    1200.8417512 1474.06597  22.8%     -    2s
+2024-03-20 09:02:51:INFO:H    0     0                    1427.7277593 1474.06597  3.25%     -    3s
+2024-03-20 09:02:52:INFO:H    0     0                    1473.1466056 1474.06597  0.06%     -    5s
+2024-03-20 09:02:52:INFO:
+2024-03-20 09:02:52:INFO:Cutting planes:
+2024-03-20 09:02:52:INFO:  MIR: 16
+2024-03-20 09:02:52:INFO:  StrongCG: 1
+2024-03-20 09:02:52:INFO:  RLT: 19
+2024-03-20 09:02:52:INFO:
+2024-03-20 09:02:52:INFO:Explored 1 nodes (522 simplex iterations) in 5.24 seconds (1.66 work units)
+2024-03-20 09:02:52:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:02:52:INFO:
+2024-03-20 09:02:52:INFO:Solution count 4: 1473.15 1427.73 1200.84 -614936 
+2024-03-20 09:02:52:INFO:
+2024-03-20 09:02:52:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:02:52:INFO:Best objective 1.473146605630e+03, best bound 1.473200462107e+03, gap 0.0037%
+2024-03-20 09:02:53:INFO:PK Accuracy = 67.63% -> 68.83%    Per_class_accuracy = 67.43% -> 68.75%
+2024-03-20 09:02:56:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:02:56:INFO:
+2024-03-20 09:02:56:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:02:56:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:02:56:INFO:
+2024-03-20 09:02:56:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:02:56:INFO:Optimize a model with 12582 rows, 87451 columns and 281449 nonzeros
+2024-03-20 09:02:56:INFO:Model fingerprint: 0x64328e12
+2024-03-20 09:02:56:INFO:Model has 62 general constraints
+2024-03-20 09:02:56:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:02:56:INFO:Coefficient statistics:
+2024-03-20 09:02:56:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:02:56:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:02:56:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:02:56:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:02:57:INFO:Presolve removed 10047 rows and 9734 columns
+2024-03-20 09:02:57:INFO:Presolve time: 1.37s
+2024-03-20 09:02:57:INFO:Presolved: 2535 rows, 77717 columns, 155341 nonzeros
+2024-03-20 09:02:57:INFO:Variable types: 93 continuous, 77624 integer (77624 binary)
+2024-03-20 09:02:58:INFO:Found heuristic solution: objective -580677.1710
+2024-03-20 09:02:58:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:02:58:INFO:Showing primal log only...
+2024-03-20 09:02:58:INFO:
+2024-03-20 09:02:58:INFO:Concurrent spin time: 0.03s
+2024-03-20 09:02:58:INFO:
+2024-03-20 09:02:58:INFO:Solved with dual simplex
+2024-03-20 09:02:58:INFO:
+2024-03-20 09:02:58:INFO:Root relaxation: objective 1.457029e+03, 294 iterations, 0.15 seconds (0.10 work units)
+2024-03-20 09:02:58:INFO:
+2024-03-20 09:02:58:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:02:58:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:02:58:INFO:
+2024-03-20 09:02:58:INFO:     0     0 1457.02892    0   32 -580677.17 1457.02892   100%     -    2s
+2024-03-20 09:02:59:INFO:H    0     0                    1183.2104398 1457.02892  23.1%     -    3s
+2024-03-20 09:03:00:INFO:H    0     0                    1228.4200158 1457.02892  18.6%     -    3s
+2024-03-20 09:03:01:INFO:H    0     0                    1455.9543082 1457.02892  0.07%     -    4s
+2024-03-20 09:03:01:INFO:H    0     0                    1455.9580742 1456.99274  0.07%     -    5s
+2024-03-20 09:03:01:INFO:
+2024-03-20 09:03:01:INFO:Cutting planes:
+2024-03-20 09:03:01:INFO:  Cover: 8
+2024-03-20 09:03:01:INFO:  MIR: 27
+2024-03-20 09:03:01:INFO:  StrongCG: 7
+2024-03-20 09:03:01:INFO:  RLT: 6
+2024-03-20 09:03:01:INFO:
+2024-03-20 09:03:01:INFO:Explored 1 nodes (294 simplex iterations) in 5.14 seconds (1.58 work units)
+2024-03-20 09:03:01:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:03:01:INFO:
+2024-03-20 09:03:01:INFO:Solution count 5: 1455.96 1455.95 1228.42 ... -580677
+2024-03-20 09:03:01:INFO:
+2024-03-20 09:03:01:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:03:01:INFO:Best objective 1.455958074179e+03, best bound 1.456033798112e+03, gap 0.0052%
+2024-03-20 09:03:01:INFO:PK Accuracy = 67.63% -> 68.94%    Per_class_accuracy = 67.43% -> 68.91%
+2024-03-20 09:03:09:INFO:visdom:3046229
+2024-03-20 09:03:09:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:03:20:INFO:visdom:3046938
+2024-03-20 09:03:20:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.5
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:03:35:INFO:Set parameter WLSAccessID
+2024-03-20 09:03:35:INFO:Set parameter WLSSecret
+2024-03-20 09:03:35:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:03:35:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:03:37:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:03:37:INFO:
+2024-03-20 09:03:37:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:03:37:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:03:37:INFO:
+2024-03-20 09:03:37:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:03:37:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:03:37:INFO:Model fingerprint: 0x32efcc07
+2024-03-20 09:03:37:INFO:Model has 62 general constraints
+2024-03-20 09:03:37:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:03:37:INFO:Coefficient statistics:
+2024-03-20 09:03:37:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:03:37:INFO:  Objective range  [1e-04, 5e+02]
+2024-03-20 09:03:37:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:03:37:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:03:39:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:03:39:INFO:Presolve time: 1.58s
+2024-03-20 09:03:39:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:03:39:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:03:39:INFO:Found heuristic solution: objective -1376867.609
+2024-03-20 09:03:40:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:03:40:INFO:Showing primal log only...
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Concurrent spin time: 0.00s
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Solved with dual simplex
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Root relaxation: objective 1.154321e+03, 441 iterations, 0.19 seconds (0.11 work units)
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:03:40:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:     0     0 1154.32135    0    6 -1376867.6 1154.32135   100%     -    2s
+2024-03-20 09:03:40:INFO:H    0     0                    1154.2173082 1154.32135  0.01%     -    3s
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Explored 1 nodes (441 simplex iterations) in 3.28 seconds (1.01 work units)
+2024-03-20 09:03:40:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Solution count 2: 1154.22 -1.37687e+06 
+2024-03-20 09:03:40:INFO:
+2024-03-20 09:03:40:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:03:40:INFO:Best objective 1.154217308238e+03, best bound 1.154321352307e+03, gap 0.0090%
+2024-03-20 09:03:41:INFO:PK Accuracy = 61.48% -> 61.27%    Per_class_accuracy = 61.33% -> 61.09%
+2024-03-20 09:04:50:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 68.34%, Ent = 0.1185
+2024-03-20 09:04:59:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:04:59:INFO:
+2024-03-20 09:04:59:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:04:59:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:04:59:INFO:
+2024-03-20 09:04:59:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:04:59:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:04:59:INFO:Model fingerprint: 0x490c7be9
+2024-03-20 09:04:59:INFO:Model has 62 general constraints
+2024-03-20 09:04:59:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:04:59:INFO:Coefficient statistics:
+2024-03-20 09:04:59:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:04:59:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:04:59:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:04:59:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:05:01:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:05:01:INFO:Presolve time: 1.40s
+2024-03-20 09:05:01:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:05:01:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:05:01:INFO:Found heuristic solution: objective -303702.6608
+2024-03-20 09:05:01:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:05:01:INFO:Showing primal log only...
+2024-03-20 09:05:01:INFO:
+2024-03-20 09:05:02:INFO:Concurrent spin time: 0.04s
+2024-03-20 09:05:02:INFO:
+2024-03-20 09:05:02:INFO:Solved with dual simplex
+2024-03-20 09:05:02:INFO:
+2024-03-20 09:05:02:INFO:Root relaxation: objective 1.522003e+03, 114 iterations, 0.30 seconds (0.07 work units)
+2024-03-20 09:05:02:INFO:
+2024-03-20 09:05:02:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:05:02:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:05:02:INFO:
+2024-03-20 09:05:02:INFO:     0     0 1522.00273    0    8 -303702.66 1522.00273   101%     -    2s
+2024-03-20 09:05:02:INFO:H    0     0                    1294.3414772 1522.00273  17.6%     -    2s
+2024-03-20 09:05:03:INFO:H    0     0                    1521.3454922 1522.00273  0.04%     -    3s
+2024-03-20 09:05:04:INFO:H    0     0                    1521.8321412 1522.00273  0.01%     -    4s
+2024-03-20 09:05:04:INFO:
+2024-03-20 09:05:04:INFO:Cutting planes:
+2024-03-20 09:05:04:INFO:  MIR: 3
+2024-03-20 09:05:04:INFO:  StrongCG: 5
+2024-03-20 09:05:04:INFO:  RLT: 6
+2024-03-20 09:05:04:INFO:
+2024-03-20 09:05:04:INFO:Explored 1 nodes (114 simplex iterations) in 4.92 seconds (1.55 work units)
+2024-03-20 09:05:04:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:05:04:INFO:
+2024-03-20 09:05:04:INFO:Solution count 4: 1521.83 1521.35 1294.34 -303703 
+2024-03-20 09:05:04:INFO:
+2024-03-20 09:05:04:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:05:04:INFO:Best objective 1.521832141155e+03, best bound 1.521942479636e+03, gap 0.0073%
+2024-03-20 09:05:05:INFO:PK Accuracy = 66.35% -> 67.09%    Per_class_accuracy = 66.14% -> 66.82%
+2024-03-20 09:05:06:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:05:06:INFO:
+2024-03-20 09:05:06:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:05:06:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:05:06:INFO:
+2024-03-20 09:05:06:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:05:06:INFO:Optimize a model with 6537 rows, 87451 columns and 269359 nonzeros
+2024-03-20 09:05:06:INFO:Model fingerprint: 0x11d682c2
+2024-03-20 09:05:06:INFO:Model has 62 general constraints
+2024-03-20 09:05:06:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:05:06:INFO:Coefficient statistics:
+2024-03-20 09:05:06:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:05:06:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:05:06:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:05:06:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:05:08:INFO:Presolve removed 3807 rows and 3689 columns
+2024-03-20 09:05:08:INFO:Presolve time: 1.21s
+2024-03-20 09:05:08:INFO:Presolved: 2730 rows, 83762 columns, 167431 nonzeros
+2024-03-20 09:05:08:INFO:Variable types: 93 continuous, 83669 integer (83669 binary)
+2024-03-20 09:05:08:INFO:Found heuristic solution: objective -293025.3033
+2024-03-20 09:05:08:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:05:08:INFO:Showing primal log only...
+2024-03-20 09:05:08:INFO:
+2024-03-20 09:05:08:INFO:Concurrent spin time: 0.02s
+2024-03-20 09:05:08:INFO:
+2024-03-20 09:05:08:INFO:Solved with dual simplex
+2024-03-20 09:05:08:INFO:
+2024-03-20 09:05:08:INFO:Root relaxation: objective 1.516643e+03, 98 iterations, 0.25 seconds (0.07 work units)
+2024-03-20 09:05:09:INFO:
+2024-03-20 09:05:09:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:05:09:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:05:09:INFO:
+2024-03-20 09:05:09:INFO:     0     0 1516.64293    0   10 -293025.30 1516.64293   101%     -    2s
+2024-03-20 09:05:09:INFO:H    0     0                    1289.0551768 1516.64293  17.7%     -    2s
+2024-03-20 09:05:11:INFO:H    0     0                    1516.4122956 1516.64293  0.02%     -    4s
+2024-03-20 09:05:11:INFO:
+2024-03-20 09:05:11:INFO:Cutting planes:
+2024-03-20 09:05:11:INFO:  Cover: 3
+2024-03-20 09:05:11:INFO:  MIR: 3
+2024-03-20 09:05:11:INFO:  StrongCG: 1
+2024-03-20 09:05:11:INFO:  RLT: 4
+2024-03-20 09:05:11:INFO:
+2024-03-20 09:05:11:INFO:Explored 1 nodes (98 simplex iterations) in 4.39 seconds (1.39 work units)
+2024-03-20 09:05:11:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:05:11:INFO:
+2024-03-20 09:05:11:INFO:Solution count 3: 1516.41 1289.06 -293025 
+2024-03-20 09:05:11:INFO:
+2024-03-20 09:05:11:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:05:11:INFO:Best objective 1.516412295584e+03, best bound 1.516553241208e+03, gap 0.0093%
+2024-03-20 09:05:11:INFO:PK Accuracy = 66.35% -> 66.99%    Per_class_accuracy = 66.14% -> 66.81%
+2024-03-20 09:05:18:INFO:visdom:3055372
+2024-03-20 09:05:18:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:05:29:INFO:visdom:3056104
+2024-03-20 09:05:29:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:1.0
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:05:42:INFO:Set parameter WLSAccessID
+2024-03-20 09:05:42:INFO:Set parameter WLSSecret
+2024-03-20 09:05:42:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:05:42:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:05:44:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:05:44:INFO:
+2024-03-20 09:05:44:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:05:44:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:05:44:INFO:
+2024-03-20 09:05:45:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:05:45:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:05:45:INFO:Model fingerprint: 0x4b29b65c
+2024-03-20 09:05:45:INFO:Model has 62 general constraints
+2024-03-20 09:05:45:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:05:45:INFO:Coefficient statistics:
+2024-03-20 09:05:45:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:05:45:INFO:  Objective range  [1e-04, 5e+02]
+2024-03-20 09:05:45:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:05:45:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:05:45:INFO:Presolve removed 31 rows and 93 columns
+2024-03-20 09:05:45:INFO:Presolve time: 0.91s
+2024-03-20 09:05:45:INFO:Presolved: 2848 rows, 87358 columns, 174685 nonzeros
+2024-03-20 09:05:46:INFO:Variable types: 3 continuous, 87355 integer (87327 binary)
+2024-03-20 09:05:46:INFO:Found heuristic solution: objective -6549.720316
+2024-03-20 09:05:46:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:05:46:INFO:Showing primal log only...
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Concurrent spin time: 0.01s
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Solved with dual simplex
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Root relaxation: objective 1.172242e+03, 330 iterations, 0.31 seconds (0.09 work units)
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:05:46:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:*    0     0               0    1172.2421865 1172.24219  0.00%     -    1s
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Explored 1 nodes (330 simplex iterations) in 1.82 seconds (0.67 work units)
+2024-03-20 09:05:46:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Solution count 2: 1172.24 -6549.72 
+2024-03-20 09:05:46:INFO:
+2024-03-20 09:05:46:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:05:46:INFO:Best objective 1.172242186457e+03, best bound 1.172242186457e+03, gap 0.0000%
+2024-03-20 09:05:47:INFO:PK Accuracy = 61.48% -> 61.41%    Per_class_accuracy = 61.33% -> 61.27%
+2024-03-20 09:06:39:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 68.05%, Ent = 0.1152
+2024-03-20 09:06:48:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:06:48:INFO:
+2024-03-20 09:06:48:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:06:48:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:06:48:INFO:
+2024-03-20 09:06:48:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:06:48:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:06:48:INFO:Model fingerprint: 0x2509aaeb
+2024-03-20 09:06:48:INFO:Model has 62 general constraints
+2024-03-20 09:06:48:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:06:48:INFO:Coefficient statistics:
+2024-03-20 09:06:48:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:06:48:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:06:48:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:06:48:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:06:50:INFO:Presolve removed 31 rows and 93 columns
+2024-03-20 09:06:50:INFO:Presolve time: 1.82s
+2024-03-20 09:06:50:INFO:Presolved: 2848 rows, 87358 columns, 174685 nonzeros
+2024-03-20 09:06:50:INFO:Variable types: 3 continuous, 87355 integer (87327 binary)
+2024-03-20 09:06:50:INFO:Found heuristic solution: objective 1537.4164004
+2024-03-20 09:06:51:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:06:51:INFO:Showing primal log only...
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Concurrent spin time: 0.08s
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Solved with dual simplex
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Root relaxation: cutoff, 0 iterations, 0.34 seconds (0.06 work units)
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Explored 1 nodes (0 simplex iterations) in 2.51 seconds (0.53 work units)
+2024-03-20 09:06:51:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Solution count 1: 1537.42 
+2024-03-20 09:06:51:INFO:
+2024-03-20 09:06:51:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:06:51:INFO:Best objective 1.537416400403e+03, best bound 1.537416400403e+03, gap 0.0000%
+2024-03-20 09:06:51:INFO:PK Accuracy = 66.17% -> 66.17%    Per_class_accuracy = 65.93% -> 65.93%
+2024-03-20 09:06:51:INFO:PK Accuracy = 66.17% -> 66.17%    Per_class_accuracy = 65.93% -> 65.93%
+2024-03-20 09:06:58:INFO:visdom:3062436
+2024-03-20 09:06:58:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:07:14:INFO:visdom:3063227
+2024-03-20 09:07:14:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:2.0
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:07:30:INFO:Set parameter WLSAccessID
+2024-03-20 09:07:30:INFO:Set parameter WLSSecret
+2024-03-20 09:07:30:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:07:30:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:07:33:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:07:33:INFO:
+2024-03-20 09:07:33:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:07:33:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:07:33:INFO:
+2024-03-20 09:07:33:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:07:33:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:07:33:INFO:Model fingerprint: 0x865cc038
+2024-03-20 09:07:33:INFO:Model has 62 general constraints
+2024-03-20 09:07:33:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:07:33:INFO:Coefficient statistics:
+2024-03-20 09:07:33:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:07:33:INFO:  Objective range  [1e-04, 5e+02]
+2024-03-20 09:07:33:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:07:33:INFO:  RHS range        [1e+00, 3e+02]
+2024-03-20 09:07:35:INFO:Presolve removed 31 rows and 93 columns
+2024-03-20 09:07:35:INFO:Presolve time: 1.67s
+2024-03-20 09:07:35:INFO:Presolved: 2848 rows, 87358 columns, 174685 nonzeros
+2024-03-20 09:07:35:INFO:Variable types: 4 continuous, 87354 integer (87327 binary)
+2024-03-20 09:07:35:INFO:Found heuristic solution: objective 1175.0553526
+2024-03-20 09:07:35:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:07:35:INFO:Showing primal log only...
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Concurrent spin time: 0.03s
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Solved with dual simplex
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Root relaxation: cutoff, 0 iterations, 0.29 seconds (0.07 work units)
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Explored 1 nodes (0 simplex iterations) in 2.53 seconds (0.67 work units)
+2024-03-20 09:07:35:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Solution count 1: 1175.06 
+2024-03-20 09:07:35:INFO:
+2024-03-20 09:07:35:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:07:35:INFO:Best objective 1.175055352554e+03, best bound 1.175055352554e+03, gap 0.0000%
+2024-03-20 09:07:36:INFO:PK Accuracy = 61.48% -> 61.48%    Per_class_accuracy = 61.33% -> 61.33%
+2024-03-20 09:08:19:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 67.63%, Ent = 0.1154
+2024-03-20 09:08:27:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:08:27:INFO:
+2024-03-20 09:08:27:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:08:27:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:08:27:INFO:
+2024-03-20 09:08:27:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:08:27:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:08:27:INFO:Model fingerprint: 0xdf555746
+2024-03-20 09:08:27:INFO:Model has 62 general constraints
+2024-03-20 09:08:27:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:08:27:INFO:Coefficient statistics:
+2024-03-20 09:08:27:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:08:27:INFO:  Objective range  [7e-05, 5e+02]
+2024-03-20 09:08:27:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:08:27:INFO:  RHS range        [1e+00, 3e+02]
+2024-03-20 09:08:28:INFO:Presolve removed 31 rows and 93 columns
+2024-03-20 09:08:28:INFO:Presolve time: 1.15s
+2024-03-20 09:08:28:INFO:Presolved: 2848 rows, 87358 columns, 174685 nonzeros
+2024-03-20 09:08:28:INFO:Variable types: 4 continuous, 87354 integer (87327 binary)
+2024-03-20 09:08:28:INFO:Found heuristic solution: objective 1537.7483279
+2024-03-20 09:08:28:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:08:28:INFO:Showing primal log only...
+2024-03-20 09:08:28:INFO:
+2024-03-20 09:08:29:INFO:Concurrent spin time: 0.03s
+2024-03-20 09:08:29:INFO:
+2024-03-20 09:08:29:INFO:Solved with dual simplex
+2024-03-20 09:08:29:INFO:
+2024-03-20 09:08:29:INFO:Root relaxation: cutoff, 0 iterations, 0.19 seconds (0.06 work units)
+2024-03-20 09:08:29:INFO:
+2024-03-20 09:08:29:INFO:Explored 1 nodes (0 simplex iterations) in 1.76 seconds (0.63 work units)
+2024-03-20 09:08:29:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:08:29:INFO:
+2024-03-20 09:08:29:INFO:Solution count 1: 1537.75 
+2024-03-20 09:08:29:INFO:
+2024-03-20 09:08:29:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:08:29:INFO:Best objective 1.537748327874e+03, best bound 1.537748327874e+03, gap 0.0000%
+2024-03-20 09:08:29:INFO:PK Accuracy = 66.03% -> 66.03%    Per_class_accuracy = 65.81% -> 65.81%
+2024-03-20 09:08:29:INFO:PK Accuracy = 66.03% -> 66.03%    Per_class_accuracy = 65.81% -> 65.81%
+2024-03-20 09:08:36:INFO:visdom:3069020
+2024-03-20 09:08:36:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:08:45:INFO:visdom:3069498
+2024-03-20 09:08:45:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:1.0
+pk_type:br
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2020/source/uda/
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:08:55:INFO:Set parameter WLSAccessID
+2024-03-20 09:08:55:INFO:Set parameter WLSSecret
+2024-03-20 09:08:55:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:08:55:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:08:57:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:08:57:INFO:
+2024-03-20 09:08:57:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:08:57:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:08:57:INFO:
+2024-03-20 09:08:57:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:08:57:INFO:Optimize a model with 2847 rows, 87387 columns and 256377 nonzeros
+2024-03-20 09:08:57:INFO:Model fingerprint: 0x85920e63
+2024-03-20 09:08:57:INFO:Model has 30 general constraints
+2024-03-20 09:08:57:INFO:Variable types: 60 continuous, 87327 integer (87327 binary)
+2024-03-20 09:08:57:INFO:Coefficient statistics:
+2024-03-20 09:08:57:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:08:57:INFO:  Objective range  [1e-04, 9e+02]
+2024-03-20 09:08:57:INFO:  Bounds range     [1e+00, 6e+03]
+2024-03-20 09:08:57:INFO:  RHS range        [1e+00, 1e+00]
+2024-03-20 09:08:58:INFO:Presolve added 59 rows and 29 columns
+2024-03-20 09:08:58:INFO:Presolve time: 0.80s
+2024-03-20 09:08:58:INFO:Presolved: 2906 rows, 87416 columns, 174831 nonzeros
+2024-03-20 09:08:58:INFO:Variable types: 0 continuous, 87416 integer (87327 binary)
+2024-03-20 09:08:58:INFO:Found heuristic solution: objective -2275142.269
+2024-03-20 09:08:59:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:08:59:INFO:Showing primal log only...
+2024-03-20 09:08:59:INFO:
+2024-03-20 09:09:00:INFO:Concurrent spin time: 0.17s (can be avoided by choosing Method=3)
+2024-03-20 09:09:00:INFO:
+2024-03-20 09:09:00:INFO:Solved with dual simplex
+2024-03-20 09:09:00:INFO:
+2024-03-20 09:09:00:INFO:Root relaxation: objective 1.102752e+03, 2109 iterations, 0.96 seconds (0.57 work units)
+2024-03-20 09:09:00:INFO:
+2024-03-20 09:09:00:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:09:00:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:09:00:INFO:
+2024-03-20 09:09:00:INFO:     0     0 1102.75177    0   18 -2275142.3 1102.75177   100%     -    2s
+2024-03-20 09:09:00:INFO:H    0     0                    1102.5689513 1102.75177  0.02%     -    2s
+2024-03-20 09:09:01:INFO:H    0     0                    1102.6562695 1102.75177  0.01%     -    3s
+2024-03-20 09:09:01:INFO:
+2024-03-20 09:09:01:INFO:Cutting planes:
+2024-03-20 09:09:01:INFO:  MIR: 3
+2024-03-20 09:09:01:INFO:  Zero half: 2
+2024-03-20 09:09:01:INFO:
+2024-03-20 09:09:01:INFO:Explored 1 nodes (5980 simplex iterations) in 3.91 seconds (2.10 work units)
+2024-03-20 09:09:01:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:09:01:INFO:
+2024-03-20 09:09:01:INFO:Solution count 3: 1102.66 1102.57 -2.27514e+06 
+2024-03-20 09:09:01:INFO:
+2024-03-20 09:09:01:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:09:01:INFO:Best objective 1.102656269515e+03, best bound 1.102751771241e+03, gap 0.0087%
+2024-03-20 09:09:01:INFO:PK Accuracy = 61.48% -> 59.35%    Per_class_accuracy = 61.33% -> 59.19%
+2024-03-20 09:09:42:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 69.86%, Ent = 0.1258
+2024-03-20 09:09:51:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:09:51:INFO:
+2024-03-20 09:09:51:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:09:51:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:09:51:INFO:
+2024-03-20 09:09:51:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:09:51:INFO:Optimize a model with 2847 rows, 87387 columns and 256377 nonzeros
+2024-03-20 09:09:51:INFO:Model fingerprint: 0x4321af43
+2024-03-20 09:09:51:INFO:Model has 30 general constraints
+2024-03-20 09:09:51:INFO:Variable types: 60 continuous, 87327 integer (87327 binary)
+2024-03-20 09:09:51:INFO:Coefficient statistics:
+2024-03-20 09:09:51:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:09:51:INFO:  Objective range  [7e-05, 9e+02]
+2024-03-20 09:09:51:INFO:  Bounds range     [1e+00, 6e+03]
+2024-03-20 09:09:51:INFO:  RHS range        [1e+00, 1e+00]
+2024-03-20 09:09:52:INFO:Presolve added 59 rows and 29 columns
+2024-03-20 09:09:52:INFO:Presolve time: 0.76s
+2024-03-20 09:09:52:INFO:Presolved: 2906 rows, 87416 columns, 174831 nonzeros
+2024-03-20 09:09:52:INFO:Variable types: 0 continuous, 87416 integer (87327 binary)
+2024-03-20 09:09:53:INFO:Found heuristic solution: objective -951173.3260
+2024-03-20 09:09:53:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:09:53:INFO:Showing primal log only...
+2024-03-20 09:09:53:INFO:
+2024-03-20 09:09:53:INFO:Concurrent spin time: 0.14s (can be avoided by choosing Method=3)
+2024-03-20 09:09:53:INFO:
+2024-03-20 09:09:53:INFO:Solved with dual simplex
+2024-03-20 09:09:53:INFO:
+2024-03-20 09:09:53:INFO:Root relaxation: objective 1.463971e+03, 1210 iterations, 0.57 seconds (0.30 work units)
+2024-03-20 09:09:54:INFO:
+2024-03-20 09:09:54:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:09:54:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:09:54:INFO:
+2024-03-20 09:09:54:INFO:     0     0 1463.97101    0   23 -951173.33 1463.97101   100%     -    2s
+2024-03-20 09:09:54:INFO:H    0     0                    1463.7865440 1463.97101  0.01%     -    2s
+2024-03-20 09:09:54:INFO:H    0     0                    1463.9613245 1463.97101  0.00%     -    3s
+2024-03-20 09:09:54:INFO:
+2024-03-20 09:09:54:INFO:Explored 1 nodes (1210 simplex iterations) in 3.16 seconds (1.62 work units)
+2024-03-20 09:09:54:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:09:54:INFO:
+2024-03-20 09:09:54:INFO:Solution count 3: 1463.96 1463.79 -951173 
+2024-03-20 09:09:54:INFO:
+2024-03-20 09:09:54:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:09:54:INFO:Best objective 1.463961324504e+03, best bound 1.463971005509e+03, gap 0.0007%
+2024-03-20 09:09:54:INFO:PK Accuracy = 67.63% -> 68.51%    Per_class_accuracy = 67.44% -> 68.32%
+2024-03-20 09:09:57:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:09:57:INFO:
+2024-03-20 09:09:57:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:09:57:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:09:57:INFO:
+2024-03-20 09:09:57:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:09:57:INFO:Optimize a model with 13728 rows, 87387 columns and 278139 nonzeros
+2024-03-20 09:09:57:INFO:Model fingerprint: 0x9f00192b
+2024-03-20 09:09:57:INFO:Model has 30 general constraints
+2024-03-20 09:09:57:INFO:Variable types: 60 continuous, 87327 integer (87327 binary)
+2024-03-20 09:09:57:INFO:Coefficient statistics:
+2024-03-20 09:09:57:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:09:57:INFO:  Objective range  [7e-05, 9e+02]
+2024-03-20 09:09:57:INFO:  Bounds range     [1e+00, 6e+03]
+2024-03-20 09:09:57:INFO:  RHS range        [1e+00, 1e+00]
+2024-03-20 09:09:59:INFO:Presolve removed 11232 rows and 12211 columns
+2024-03-20 09:09:59:INFO:Presolve time: 2.32s
+2024-03-20 09:09:59:INFO:Presolved: 2496 rows, 75176 columns, 221836 nonzeros
+2024-03-20 09:09:59:INFO:Variable types: 0 continuous, 75176 integer (75146 binary)
+2024-03-20 09:10:00:INFO:Found heuristic solution: objective -651472.1340
+2024-03-20 09:10:00:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:10:00:INFO:Showing primal log only...
+2024-03-20 09:10:00:INFO:
+2024-03-20 09:10:01:INFO:Concurrent spin time: 0.12s (can be avoided by choosing Method=3)
+2024-03-20 09:10:01:INFO:
+2024-03-20 09:10:01:INFO:Solved with dual simplex
+2024-03-20 09:10:01:INFO:
+2024-03-20 09:10:01:INFO:Root relaxation: objective 1.443622e+03, 651 iterations, 0.60 seconds (0.21 work units)
+2024-03-20 09:10:01:INFO:
+2024-03-20 09:10:01:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:10:01:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:10:01:INFO:
+2024-03-20 09:10:01:INFO:     0     0 1443.62170    0   28 -651472.13 1443.62170   100%     -    4s
+2024-03-20 09:10:01:INFO:H    0     0                    1442.9935782 1443.62170  0.04%     -    4s
+2024-03-20 09:10:03:INFO:H    0     0                    1443.4872544 1443.62170  0.01%     -    5s
+2024-03-20 09:10:03:INFO:
+2024-03-20 09:10:03:INFO:Cutting planes:
+2024-03-20 09:10:03:INFO:  Cover: 2
+2024-03-20 09:10:03:INFO:  MIR: 5
+2024-03-20 09:10:03:INFO:  GUB cover: 4
+2024-03-20 09:10:03:INFO:  Zero half: 4
+2024-03-20 09:10:03:INFO:  RLT: 9
+2024-03-20 09:10:03:INFO:
+2024-03-20 09:10:03:INFO:Explored 1 nodes (651 simplex iterations) in 6.02 seconds (2.92 work units)
+2024-03-20 09:10:03:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:10:03:INFO:
+2024-03-20 09:10:03:INFO:Solution count 3: 1443.49 1442.99 -651472 
+2024-03-20 09:10:03:INFO:
+2024-03-20 09:10:03:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:10:03:INFO:Best objective 1.443487254360e+03, best bound 1.443575429679e+03, gap 0.0061%
+2024-03-20 09:10:03:INFO:PK Accuracy = 67.63% -> 68.87%    Per_class_accuracy = 67.44% -> 68.75%
+2024-03-20 09:10:11:INFO:visdom:3074834
+2024-03-20 09:10:11:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2020
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2020/target/uda/
+
+2024-03-20 09:38:33:INFO:visdom:3215972
+2024-03-20 09:38:33:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.0
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2021/source/uda/
+output_dir:../checkpoints/DINE/2021/target/uda/
+
+2024-03-20 09:38:44:INFO:Set parameter WLSAccessID
+2024-03-20 09:38:44:INFO:Set parameter WLSSecret
+2024-03-20 09:38:44:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:38:44:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:38:46:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:38:46:INFO:
+2024-03-20 09:38:46:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:38:46:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:38:46:INFO:
+2024-03-20 09:38:46:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:38:46:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:38:46:INFO:Model fingerprint: 0x43d22976
+2024-03-20 09:38:46:INFO:Model has 62 general constraints
+2024-03-20 09:38:46:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:38:46:INFO:Coefficient statistics:
+2024-03-20 09:38:46:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:38:46:INFO:  Objective range  [3e-05, 5e+02]
+2024-03-20 09:38:46:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:38:46:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:38:47:INFO:Presolve removed 31 rows and 62 columns
+2024-03-20 09:38:47:INFO:Presolve time: 1.24s
+2024-03-20 09:38:47:INFO:Presolved: 2848 rows, 87389 columns, 174716 nonzeros
+2024-03-20 09:38:47:INFO:Variable types: 62 continuous, 87327 integer (87327 binary)
+2024-03-20 09:38:48:INFO:Found heuristic solution: objective -1997288.550
+2024-03-20 09:38:48:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:38:48:INFO:Showing primal log only...
+2024-03-20 09:38:48:INFO:
+2024-03-20 09:38:48:INFO:Concurrent spin time: 0.17s (can be avoided by choosing Method=3)
+2024-03-20 09:38:48:INFO:
+2024-03-20 09:38:48:INFO:Solved with dual simplex
+2024-03-20 09:38:48:INFO:
+2024-03-20 09:38:48:INFO:Root relaxation: objective 1.060971e+03, 2907 iterations, 0.63 seconds (0.27 work units)
+2024-03-20 09:38:49:INFO:
+2024-03-20 09:38:49:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:38:49:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:38:49:INFO:
+2024-03-20 09:38:49:INFO:     0     0 1060.97125    0    2 -1997288.6 1060.97125   100%     -    2s
+2024-03-20 09:38:49:INFO:H    0     0                    1060.9712362 1060.97125  0.00%     -    3s
+2024-03-20 09:38:49:INFO:
+2024-03-20 09:38:49:INFO:Explored 1 nodes (7345 simplex iterations) in 3.10 seconds (1.24 work units)
+2024-03-20 09:38:49:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:38:49:INFO:
+2024-03-20 09:38:49:INFO:Solution count 2: 1060.97 -1.99729e+06 
+2024-03-20 09:38:49:INFO:
+2024-03-20 09:38:49:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:38:49:INFO:Best objective 1.060971236221e+03, best bound 1.060971246911e+03, gap 0.0000%
+2024-03-20 09:38:49:INFO:PK Accuracy = 58.79% -> 55.70%    Per_class_accuracy = 58.68% -> 55.53%
+2024-03-20 09:39:28:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 67.23%, Ent = 0.1341
+2024-03-20 09:39:35:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:39:35:INFO:
+2024-03-20 09:39:35:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:39:35:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:39:35:INFO:
+2024-03-20 09:39:35:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:39:35:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:39:35:INFO:Model fingerprint: 0xc84c4fd4
+2024-03-20 09:39:35:INFO:Model has 62 general constraints
+2024-03-20 09:39:35:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:39:35:INFO:Coefficient statistics:
+2024-03-20 09:39:35:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:39:35:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:39:35:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:39:35:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:39:36:INFO:Presolve removed 31 rows and 62 columns
+2024-03-20 09:39:36:INFO:Presolve time: 0.96s
+2024-03-20 09:39:36:INFO:Presolved: 2848 rows, 87389 columns, 174716 nonzeros
+2024-03-20 09:39:36:INFO:Variable types: 62 continuous, 87327 integer (87327 binary)
+2024-03-20 09:39:36:INFO:Found heuristic solution: objective -600622.9183
+2024-03-20 09:39:37:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:39:37:INFO:Showing primal log only...
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Concurrent spin time: 0.02s
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Solved with dual simplex
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Root relaxation: objective 1.410696e+03, 787 iterations, 0.35 seconds (0.13 work units)
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:39:37:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:     0     0 1410.69557    0    4 -600622.92 1410.69557   100%     -    1s
+2024-03-20 09:39:37:INFO:H    0     0                    1410.6955537 1410.69557  0.00%     -    2s
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Explored 1 nodes (787 simplex iterations) in 2.52 seconds (1.03 work units)
+2024-03-20 09:39:37:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Solution count 2: 1410.7 -600623 
+2024-03-20 09:39:37:INFO:
+2024-03-20 09:39:37:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:39:37:INFO:Best objective 1.410695553701e+03, best bound 1.410695565799e+03, gap 0.0000%
+2024-03-20 09:39:38:INFO:PK Accuracy = 65.50% -> 66.56%    Per_class_accuracy = 65.59% -> 66.58%
+2024-03-20 09:39:40:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:39:40:INFO:
+2024-03-20 09:39:40:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:39:40:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:39:40:INFO:
+2024-03-20 09:39:40:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:39:40:INFO:Optimize a model with 16891 rows, 87451 columns and 290067 nonzeros
+2024-03-20 09:39:40:INFO:Model fingerprint: 0x01462822
+2024-03-20 09:39:40:INFO:Model has 62 general constraints
+2024-03-20 09:39:40:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:39:40:INFO:Coefficient statistics:
+2024-03-20 09:39:40:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:39:40:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:39:40:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:39:40:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:39:41:INFO:Presolve removed 14495 rows and 14074 columns
+2024-03-20 09:39:41:INFO:Presolve time: 1.11s
+2024-03-20 09:39:41:INFO:Presolved: 2396 rows, 73377 columns, 146692 nonzeros
+2024-03-20 09:39:41:INFO:Variable types: 62 continuous, 73315 integer (73315 binary)
+2024-03-20 09:39:42:INFO:Found heuristic solution: objective -630610.2277
+2024-03-20 09:39:42:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:39:42:INFO:Showing primal log only...
+2024-03-20 09:39:42:INFO:
+2024-03-20 09:39:42:INFO:Concurrent spin time: 0.02s
+2024-03-20 09:39:42:INFO:
+2024-03-20 09:39:42:INFO:Solved with dual simplex
+2024-03-20 09:39:42:INFO:
+2024-03-20 09:39:42:INFO:Root relaxation: objective 1.383018e+03, 437 iterations, 0.14 seconds (0.09 work units)
+2024-03-20 09:39:42:INFO:
+2024-03-20 09:39:42:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:39:42:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:39:42:INFO:
+2024-03-20 09:39:42:INFO:     0     0 1383.01791    0   20 -630610.23 1383.01791   100%     -    1s
+2024-03-20 09:39:42:INFO:H    0     0                    -4978.806686 1383.01791   128%     -    2s
+2024-03-20 09:39:43:INFO:H    0     0                    -1343.792005 1383.01791   203%     -    2s
+2024-03-20 09:39:43:INFO:H    0     0                    1382.9212157 1383.01791  0.01%     -    3s
+2024-03-20 09:39:43:INFO:
+2024-03-20 09:39:43:INFO:Cutting planes:
+2024-03-20 09:39:43:INFO:  Cover: 11
+2024-03-20 09:39:43:INFO:  MIR: 6
+2024-03-20 09:39:43:INFO:  StrongCG: 7
+2024-03-20 09:39:43:INFO:  Zero half: 1
+2024-03-20 09:39:43:INFO:  RLT: 10
+2024-03-20 09:39:43:INFO:
+2024-03-20 09:39:43:INFO:Explored 1 nodes (438 simplex iterations) in 3.20 seconds (1.50 work units)
+2024-03-20 09:39:43:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:39:43:INFO:
+2024-03-20 09:39:43:INFO:Solution count 4: 1382.92 -1343.79 -4978.81 -630610 
+2024-03-20 09:39:43:INFO:
+2024-03-20 09:39:43:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:39:43:INFO:Warning: max constraint violation (7.6294e-06) exceeds tolerance
+2024-03-20 09:39:43:INFO:Best objective 1.382921215679e+03, best bound 1.382925921256e+03, gap 0.0003%
+2024-03-20 09:39:43:INFO:PK Accuracy = 65.50% -> 66.17%    Per_class_accuracy = 65.59% -> 66.15%
+2024-03-20 09:39:50:INFO:visdom:3220816
+2024-03-20 09:39:50:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2021/target/uda/
+
+2024-03-20 09:40:02:INFO:visdom:3221267
+2024-03-20 09:40:02:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.1
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2021/source/uda/
+output_dir:../checkpoints/DINE/2021/target/uda/
+
+2024-03-20 09:40:17:INFO:Set parameter WLSAccessID
+2024-03-20 09:40:17:INFO:Set parameter WLSSecret
+2024-03-20 09:40:17:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:40:17:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:40:19:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:40:19:INFO:
+2024-03-20 09:40:19:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:40:19:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:40:19:INFO:
+2024-03-20 09:40:19:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:40:19:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:40:19:INFO:Model fingerprint: 0xb6619789
+2024-03-20 09:40:19:INFO:Model has 62 general constraints
+2024-03-20 09:40:19:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:40:19:INFO:Coefficient statistics:
+2024-03-20 09:40:19:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:40:19:INFO:  Objective range  [3e-05, 5e+02]
+2024-03-20 09:40:19:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:40:19:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:40:20:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:40:20:INFO:Presolve time: 1.27s
+2024-03-20 09:40:20:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:40:20:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:40:21:INFO:Found heuristic solution: objective -1869296.740
+2024-03-20 09:40:21:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:40:21:INFO:Showing primal log only...
+2024-03-20 09:40:21:INFO:
+2024-03-20 09:40:21:INFO:Concurrent spin time: 0.00s
+2024-03-20 09:40:21:INFO:
+2024-03-20 09:40:21:INFO:Solved with dual simplex
+2024-03-20 09:40:21:INFO:
+2024-03-20 09:40:21:INFO:Root relaxation: objective 1.083905e+03, 2455 iterations, 0.28 seconds (0.25 work units)
+2024-03-20 09:40:21:INFO:
+2024-03-20 09:40:21:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:40:21:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:40:21:INFO:
+2024-03-20 09:40:21:INFO:     0     0 1083.90527    0   22 -1869296.7 1083.90527   100%     -    2s
+2024-03-20 09:40:22:INFO:H    0     0                     855.9159151 1083.90527  26.6%     -    3s
+2024-03-20 09:40:23:INFO:H    0     0                     901.2497695 1083.90527  20.3%     -    3s
+2024-03-20 09:40:24:INFO:H    0     0                    1082.9719364 1083.90527  0.09%     -    5s
+2024-03-20 09:40:24:INFO:
+2024-03-20 09:40:24:INFO:Cutting planes:
+2024-03-20 09:40:24:INFO:  MIR: 16
+2024-03-20 09:40:24:INFO:  RLT: 18
+2024-03-20 09:40:24:INFO:
+2024-03-20 09:40:24:INFO:Explored 1 nodes (6478 simplex iterations) in 5.16 seconds (1.79 work units)
+2024-03-20 09:40:24:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:40:24:INFO:
+2024-03-20 09:40:24:INFO:Solution count 4: 1082.97 901.25 855.916 -1.8693e+06 
+2024-03-20 09:40:24:INFO:
+2024-03-20 09:40:24:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:40:24:INFO:Best objective 1.082971936358e+03, best bound 1.082971936358e+03, gap 0.0000%
+2024-03-20 09:40:24:INFO:PK Accuracy = 58.79% -> 56.69%    Per_class_accuracy = 58.68% -> 56.46%
+2024-03-20 09:41:06:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 67.45%, Ent = 0.1299
+2024-03-20 09:41:14:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:41:14:INFO:
+2024-03-20 09:41:14:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:41:14:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:41:14:INFO:
+2024-03-20 09:41:14:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:41:14:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:41:14:INFO:Model fingerprint: 0xc5cf4f93
+2024-03-20 09:41:14:INFO:Model has 62 general constraints
+2024-03-20 09:41:14:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:41:14:INFO:Coefficient statistics:
+2024-03-20 09:41:14:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:41:14:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:41:14:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:41:14:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:41:15:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:41:15:INFO:Presolve time: 0.92s
+2024-03-20 09:41:15:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:41:15:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:41:15:INFO:Found heuristic solution: objective -529516.3648
+2024-03-20 09:41:15:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:41:15:INFO:Showing primal log only...
+2024-03-20 09:41:15:INFO:
+2024-03-20 09:41:16:INFO:Concurrent spin time: 0.07s
+2024-03-20 09:41:16:INFO:
+2024-03-20 09:41:16:INFO:Solved with dual simplex
+2024-03-20 09:41:16:INFO:
+2024-03-20 09:41:16:INFO:Root relaxation: objective 1.443461e+03, 644 iterations, 0.31 seconds (0.12 work units)
+2024-03-20 09:41:16:INFO:
+2024-03-20 09:41:16:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:41:16:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:41:16:INFO:
+2024-03-20 09:41:16:INFO:     0     0 1443.46131    0   38 -529516.36 1443.46131   100%     -    1s
+2024-03-20 09:41:17:INFO:H    0     0                     987.9027351 1443.46131  46.1%     -    2s
+2024-03-20 09:41:17:INFO:H    0     0                    1169.6398663 1443.46131  23.4%     -    3s
+2024-03-20 09:41:19:INFO:H    0     0                    1442.5033018 1443.46131  0.07%     -    4s
+2024-03-20 09:41:19:INFO:
+2024-03-20 09:41:19:INFO:Cutting planes:
+2024-03-20 09:41:19:INFO:  MIR: 18
+2024-03-20 09:41:19:INFO:  RLT: 19
+2024-03-20 09:41:19:INFO:
+2024-03-20 09:41:19:INFO:Explored 1 nodes (644 simplex iterations) in 4.91 seconds (1.69 work units)
+2024-03-20 09:41:19:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:41:19:INFO:
+2024-03-20 09:41:19:INFO:Solution count 4: 1442.5 1169.64 987.903 -529516 
+2024-03-20 09:41:19:INFO:
+2024-03-20 09:41:19:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:41:19:INFO:Best objective 1.442503301805e+03, best bound 1.442503302212e+03, gap 0.0000%
+2024-03-20 09:41:19:INFO:PK Accuracy = 65.67% -> 66.81%    Per_class_accuracy = 65.70% -> 66.75%
+2024-03-20 09:41:22:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:41:22:INFO:
+2024-03-20 09:41:22:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:41:22:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:41:22:INFO:
+2024-03-20 09:41:22:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:41:22:INFO:Optimize a model with 13729 rows, 87451 columns and 283743 nonzeros
+2024-03-20 09:41:22:INFO:Model fingerprint: 0x18d81f24
+2024-03-20 09:41:22:INFO:Model has 62 general constraints
+2024-03-20 09:41:22:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:41:22:INFO:Coefficient statistics:
+2024-03-20 09:41:22:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:41:22:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:41:22:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:41:22:INFO:  RHS range        [1e+00, 1e+02]
+2024-03-20 09:41:22:INFO:Presolve removed 11231 rows and 10881 columns
+2024-03-20 09:41:22:INFO:Presolve time: 0.73s
+2024-03-20 09:41:22:INFO:Presolved: 2498 rows, 76570 columns, 153047 nonzeros
+2024-03-20 09:41:22:INFO:Variable types: 93 continuous, 76477 integer (76477 binary)
+2024-03-20 09:41:23:INFO:Found heuristic solution: objective -540784.2818
+2024-03-20 09:41:23:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:41:23:INFO:Showing primal log only...
+2024-03-20 09:41:23:INFO:
+2024-03-20 09:41:23:INFO:Concurrent spin time: 0.04s
+2024-03-20 09:41:23:INFO:
+2024-03-20 09:41:23:INFO:Solved with dual simplex
+2024-03-20 09:41:23:INFO:
+2024-03-20 09:41:23:INFO:Root relaxation: objective 1.425228e+03, 320 iterations, 0.26 seconds (0.09 work units)
+2024-03-20 09:41:23:INFO:
+2024-03-20 09:41:23:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:41:23:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:41:23:INFO:
+2024-03-20 09:41:23:INFO:     0     0 1425.22768    0   36 -540784.28 1425.22768   100%     -    1s
+2024-03-20 09:41:24:INFO:H    0     0                     379.0111494 1425.22768   276%     -    1s
+2024-03-20 09:41:24:INFO:H    0     0                     560.2945051 1425.22768   154%     -    2s
+2024-03-20 09:41:26:INFO:H    0     0                    1424.0539067 1425.22768  0.08%     -    4s
+2024-03-20 09:41:26:INFO:H    0     0                    1424.0600278 1425.17263  0.08%     -    4s
+2024-03-20 09:41:26:INFO:H    0     0                    1424.0886636 1425.17263  0.08%     -    4s
+2024-03-20 09:41:26:INFO:
+2024-03-20 09:41:26:INFO:Cutting planes:
+2024-03-20 09:41:26:INFO:  Cover: 8
+2024-03-20 09:41:26:INFO:  MIR: 26
+2024-03-20 09:41:26:INFO:  StrongCG: 11
+2024-03-20 09:41:26:INFO:  RLT: 9
+2024-03-20 09:41:26:INFO:
+2024-03-20 09:41:26:INFO:Explored 1 nodes (320 simplex iterations) in 4.71 seconds (1.87 work units)
+2024-03-20 09:41:26:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:41:26:INFO:
+2024-03-20 09:41:26:INFO:Solution count 6: 1424.09 1424.06 1424.05 ... -540784
+2024-03-20 09:41:26:INFO:
+2024-03-20 09:41:26:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:41:26:INFO:Best objective 1.424088663620e+03, best bound 1.424216262868e+03, gap 0.0090%
+2024-03-20 09:41:27:INFO:PK Accuracy = 65.67% -> 66.56%    Per_class_accuracy = 65.70% -> 66.67%
+2024-03-20 09:41:33:INFO:visdom:3227313
+2024-03-20 09:41:33:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2021/target/uda/
+
+2024-03-20 09:41:42:INFO:visdom:3227721
+2024-03-20 09:41:42:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+output:san
+lr_src:0.01
+net_src:resnet50
+output_src:san
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+da:uda
+topk:1
+distill:True
+ema:0.6
+mix:1.0
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+cls_par:0.3
+distance:cosine
+pk_uconf:0.5
+pk_type:ub
+pk_allow:None
+pk_temp:1.0
+pk_prior_weight:10.0
+pk_knn:1
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir_src:../checkpoints/DINE/2021/source/uda/
+output_dir:../checkpoints/DINE/2021/target/uda/
+
+2024-03-20 09:41:54:INFO:Set parameter WLSAccessID
+2024-03-20 09:41:54:INFO:Set parameter WLSSecret
+2024-03-20 09:41:54:INFO:Set parameter LicenseID to value 2487155
+2024-03-20 09:41:54:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:41:56:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:41:56:INFO:
+2024-03-20 09:41:56:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:41:56:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:41:56:INFO:
+2024-03-20 09:41:56:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:41:56:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:41:56:INFO:Model fingerprint: 0x44db76ba
+2024-03-20 09:41:56:INFO:Model has 62 general constraints
+2024-03-20 09:41:56:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:41:56:INFO:Coefficient statistics:
+2024-03-20 09:41:56:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:41:56:INFO:  Objective range  [3e-05, 5e+02]
+2024-03-20 09:41:56:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:41:56:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:41:57:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:41:57:INFO:Presolve time: 0.75s
+2024-03-20 09:41:57:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:41:57:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:41:57:INFO:Found heuristic solution: objective -1361418.965
+2024-03-20 09:41:58:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:41:58:INFO:Showing primal log only...
+2024-03-20 09:41:58:INFO:
+2024-03-20 09:41:58:INFO:Concurrent spin time: 0.05s
+2024-03-20 09:41:58:INFO:
+2024-03-20 09:41:58:INFO:Solved with dual simplex
+2024-03-20 09:41:58:INFO:
+2024-03-20 09:41:58:INFO:Root relaxation: objective 1.133455e+03, 663 iterations, 0.40 seconds (0.16 work units)
+2024-03-20 09:41:58:INFO:
+2024-03-20 09:41:58:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:41:58:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:41:58:INFO:
+2024-03-20 09:41:58:INFO:     0     0 1133.45474    0    4 -1361419.0 1133.45474   100%     -    1s
+2024-03-20 09:41:59:INFO:H    0     0                     906.1398607 1133.45474  25.1%     -    2s
+2024-03-20 09:41:59:INFO:H    0     0                    1133.4037637 1133.45474  0.00%     -    3s
+2024-03-20 09:41:59:INFO:
+2024-03-20 09:41:59:INFO:Cutting planes:
+2024-03-20 09:41:59:INFO:  MIR: 7
+2024-03-20 09:41:59:INFO:  StrongCG: 4
+2024-03-20 09:41:59:INFO:  RLT: 6
+2024-03-20 09:41:59:INFO:
+2024-03-20 09:41:59:INFO:Explored 1 nodes (663 simplex iterations) in 3.24 seconds (1.45 work units)
+2024-03-20 09:41:59:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:41:59:INFO:
+2024-03-20 09:41:59:INFO:Solution count 3: 1133.4 906.14 -1.36142e+06 
+2024-03-20 09:41:59:INFO:
+2024-03-20 09:41:59:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:41:59:INFO:Best objective 1.133403763685e+03, best bound 1.133403763685e+03, gap 0.0000%
+2024-03-20 09:42:00:INFO:PK Accuracy = 58.79% -> 58.71%    Per_class_accuracy = 58.68% -> 58.61%
+2024-03-20 09:42:44:INFO:Task: webcam->amazon, Iter:135/1350; Accuracy = 67.02%, Ent = 0.1237
+2024-03-20 09:42:53:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:42:53:INFO:
+2024-03-20 09:42:53:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:42:53:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:42:53:INFO:
+2024-03-20 09:42:53:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:42:53:INFO:Optimize a model with 2879 rows, 87451 columns and 262043 nonzeros
+2024-03-20 09:42:53:INFO:Model fingerprint: 0x5c4c4c38
+2024-03-20 09:42:53:INFO:Model has 62 general constraints
+2024-03-20 09:42:53:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:42:53:INFO:Coefficient statistics:
+2024-03-20 09:42:53:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:42:53:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:42:53:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:42:53:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:42:55:INFO:Presolve removed 31 rows and 31 columns
+2024-03-20 09:42:55:INFO:Presolve time: 1.29s
+2024-03-20 09:42:55:INFO:Presolved: 2848 rows, 87420 columns, 174747 nonzeros
+2024-03-20 09:42:55:INFO:Variable types: 93 continuous, 87327 integer (87327 binary)
+2024-03-20 09:42:55:INFO:Found heuristic solution: objective -199200.5911
+2024-03-20 09:42:55:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:42:55:INFO:Showing primal log only...
+2024-03-20 09:42:55:INFO:
+2024-03-20 09:42:55:INFO:Concurrent spin time: 0.03s
+2024-03-20 09:42:55:INFO:
+2024-03-20 09:42:55:INFO:Solved with dual simplex
+2024-03-20 09:42:55:INFO:
+2024-03-20 09:42:55:INFO:Root relaxation: objective 1.497466e+03, 147 iterations, 0.20 seconds (0.07 work units)
+2024-03-20 09:42:55:INFO:
+2024-03-20 09:42:55:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:42:55:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:42:55:INFO:
+2024-03-20 09:42:55:INFO:     0     0 1497.46617    0    4 -199200.59 1497.46617   101%     -    2s
+2024-03-20 09:42:56:INFO:H    0     0                    1497.3826966 1497.46617  0.01%     -    2s
+2024-03-20 09:42:56:INFO:
+2024-03-20 09:42:56:INFO:Explored 1 nodes (147 simplex iterations) in 2.75 seconds (0.99 work units)
+2024-03-20 09:42:56:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:42:56:INFO:
+2024-03-20 09:42:56:INFO:Solution count 2: 1497.38 -199201 
+2024-03-20 09:42:56:INFO:
+2024-03-20 09:42:56:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:42:56:INFO:Best objective 1.497382696595e+03, best bound 1.497466170467e+03, gap 0.0056%
+2024-03-20 09:42:56:INFO:PK Accuracy = 65.10% -> 65.10%    Per_class_accuracy = 65.10% -> 65.08%
+2024-03-20 09:42:58:INFO:Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 20.04.2 LTS")
+2024-03-20 09:42:58:INFO:
+2024-03-20 09:42:58:INFO:CPU model: Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+2024-03-20 09:42:58:INFO:Thread count: 52 physical cores, 104 logical processors, using up to 32 threads
+2024-03-20 09:42:58:INFO:
+2024-03-20 09:42:58:INFO:Academic license 2487155 - for non-commercial use only - registered to sh___@iiserb.ac.in
+2024-03-20 09:42:58:INFO:Optimize a model with 6506 rows, 87451 columns and 269297 nonzeros
+2024-03-20 09:42:58:INFO:Model fingerprint: 0x170648a6
+2024-03-20 09:42:58:INFO:Model has 62 general constraints
+2024-03-20 09:42:58:INFO:Variable types: 124 continuous, 87327 integer (87327 binary)
+2024-03-20 09:42:58:INFO:Coefficient statistics:
+2024-03-20 09:42:58:INFO:  Matrix range     [1e+00, 1e+00]
+2024-03-20 09:42:58:INFO:  Objective range  [2e-05, 5e+02]
+2024-03-20 09:42:58:INFO:  Bounds range     [1e+00, 3e+03]
+2024-03-20 09:42:58:INFO:  RHS range        [1e+00, 2e+02]
+2024-03-20 09:42:59:INFO:Presolve removed 3775 rows and 3658 columns
+2024-03-20 09:42:59:INFO:Presolve time: 0.68s
+2024-03-20 09:42:59:INFO:Presolved: 2731 rows, 83793 columns, 167493 nonzeros
+2024-03-20 09:42:59:INFO:Variable types: 93 continuous, 83700 integer (83700 binary)
+2024-03-20 09:42:59:INFO:Found heuristic solution: objective -214421.4380
+2024-03-20 09:43:00:INFO:Deterministic concurrent LP optimizer: primal and dual simplex
+2024-03-20 09:43:00:INFO:Showing primal log only...
+2024-03-20 09:43:00:INFO:
+2024-03-20 09:43:00:INFO:Concurrent spin time: 0.04s
+2024-03-20 09:43:00:INFO:
+2024-03-20 09:43:00:INFO:Solved with dual simplex
+2024-03-20 09:43:00:INFO:
+2024-03-20 09:43:00:INFO:Root relaxation: objective 1.491214e+03, 98 iterations, 0.26 seconds (0.07 work units)
+2024-03-20 09:43:00:INFO:
+2024-03-20 09:43:00:INFO:    Nodes    |    Current Node    |     Objective Bounds      |     Work
+2024-03-20 09:43:00:INFO: Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+2024-03-20 09:43:00:INFO:
+2024-03-20 09:43:00:INFO:     0     0 1491.21388    0    4 -214421.44 1491.21388   101%     -    1s
+2024-03-20 09:43:00:INFO:H    0     0                    1490.9303718 1491.21388  0.02%     -    2s
+2024-03-20 09:43:00:INFO:H    0     0                    1490.9565124 1491.21388  0.02%     -    2s
+2024-03-20 09:43:01:INFO:H    0     0                    1491.0671386 1491.21388  0.01%     -    2s
+2024-03-20 09:43:01:INFO:H    0     0                    1491.1324066 1491.21375  0.01%     -    2s
+2024-03-20 09:43:01:INFO:
+2024-03-20 09:43:01:INFO:Cutting planes:
+2024-03-20 09:43:01:INFO:  Cover: 2
+2024-03-20 09:43:01:INFO:  RLT: 4
+2024-03-20 09:43:01:INFO:
+2024-03-20 09:43:01:INFO:Explored 1 nodes (98 simplex iterations) in 2.78 seconds (1.13 work units)
+2024-03-20 09:43:01:INFO:Thread count was 32 (of 104 available processors)
+2024-03-20 09:43:01:INFO:
+2024-03-20 09:43:01:INFO:Solution count 5: 1491.13 1491.07 1490.96 ... -214421
+2024-03-20 09:43:01:INFO:
+2024-03-20 09:43:01:INFO:Optimal solution found (tolerance 1.00e-04)
+2024-03-20 09:43:01:INFO:Best objective 1.491132406622e+03, best bound 1.491213752381e+03, gap 0.0055%
+2024-03-20 09:43:01:INFO:PK Accuracy = 65.10% -> 65.25%    Per_class_accuracy = 65.10% -> 65.25%
+2024-03-20 09:43:07:INFO:visdom:3233758
+2024-03-20 09:43:07:INFO:==========================================
+gpu_id:0
+s:webcam
+t:amazon
+max_epoch:30
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+net_src:resnet50
+seed:2021
+bottleneck:256
+layer:wn
+classifier:bn
+output:san
+da:uda
+timestamp:2024-03-20_08.55.48
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+method:kdine
+class_num:31
+s_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/webcam.txt
+t_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+test_dset_path:/data3/Shivangi/KUDA/data/office31/image_list/amazon.txt
+output_dir:../checkpoints/DINE/2021/target/uda/
+
