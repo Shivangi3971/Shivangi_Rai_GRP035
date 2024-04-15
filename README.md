@@ -4,8 +4,6 @@ Pytorch implementation of KUDA.
 > Tao Sun, Cheng Lu, and Haibin Ling                 
 > *ECCV 2022* 
 
-## Abstract
-The waive of labels in the target domain makes Unsupervised Domain Adaptation (UDA) an attractive technique in many real-world applications, though it also brings great challenges as model adaptation becomes harder without labeled target data. In this paper, we address this issue by seeking compensation from target domain prior knowledge, which is often (partially) available in practice, e.g., from human expertise. This leads to a novel yet practical setting where in addition to the training data, some prior knowledge about the target class distribution are available. We term the setting as Knowledge-guided Unsupervised Domain Adaptation (KUDA). In particular, we consider two specific types of prior knowledge about the class distribution in the target domain: Unary Bound that describes the lower and upper bounds of individual class probabilities, and Binary Relationship that describes the relations between two class probabilities. We propose a general rectification module that uses such prior knowledge to refine model generated pseudo labels. The module is formulated as a Zero-One Programming problem derived from the prior knowledge and a smooth regularizer. It can be easily plugged into self-training based UDA methods, and we combine it with two state-of-the-art methods, SHOT and DINE. Empirical results on four benchmarks confirm that the rectification module clearly improves the quality of pseudo labels, which in turn benefits the self-training stage. With the guidance from prior knowledge, the performances of both methods are substantially boosted. We expect our work to inspire further investigations in integrating prior knowledge in UDA.
 
 ### Knowledge-guided Unsupervised Domain Adaptation (KUDA)
 <img src="fig/PK.png" width="90%">
@@ -16,8 +14,9 @@ The waive of labels in the target domain makes Unsupervised Domain Adaptation (U
 ## Usage
 ### Prerequisites
 
-We experimented with python==3.8, pytorch==1.8.0, cudatoolkit==11.1, gurobi==9.5.0.
-
+We experimented with python environment, pytorch , cudatoolkit & gurobi
+we have to install requirement.txt file
+pip install -r requirements.txt
 For Zero-One programming, we use [Gurobi Optimizer](https://www.gurobi.com/). A free [academic license](https://www.gurobi.com/academia/academic-program-and-licenses/) can be obtained from its official website. 
 
 
