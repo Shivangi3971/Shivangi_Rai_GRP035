@@ -1,0 +1,261 @@
+2024-04-12 03:47:36:INFO:visdom:76869
+2024-04-12 03:47:36:INFO:==========================================
+gpu_id:0
+s:train
+t:validation
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-12_01.50.32
+use_file_logger:True
+names:['train', 'validation']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:12
+s_dset_path:../data/visda-2017/image_list/train.txt
+t_dset_path:../data/visda-2017/image_list/validation.txt
+test_dset_path:../data/visda-2017/image_list/validation.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-12 03:50:18:INFO:Accuracy = 53.20% -> 59.14%    Per_class_accuracy = 46.72% -> 56.29%
+2024-04-12 03:57:04:INFO:Task: train->validation, Iter:866/12990; Accuracy = 76.71%    Per_class_accuracy=80.67
+94.35 79.17 80.51 55.68 91.41 91.95 84.47 80.17 85.43 85.09 88.15 51.69
+2024-04-12 03:59:18:INFO:Accuracy = 76.71% -> 76.93%    Per_class_accuracy = 80.67% -> 80.96%
+2024-04-12 04:05:46:INFO:Task: train->validation, Iter:1732/12990; Accuracy = 78.23%    Per_class_accuracy=81.92
+94.38 83.88 80.58 59.96 92.43 93.25 84.37 80.5 86.52 87.33 84.42 55.37
+2024-04-12 04:07:56:INFO:Accuracy = 78.23% -> 78.01%    Per_class_accuracy = 81.92% -> 81.88%
+2024-04-12 04:14:47:INFO:Task: train->validation, Iter:2598/12990; Accuracy = 78.36%    Per_class_accuracy=82.25
+94.51 84.23 79.21 59.3 92.71 94.89 83.68 79.77 89.21 88.08 85.67 55.68
+2024-04-12 04:17:16:INFO:Accuracy = 78.36% -> 78.16%    Per_class_accuracy = 82.25% -> 82.15%
+2024-04-12 04:25:24:INFO:Task: train->validation, Iter:3464/12990; Accuracy = 78.66%    Per_class_accuracy=82.43
+94.24 84.63 80.32 60.4 92.52 95.33 84.21 80.62 87.14 87.64 86.21 55.95
+2024-04-12 04:28:09:INFO:Accuracy = 78.66% -> 78.48%    Per_class_accuracy = 82.43% -> 82.38%
+2024-04-12 04:34:34:INFO:Task: train->validation, Iter:4330/12990; Accuracy = 78.34%    Per_class_accuracy=82.36
+94.38 86.39 80.23 59.17 92.6 95.04 81.52 80.7 87.05 88.51 86.33 56.36
+2024-04-12 04:36:57:INFO:Accuracy = 78.34% -> 78.22%    Per_class_accuracy = 82.36% -> 82.32%
+2024-04-12 04:43:18:INFO:Task: train->validation, Iter:5196/12990; Accuracy = 78.22%    Per_class_accuracy=82.50
+94.35 87.6 80.85 56.62 93.46 94.22 82.26 80.6 88.52 89.35 85.43 56.69
+2024-04-12 04:45:32:INFO:Accuracy = 78.22% -> 78.02%    Per_class_accuracy = 82.50% -> 82.35%
+2024-04-12 04:52:29:INFO:Task: train->validation, Iter:6062/12990; Accuracy = 78.22%    Per_class_accuracy=82.44
+94.62 85.44 80.15 57.2 92.69 94.27 81.63 80.57 88.94 89.74 87.04 56.99
+2024-04-12 04:55:22:INFO:Accuracy = 78.22% -> 78.07%    Per_class_accuracy = 82.44% -> 82.35%
+2024-04-12 05:03:10:INFO:Task: train->validation, Iter:6928/12990; Accuracy = 77.69%    Per_class_accuracy=82.14
+94.79 88.17 77.1 55.91 93.22 94.75 77.88 80.77 89.54 88.47 86.92 58.11
+2024-04-12 05:06:10:INFO:Accuracy = 77.69% -> 77.50%    Per_class_accuracy = 82.14% -> 82.01%
+2024-04-12 05:13:21:INFO:Task: train->validation, Iter:7794/12990; Accuracy = 77.94%    Per_class_accuracy=82.31
+94.21 88.12 78.96 56.53 93.31 94.89 79.11 80.45 88.13 89.39 86.4 58.24
+2024-04-12 05:16:40:INFO:Accuracy = 77.94% -> 77.75%    Per_class_accuracy = 82.31% -> 82.17%
+2024-04-12 05:25:27:INFO:Task: train->validation, Iter:8660/12990; Accuracy = 78.16%    Per_class_accuracy=82.47
+94.46 86.13 79.02 56.09 93.18 94.12 81.21 81.0 90.22 89.79 85.41 59.01
+2024-04-12 05:28:53:INFO:Accuracy = 78.16% -> 77.94%    Per_class_accuracy = 82.47% -> 82.32%
+2024-04-12 05:37:36:INFO:Task: train->validation, Iter:9526/12990; Accuracy = 78.33%    Per_class_accuracy=82.53
+94.95 86.13 77.59 57.08 93.41 94.27 81.85 80.62 89.69 89.7 85.95 59.16
+2024-04-12 05:40:42:INFO:Accuracy = 78.33% -> 78.02%    Per_class_accuracy = 82.53% -> 82.34%
+2024-04-12 05:47:08:INFO:Task: train->validation, Iter:10392/12990; Accuracy = 78.64%    Per_class_accuracy=82.82
+94.4 86.36 79.79 57.53 92.67 94.55 82.32 80.35 89.32 90.18 87.09 59.23
+2024-04-12 05:49:46:INFO:Accuracy = 78.64% -> 78.27%    Per_class_accuracy = 82.82% -> 82.55%
+2024-04-12 05:56:53:INFO:Task: train->validation, Iter:11258/12990; Accuracy = 78.23%    Per_class_accuracy=82.61
+94.82 87.17 80.04 56.4 93.41 94.41 80.66 80.47 90.61 89.83 87.02 56.47
+2024-04-12 06:00:46:INFO:Accuracy = 78.23% -> 77.95%    Per_class_accuracy = 82.61% -> 82.41%
+2024-04-12 06:07:45:INFO:Task: train->validation, Iter:12124/12990; Accuracy = 77.88%    Per_class_accuracy=82.32
+95.04 87.37 79.1 55.69 93.33 95.23 79.45 80.5 90.37 88.95 84.63 58.24
+2024-04-12 06:10:37:INFO:Accuracy = 77.88% -> 77.63%    Per_class_accuracy = 82.32% -> 82.15%
+2024-04-12 06:19:02:INFO:Task: train->validation, Iter:12990/12990; Accuracy = 77.96%    Per_class_accuracy=82.37
+94.95 87.25 76.99 55.35 93.99 95.61 80.16 80.0 89.47 88.34 85.6 60.69
+2024-04-12 06:19:24:INFO:visdom:311516
+2024-04-12 06:19:24:INFO:==========================================
+gpu_id:0
+s:train
+t:validation
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-12_01.50.32
+use_file_logger:True
+names:['train', 'validation']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:12
+s_dset_path:../data/visda-2017/image_list/train.txt
+t_dset_path:../data/visda-2017/image_list/validation.txt
+test_dset_path:../data/visda-2017/image_list/validation.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-12 06:22:24:INFO:Accuracy = 53.20% -> 59.14%    Per_class_accuracy = 46.72% -> 56.29%
+2024-04-12 06:30:36:INFO:Task: train->validation, Iter:866/12990; Accuracy = 77.46%    Per_class_accuracy=81.12
+93.83 80.49 79.49 58.15 91.35 93.16 86.3 78.87 86.24 84.7 86.24 54.58
+2024-04-12 06:33:53:INFO:Accuracy = 77.46% -> 77.38%    Per_class_accuracy = 81.12% -> 81.15%
+2024-04-12 06:41:40:INFO:Task: train->validation, Iter:1732/12990; Accuracy = 77.91%    Per_class_accuracy=81.75
+94.49 82.36 78.34 58.74 92.35 93.64 85.61 79.87 87.25 87.46 87.89 53.01
+2024-04-12 06:45:19:INFO:Accuracy = 77.91% -> 77.75%    Per_class_accuracy = 81.75% -> 81.73%
+2024-04-12 06:53:42:INFO:Task: train->validation, Iter:2598/12990; Accuracy = 77.63%    Per_class_accuracy=81.79
+93.03 85.44 78.19 56.92 92.24 94.75 82.63 80.0 88.52 88.29 85.43 56.02
+2024-04-12 06:56:57:INFO:Accuracy = 77.63% -> 77.48%    Per_class_accuracy = 81.79% -> 81.71%
+2024-04-12 07:05:14:INFO:Task: train->validation, Iter:3464/12990; Accuracy = 78.50%    Per_class_accuracy=82.39
+94.13 84.98 80.6 59.83 92.84 93.49 83.21 79.87 89.03 90.09 85.98 54.65
+2024-04-12 07:09:05:INFO:Accuracy = 78.50% -> 78.31%    Per_class_accuracy = 82.39% -> 82.32%
+2024-04-12 07:16:38:INFO:Task: train->validation, Iter:4330/12990; Accuracy = 77.94%    Per_class_accuracy=82.22
+94.62 85.96 78.66 56.32 93.43 93.69 81.78 81.2 89.38 89.13 86.21 56.27
+2024-04-12 07:18:39:INFO:Accuracy = 77.94% -> 77.78%    Per_class_accuracy = 82.22% -> 82.11%
+2024-04-12 07:23:37:INFO:Task: train->validation, Iter:5196/12990; Accuracy = 77.77%    Per_class_accuracy=82.14
+94.9 86.22 79.04 56.02 93.75 93.83 81.66 80.8 87.73 89.87 86.66 55.23
+2024-04-12 07:25:38:INFO:Accuracy = 77.77% -> 77.61%    Per_class_accuracy = 82.14% -> 82.02%
+2024-04-12 07:31:36:INFO:Task: train->validation, Iter:6062/12990; Accuracy = 78.06%    Per_class_accuracy=82.40
+94.6 87.34 79.34 56.15 93.37 93.88 81.76 80.35 89.84 89.48 86.5 56.22
+2024-04-12 07:33:51:INFO:Accuracy = 78.06% -> 77.86%    Per_class_accuracy = 82.40% -> 82.24%
+2024-04-12 07:39:35:INFO:Task: train->validation, Iter:6928/12990; Accuracy = 77.97%    Per_class_accuracy=82.36
+94.68 86.68 80.15 55.1 93.97 93.49 82.73 80.62 88.57 90.09 84.82 57.41
+2024-04-12 07:41:50:INFO:Accuracy = 77.97% -> 77.83%    Per_class_accuracy = 82.36% -> 82.25%
+2024-04-12 07:48:05:INFO:Task: train->validation, Iter:7794/12990; Accuracy = 78.54%    Per_class_accuracy=82.74
+94.84 87.97 80.58 57.3 93.78 93.2 83.23 80.05 89.93 90.44 85.15 56.4
+2024-04-12 07:50:06:INFO:Accuracy = 78.54% -> 78.26%    Per_class_accuracy = 82.74% -> 82.56%
+2024-04-12 07:56:21:INFO:Task: train->validation, Iter:8660/12990; Accuracy = 78.20%    Per_class_accuracy=82.39
+94.6 87.34 79.19 57.62 92.37 95.42 83.54 80.22 88.28 88.86 85.34 55.93
+2024-04-12 07:58:23:INFO:Accuracy = 78.20% -> 77.97%    Per_class_accuracy = 82.39% -> 82.28%
+2024-04-12 08:04:49:INFO:Task: train->validation, Iter:9526/12990; Accuracy = 78.29%    Per_class_accuracy=82.49
+94.51 88.58 78.44 58.09 93.18 95.13 81.68 78.95 89.12 89.74 85.69 56.74
+2024-04-12 08:06:40:INFO:Accuracy = 78.29% -> 78.04%    Per_class_accuracy = 82.49% -> 82.34%
+2024-04-12 08:12:51:INFO:Task: train->validation, Iter:10392/12990; Accuracy = 78.09%    Per_class_accuracy=82.32
+94.82 88.75 77.95 58.06 93.67 94.46 80.21 79.7 88.72 90.05 84.92 56.6
+2024-04-12 08:14:54:INFO:Accuracy = 78.09% -> 77.80%    Per_class_accuracy = 82.32% -> 82.13%
+2024-04-12 08:20:19:INFO:Task: train->validation, Iter:11258/12990; Accuracy = 78.31%    Per_class_accuracy=82.63
+94.9 87.88 77.53 56.38 94.18 94.84 81.44 79.05 89.73 89.79 85.69 60.09
+2024-04-12 08:22:28:INFO:Accuracy = 78.31% -> 78.03%    Per_class_accuracy = 82.63% -> 82.43%
+2024-04-12 08:27:32:INFO:Task: train->validation, Iter:12124/12990; Accuracy = 78.26%    Per_class_accuracy=82.55
+94.71 88.23 77.78 57.43 93.31 94.75 79.8 79.87 90.42 89.65 86.57 58.04
+2024-04-12 08:29:36:INFO:Accuracy = 78.26% -> 77.97%    Per_class_accuracy = 82.55% -> 82.36%
+2024-04-12 08:35:03:INFO:Task: train->validation, Iter:12990/12990; Accuracy = 77.90%    Per_class_accuracy=82.27
+94.32 88.83 77.31 56.65 93.22 95.04 78.64 79.7 90.35 88.82 85.98 58.35
+2024-04-12 08:35:16:INFO:visdom:521899
+2024-04-12 08:35:16:INFO:==========================================
+gpu_id:0
+s:train
+t:validation
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:visda-2017
+lr:0.001
+net:resnet101
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-12_01.50.32
+use_file_logger:True
+names:['train', 'validation']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:12
+s_dset_path:../data/visda-2017/image_list/train.txt
+t_dset_path:../data/visda-2017/image_list/validation.txt
+test_dset_path:../data/visda-2017/image_list/validation.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-12 08:37:32:INFO:Accuracy = 53.20% -> 59.14%    Per_class_accuracy = 46.72% -> 56.29%
+2024-04-12 08:43:49:INFO:Task: train->validation, Iter:866/12990; Accuracy = 78.01%    Per_class_accuracy=81.40
+94.38 81.67 79.4 61.36 91.56 93.3 85.49 79.35 85.32 85.01 85.53 54.42
+2024-04-12 08:45:54:INFO:Accuracy = 78.01% -> 77.82%    Per_class_accuracy = 81.40% -> 81.45%
+2024-04-12 08:52:12:INFO:Task: train->validation, Iter:1732/12990; Accuracy = 78.36%    Per_class_accuracy=82.14
+94.62 83.17 77.78 59.47 91.71 94.46 85.78 80.27 88.39 87.86 85.62 56.49
+2024-04-12 08:54:09:INFO:Accuracy = 78.36% -> 78.11%    Per_class_accuracy = 82.14% -> 82.02%
+2024-04-12 08:59:52:INFO:Task: train->validation, Iter:2598/12990; Accuracy = 78.62%    Per_class_accuracy=82.33
+94.57 81.27 79.25 60.07 92.35 94.99 85.71 80.37 87.93 88.51 85.95 56.99
+2024-04-12 09:01:45:INFO:Accuracy = 78.62% -> 78.38%    Per_class_accuracy = 82.33% -> 82.25%
+2024-04-12 09:07:30:INFO:Task: train->validation, Iter:3464/12990; Accuracy = 78.79%    Per_class_accuracy=82.69
+94.82 84.0 78.36 58.82 93.35 94.31 85.11 81.02 89.32 88.91 86.73 57.59
+2024-04-12 09:09:17:INFO:Accuracy = 78.79% -> 78.61%    Per_class_accuracy = 82.69% -> 82.63%
+2024-04-12 09:15:18:INFO:Task: train->validation, Iter:4330/12990; Accuracy = 78.26%    Per_class_accuracy=82.36
+94.82 86.16 77.78 58.48 92.75 94.75 82.14 81.57 88.96 89.04 85.65 56.16
+2024-04-12 09:17:12:INFO:Accuracy = 78.26% -> 78.11%    Per_class_accuracy = 82.36% -> 82.32%
+2024-04-12 09:23:32:INFO:Task: train->validation, Iter:5196/12990; Accuracy = 78.44%    Per_class_accuracy=82.42
+94.3 86.45 78.61 59.81 92.45 95.95 82.54 80.35 88.37 88.65 85.95 55.62
+2024-04-12 09:25:22:INFO:Accuracy = 78.44% -> 78.29%    Per_class_accuracy = 82.42% -> 82.42%
+2024-04-12 09:31:28:INFO:Task: train->validation, Iter:6062/12990; Accuracy = 78.21%    Per_class_accuracy=82.44
+94.62 86.56 79.32 57.3 92.18 95.37 82.73 81.2 89.36 88.73 85.76 56.15
+2024-04-12 09:33:12:INFO:Accuracy = 78.21% -> 78.08%    Per_class_accuracy = 82.44% -> 82.38%
+2024-04-12 09:38:46:INFO:Task: train->validation, Iter:6928/12990; Accuracy = 78.44%    Per_class_accuracy=82.62
+94.9 87.22 77.89 57.89 93.11 95.04 82.19 80.4 89.36 89.74 85.79 57.91
+2024-04-12 09:40:25:INFO:Accuracy = 78.44% -> 78.21%    Per_class_accuracy = 82.62% -> 82.46%
+2024-04-12 09:45:58:INFO:Task: train->validation, Iter:7794/12990; Accuracy = 78.32%    Per_class_accuracy=82.50
+95.01 86.36 79.17 57.7 92.56 95.52 82.11 80.5 90.02 88.6 85.41 57.05
+2024-04-12 09:47:42:INFO:Accuracy = 78.32% -> 78.12%    Per_class_accuracy = 82.50% -> 82.39%
+2024-04-12 09:53:07:INFO:Task: train->validation, Iter:8660/12990; Accuracy = 78.73%    Per_class_accuracy=82.87
+94.93 87.19 80.02 58.51 94.1 94.89 82.06 80.77 88.06 89.87 86.54 57.44
+2024-04-12 09:54:33:INFO:Accuracy = 78.73% -> 78.48%    Per_class_accuracy = 82.87% -> 82.69%
+2024-04-12 10:00:00:INFO:Task: train->validation, Iter:9526/12990; Accuracy = 78.30%    Per_class_accuracy=82.63
+94.46 87.77 79.19 57.24 93.33 94.94 79.4 80.97 90.44 89.48 87.11 57.17
+2024-04-12 10:01:41:INFO:Accuracy = 78.30% -> 78.10%    Per_class_accuracy = 82.63% -> 82.50%
+2024-04-12 10:07:11:INFO:Task: train->validation, Iter:10392/12990; Accuracy = 78.60%    Per_class_accuracy=82.78
+94.46 87.74 80.64 58.2 93.69 95.42 80.97 80.47 89.05 89.35 85.91 57.52
+2024-04-12 10:08:57:INFO:Accuracy = 78.60% -> 78.34%    Per_class_accuracy = 82.78% -> 82.62%
+2024-04-12 10:14:23:INFO:Task: train->validation, Iter:11258/12990; Accuracy = 78.74%    Per_class_accuracy=82.77
+94.02 87.08 79.4 59.77 93.82 94.46 81.75 80.47 88.46 90.75 86.8 56.42
+2024-04-12 10:16:11:INFO:Accuracy = 78.74% -> 78.48%    Per_class_accuracy = 82.77% -> 82.61%
+2024-04-12 10:20:28:INFO:Task: train->validation, Iter:12124/12990; Accuracy = 78.80%    Per_class_accuracy=83.05
+94.79 88.75 79.49 57.84 94.07 94.46 80.59 79.92 91.49 90.09 87.18 57.89
+2024-04-12 10:22:17:INFO:Accuracy = 78.80% -> 78.52%    Per_class_accuracy = 83.05% -> 82.84%
+2024-04-12 10:27:04:INFO:Task: train->validation, Iter:12990/12990; Accuracy = 78.48%    Per_class_accuracy=82.85
+94.73 87.77 78.74 56.54 93.78 94.84 80.61 80.92 91.03 90.27 86.07 58.94

@@ -1,0 +1,54 @@
+2024-04-14 12:38:21:INFO:visdom:2014277
+2024-04-14 12:38:21:INFO:==========================================
+gpu_id:0
+s:painting
+t:sketch
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:domainnet40
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_11.35.59
+use_file_logger:True
+names:['sketch', 'clipart', 'painting', 'real']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:40
+s_dset_path:../data/domainnet40/image_list/painting_train_mini.txt
+t_dset_path:../data/domainnet40/image_list/sketch_train_mini.txt
+test_dset_path:../data/domainnet40/image_list/sketch_test_mini.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 12:38:37:INFO:Accuracy = 62.18% -> 67.60%    Per_class_accuracy = 60.44% -> 67.27%
+2024-04-14 12:38:56:INFO:Task: painting->sketch, Iter:87/1305; Accuracy = 74.66%    Per_class_accuracy=74.96
+2024-04-14 12:39:06:INFO:Accuracy = 73.70% -> 73.78%    Per_class_accuracy = 73.02% -> 73.41%
+2024-04-14 12:39:24:INFO:Task: painting->sketch, Iter:174/1305; Accuracy = 75.66%    Per_class_accuracy=75.96
+2024-04-14 12:39:34:INFO:Accuracy = 74.43% -> 74.21%    Per_class_accuracy = 73.89% -> 73.94%
+2024-04-14 12:39:51:INFO:Task: painting->sketch, Iter:261/1305; Accuracy = 75.70%    Per_class_accuracy=76.14
+2024-04-14 12:40:01:INFO:Accuracy = 74.75% -> 74.50%    Per_class_accuracy = 74.42% -> 74.28%
+2024-04-14 12:40:21:INFO:Task: painting->sketch, Iter:348/1305; Accuracy = 75.86%    Per_class_accuracy=76.31
+2024-04-14 12:40:31:INFO:Accuracy = 74.68% -> 74.59%    Per_class_accuracy = 74.49% -> 74.47%
+2024-04-14 12:40:50:INFO:Task: painting->sketch, Iter:435/1305; Accuracy = 75.53%    Per_class_accuracy=76.17
+2024-04-14 12:41:00:INFO:Accuracy = 74.59% -> 74.52%    Per_class_accuracy = 74.51% -> 74.40%
+2024-04-14 12:41:16:INFO:Task: painting->sketch, Iter:522/1305; Accuracy = 76.20%    Per_class_accuracy=76.84

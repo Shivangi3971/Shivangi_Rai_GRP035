@@ -1,0 +1,214 @@
+2024-04-14 12:05:27:INFO:visdom:1888919
+2024-04-14 12:05:27:INFO:==========================================
+gpu_id:0
+s:clipart
+t:sketch
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:domainnet40
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_11.35.59
+use_file_logger:True
+names:['sketch', 'clipart', 'painting', 'real']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:40
+s_dset_path:../data/domainnet40/image_list/clipart_train_mini.txt
+t_dset_path:../data/domainnet40/image_list/sketch_train_mini.txt
+test_dset_path:../data/domainnet40/image_list/sketch_test_mini.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 12:05:44:INFO:Accuracy = 57.96% -> 66.05%    Per_class_accuracy = 54.71% -> 66.97%
+2024-04-14 12:06:03:INFO:Task: clipart->sketch, Iter:87/1305; Accuracy = 74.57%    Per_class_accuracy=74.39
+2024-04-14 12:06:13:INFO:Accuracy = 74.59% -> 74.21%    Per_class_accuracy = 74.01% -> 74.49%
+2024-04-14 12:06:32:INFO:Task: clipart->sketch, Iter:174/1305; Accuracy = 74.78%    Per_class_accuracy=75.87
+2024-04-14 12:06:43:INFO:Accuracy = 75.24% -> 75.11%    Per_class_accuracy = 75.61% -> 75.56%
+2024-04-14 12:07:01:INFO:Task: clipart->sketch, Iter:261/1305; Accuracy = 74.86%    Per_class_accuracy=75.93
+2024-04-14 12:07:13:INFO:Accuracy = 75.29% -> 74.97%    Per_class_accuracy = 75.85% -> 75.72%
+2024-04-14 12:07:29:INFO:Task: clipart->sketch, Iter:348/1305; Accuracy = 74.82%    Per_class_accuracy=76.26
+2024-04-14 12:07:39:INFO:Accuracy = 75.17% -> 74.97%    Per_class_accuracy = 76.46% -> 75.71%
+2024-04-14 12:07:57:INFO:Task: clipart->sketch, Iter:435/1305; Accuracy = 74.74%    Per_class_accuracy=76.00
+2024-04-14 12:08:07:INFO:Accuracy = 75.33% -> 75.15%    Per_class_accuracy = 76.11% -> 76.03%
+2024-04-14 12:08:24:INFO:Task: clipart->sketch, Iter:522/1305; Accuracy = 74.20%    Per_class_accuracy=75.70
+2024-04-14 12:08:34:INFO:Accuracy = 75.13% -> 74.99%    Per_class_accuracy = 76.12% -> 75.91%
+2024-04-14 12:08:52:INFO:Task: clipart->sketch, Iter:609/1305; Accuracy = 74.36%    Per_class_accuracy=75.87
+2024-04-14 12:09:02:INFO:Accuracy = 75.08% -> 75.04%    Per_class_accuracy = 75.99% -> 75.97%
+2024-04-14 12:09:20:INFO:Task: clipart->sketch, Iter:696/1305; Accuracy = 74.07%    Per_class_accuracy=75.63
+2024-04-14 12:09:30:INFO:Accuracy = 75.04% -> 74.90%    Per_class_accuracy = 76.03% -> 75.80%
+2024-04-14 12:09:44:INFO:Task: clipart->sketch, Iter:783/1305; Accuracy = 74.03%    Per_class_accuracy=75.78
+2024-04-14 12:09:54:INFO:Accuracy = 74.90% -> 74.86%    Per_class_accuracy = 75.95% -> 75.84%
+2024-04-14 12:10:08:INFO:Task: clipart->sketch, Iter:870/1305; Accuracy = 74.03%    Per_class_accuracy=75.61
+2024-04-14 12:10:18:INFO:Accuracy = 74.79% -> 74.82%    Per_class_accuracy = 75.77% -> 75.77%
+2024-04-14 12:10:34:INFO:Task: clipart->sketch, Iter:957/1305; Accuracy = 73.95%    Per_class_accuracy=75.47
+2024-04-14 12:10:44:INFO:Accuracy = 74.82% -> 74.77%    Per_class_accuracy = 76.05% -> 75.72%
+2024-04-14 12:11:02:INFO:Task: clipart->sketch, Iter:1044/1305; Accuracy = 73.86%    Per_class_accuracy=75.36
+2024-04-14 12:11:11:INFO:Accuracy = 74.90% -> 74.82%    Per_class_accuracy = 76.05% -> 75.75%
+2024-04-14 12:11:25:INFO:Task: clipart->sketch, Iter:1131/1305; Accuracy = 74.03%    Per_class_accuracy=75.47
+2024-04-14 12:11:35:INFO:Accuracy = 74.82% -> 74.81%    Per_class_accuracy = 75.99% -> 75.72%
+2024-04-14 12:11:49:INFO:Task: clipart->sketch, Iter:1218/1305; Accuracy = 74.20%    Per_class_accuracy=75.62
+2024-04-14 12:11:59:INFO:Accuracy = 74.88% -> 74.84%    Per_class_accuracy = 76.01% -> 75.78%
+2024-04-14 12:12:16:INFO:Task: clipart->sketch, Iter:1305/1305; Accuracy = 73.28%    Per_class_accuracy=74.85
+2024-04-14 12:12:16:INFO:==========================================
+gpu_id:0
+s:clipart
+t:painting
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:domainnet40
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_11.35.59
+use_file_logger:True
+names:['sketch', 'clipart', 'painting', 'real']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:40
+s_dset_path:../data/domainnet40/image_list/clipart_train_mini.txt
+t_dset_path:../data/domainnet40/image_list/painting_train_mini.txt
+test_dset_path:../data/domainnet40/image_list/painting_test_mini.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 12:12:29:INFO:Accuracy = 54.63% -> 64.40%    Per_class_accuracy = 54.33% -> 62.80%
+2024-04-14 12:12:51:INFO:Task: clipart->painting, Iter:106/1590; Accuracy = 74.84%    Per_class_accuracy=70.31
+2024-04-14 12:13:04:INFO:Accuracy = 74.85% -> 75.81%    Per_class_accuracy = 70.94% -> 73.11%
+2024-04-14 12:13:25:INFO:Task: clipart->painting, Iter:212/1590; Accuracy = 76.31%    Per_class_accuracy=71.98
+2024-04-14 12:13:39:INFO:Accuracy = 76.17% -> 76.54%    Per_class_accuracy = 72.08% -> 73.78%
+2024-04-14 12:13:59:INFO:Task: clipart->painting, Iter:318/1590; Accuracy = 76.52%    Per_class_accuracy=72.41
+2024-04-14 12:14:12:INFO:Accuracy = 76.35% -> 76.66%    Per_class_accuracy = 72.38% -> 73.80%
+2024-04-14 12:14:34:INFO:Task: clipart->painting, Iter:424/1590; Accuracy = 76.25%    Per_class_accuracy=72.37
+2024-04-14 12:14:47:INFO:Accuracy = 76.59% -> 76.88%    Per_class_accuracy = 72.47% -> 74.12%
+2024-04-14 12:15:09:INFO:Task: clipart->painting, Iter:530/1590; Accuracy = 76.25%    Per_class_accuracy=72.45
+2024-04-14 12:15:22:INFO:Accuracy = 76.54% -> 76.75%    Per_class_accuracy = 72.57% -> 73.90%
+2024-04-14 12:15:44:INFO:Task: clipart->painting, Iter:636/1590; Accuracy = 75.97%    Per_class_accuracy=71.96
+2024-04-14 12:15:56:INFO:Accuracy = 76.63% -> 76.57%    Per_class_accuracy = 73.15% -> 73.74%
+2024-04-14 12:16:19:INFO:Task: clipart->painting, Iter:742/1590; Accuracy = 76.49%    Per_class_accuracy=72.02
+2024-04-14 12:16:31:INFO:Accuracy = 76.62% -> 76.66%    Per_class_accuracy = 72.84% -> 73.74%
+2024-04-14 12:16:52:INFO:Task: clipart->painting, Iter:848/1590; Accuracy = 76.28%    Per_class_accuracy=72.21
+2024-04-14 12:17:04:INFO:Accuracy = 76.47% -> 76.48%    Per_class_accuracy = 73.10% -> 73.63%
+2024-04-14 12:17:27:INFO:Task: clipart->painting, Iter:954/1590; Accuracy = 76.07%    Per_class_accuracy=71.76
+2024-04-14 12:17:40:INFO:Accuracy = 76.47% -> 76.48%    Per_class_accuracy = 73.02% -> 73.63%
+2024-04-14 12:17:59:INFO:Task: clipart->painting, Iter:1060/1590; Accuracy = 76.45%    Per_class_accuracy=72.04
+2024-04-14 12:18:12:INFO:Accuracy = 76.57% -> 76.60%    Per_class_accuracy = 73.23% -> 73.81%
+2024-04-14 12:18:33:INFO:Task: clipart->painting, Iter:1166/1590; Accuracy = 76.28%    Per_class_accuracy=71.91
+2024-04-14 12:18:46:INFO:Accuracy = 76.53% -> 76.60%    Per_class_accuracy = 73.15% -> 73.81%
+2024-04-14 12:19:05:INFO:Task: clipart->painting, Iter:1272/1590; Accuracy = 75.83%    Per_class_accuracy=71.62
+2024-04-14 12:19:17:INFO:Accuracy = 76.54% -> 76.59%    Per_class_accuracy = 73.53% -> 73.80%
+2024-04-14 12:19:40:INFO:Task: clipart->painting, Iter:1378/1590; Accuracy = 75.97%    Per_class_accuracy=72.34
+2024-04-14 12:19:53:INFO:Accuracy = 76.54% -> 76.57%    Per_class_accuracy = 73.52% -> 73.80%
+2024-04-14 12:20:12:INFO:Task: clipart->painting, Iter:1484/1590; Accuracy = 76.04%    Per_class_accuracy=73.10
+2024-04-14 12:20:25:INFO:Accuracy = 76.54% -> 76.54%    Per_class_accuracy = 73.76% -> 73.74%
+2024-04-14 12:20:46:INFO:Task: clipart->painting, Iter:1590/1590; Accuracy = 75.97%    Per_class_accuracy=72.81
+2024-04-14 12:20:47:INFO:==========================================
+gpu_id:0
+s:clipart
+t:real
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:domainnet40
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_11.35.59
+use_file_logger:True
+names:['sketch', 'clipart', 'painting', 'real']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:40
+s_dset_path:../data/domainnet40/image_list/clipart_train_mini.txt
+t_dset_path:../data/domainnet40/image_list/real_train_mini.txt
+test_dset_path:../data/domainnet40/image_list/real_test_mini.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 12:21:13:INFO:Accuracy = 75.55% -> 84.54%    Per_class_accuracy = 74.43% -> 83.48%
+2024-04-14 12:22:06:INFO:Task: clipart->real, Iter:253/3795; Accuracy = 89.04%    Per_class_accuracy=87.66
+2024-04-14 12:22:31:INFO:Accuracy = 89.13% -> 89.20%    Per_class_accuracy = 87.65% -> 87.70%
+2024-04-14 12:23:21:INFO:Task: clipart->real, Iter:506/3795; Accuracy = 89.60%    Per_class_accuracy=88.15
+2024-04-14 12:23:46:INFO:Accuracy = 89.41% -> 89.42%    Per_class_accuracy = 87.95% -> 87.94%
+2024-04-14 12:24:35:INFO:Task: clipart->real, Iter:759/3795; Accuracy = 89.57%    Per_class_accuracy=88.16
+2024-04-14 12:24:59:INFO:Accuracy = 89.47% -> 89.58%    Per_class_accuracy = 88.02% -> 88.11%
+2024-04-14 12:25:46:INFO:Task: clipart->real, Iter:1012/3795; Accuracy = 89.82%    Per_class_accuracy=88.46
+2024-04-14 12:26:11:INFO:Accuracy = 89.64% -> 89.67%    Per_class_accuracy = 88.20% -> 88.21%
+2024-04-14 12:26:56:INFO:Task: clipart->real, Iter:1265/3795; Accuracy = 89.43%    Per_class_accuracy=88.13
+2024-04-14 12:27:20:INFO:Accuracy = 89.68% -> 89.59%    Per_class_accuracy = 88.26% -> 88.18%
+2024-04-14 12:28:04:INFO:Task: clipart->real, Iter:1518/3795; Accuracy = 89.57%    Per_class_accuracy=88.24
+2024-04-14 12:28:28:INFO:Accuracy = 89.53% -> 89.55%    Per_class_accuracy = 88.10% -> 88.12%
+2024-04-14 12:29:13:INFO:Task: clipart->real, Iter:1771/3795; Accuracy = 89.80%    Per_class_accuracy=88.37
+2024-04-14 12:29:37:INFO:Accuracy = 89.59% -> 89.55%    Per_class_accuracy = 88.15% -> 88.11%
+2024-04-14 12:30:19:INFO:Task: clipart->real, Iter:2024/3795; Accuracy = 89.50%    Per_class_accuracy=88.14
+2024-04-14 12:30:43:INFO:Accuracy = 89.54% -> 89.54%    Per_class_accuracy = 88.14% -> 88.13%
+2024-04-14 12:31:26:INFO:Task: clipart->real, Iter:2277/3795; Accuracy = 89.31%    Per_class_accuracy=88.04
+2024-04-14 12:31:52:INFO:Accuracy = 89.55% -> 89.59%    Per_class_accuracy = 88.17% -> 88.18%
+2024-04-14 12:32:35:INFO:Task: clipart->real, Iter:2530/3795; Accuracy = 89.44%    Per_class_accuracy=88.08
+2024-04-14 12:33:00:INFO:Accuracy = 89.56% -> 89.58%    Per_class_accuracy = 88.17% -> 88.17%
+2024-04-14 12:33:42:INFO:Task: clipart->real, Iter:2783/3795; Accuracy = 89.49%    Per_class_accuracy=88.08
+2024-04-14 12:34:06:INFO:Accuracy = 89.54% -> 89.54%    Per_class_accuracy = 88.16% -> 88.14%
+2024-04-14 12:34:45:INFO:Task: clipart->real, Iter:3036/3795; Accuracy = 89.51%    Per_class_accuracy=88.14
+2024-04-14 12:35:09:INFO:Accuracy = 89.52% -> 89.52%    Per_class_accuracy = 88.12% -> 88.12%
+2024-04-14 12:35:54:INFO:Task: clipart->real, Iter:3289/3795; Accuracy = 89.83%    Per_class_accuracy=88.40
+2024-04-14 12:36:20:INFO:Accuracy = 89.58% -> 89.55%    Per_class_accuracy = 88.18% -> 88.14%
+2024-04-14 12:37:05:INFO:Task: clipart->real, Iter:3542/3795; Accuracy = 89.59%    Per_class_accuracy=88.25
+2024-04-14 12:37:31:INFO:Accuracy = 89.55% -> 89.54%    Per_class_accuracy = 88.17% -> 88.14%
+2024-04-14 12:38:17:INFO:Task: clipart->real, Iter:3795/3795; Accuracy = 89.43%    Per_class_accuracy=88.18

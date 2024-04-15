@@ -1,0 +1,429 @@
+2024-04-13 00:57:55:INFO:visdom:2209986
+2024-04-13 00:57:55:INFO:==========================================
+gpu_id:0
+s:amazon
+t:dslr
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/dslr.txt
+test_dset_path:../data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 00:58:13:INFO:Accuracy = 81.53% -> 91.77%    Per_class_accuracy = 84.02% -> 92.50%
+2024-04-13 00:58:21:INFO:Task: amazon->dslr, Iter:8/120; Accuracy = 87.95%    Per_class_accuracy=89.80
+2024-04-13 00:58:25:INFO:Accuracy = 87.95% -> 92.77%    Per_class_accuracy = 89.80% -> 93.46%
+2024-04-13 00:58:30:INFO:Task: amazon->dslr, Iter:16/120; Accuracy = 91.77%    Per_class_accuracy=92.70
+2024-04-13 00:58:34:INFO:Accuracy = 91.77% -> 92.97%    Per_class_accuracy = 92.70% -> 93.67%
+2024-04-13 00:58:39:INFO:Task: amazon->dslr, Iter:24/120; Accuracy = 93.17%    Per_class_accuracy=93.74
+2024-04-13 00:58:44:INFO:Accuracy = 93.17% -> 93.57%    Per_class_accuracy = 93.74% -> 94.03%
+2024-04-13 00:58:49:INFO:Task: amazon->dslr, Iter:32/120; Accuracy = 93.78%    Per_class_accuracy=94.22
+2024-04-13 00:58:54:INFO:Accuracy = 93.78% -> 94.18%    Per_class_accuracy = 94.22% -> 94.61%
+2024-04-13 00:58:59:INFO:Task: amazon->dslr, Iter:40/120; Accuracy = 93.98%    Per_class_accuracy=94.43
+2024-04-13 00:59:03:INFO:Accuracy = 93.98% -> 94.18%    Per_class_accuracy = 94.43% -> 94.61%
+2024-04-13 00:59:07:INFO:Task: amazon->dslr, Iter:48/120; Accuracy = 93.78%    Per_class_accuracy=94.26
+2024-04-13 00:59:12:INFO:Accuracy = 93.78% -> 93.98%    Per_class_accuracy = 94.26% -> 94.47%
+2024-04-13 00:59:17:INFO:Task: amazon->dslr, Iter:56/120; Accuracy = 93.78%    Per_class_accuracy=94.26
+2024-04-13 00:59:21:INFO:Accuracy = 93.78% -> 93.98%    Per_class_accuracy = 94.26% -> 94.47%
+2024-04-13 00:59:26:INFO:Task: amazon->dslr, Iter:64/120; Accuracy = 93.78%    Per_class_accuracy=94.26
+2024-04-13 00:59:30:INFO:Accuracy = 93.78% -> 93.98%    Per_class_accuracy = 94.26% -> 94.47%
+2024-04-13 00:59:35:INFO:Task: amazon->dslr, Iter:72/120; Accuracy = 93.98%    Per_class_accuracy=94.40
+2024-04-13 00:59:40:INFO:Accuracy = 93.98% -> 93.98%    Per_class_accuracy = 94.40% -> 94.47%
+2024-04-13 00:59:45:INFO:Task: amazon->dslr, Iter:80/120; Accuracy = 94.18%    Per_class_accuracy=94.61
+2024-04-13 00:59:49:INFO:Accuracy = 94.18% -> 93.98%    Per_class_accuracy = 94.61% -> 94.47%
+2024-04-13 00:59:54:INFO:Task: amazon->dslr, Iter:88/120; Accuracy = 94.18%    Per_class_accuracy=94.61
+2024-04-13 00:59:59:INFO:Accuracy = 94.18% -> 93.98%    Per_class_accuracy = 94.61% -> 94.47%
+2024-04-13 01:00:04:INFO:Task: amazon->dslr, Iter:96/120; Accuracy = 93.98%    Per_class_accuracy=94.48
+2024-04-13 01:00:08:INFO:Accuracy = 93.98% -> 94.18%    Per_class_accuracy = 94.48% -> 94.61%
+2024-04-13 01:00:13:INFO:Task: amazon->dslr, Iter:104/120; Accuracy = 94.18%    Per_class_accuracy=94.61
+2024-04-13 01:00:17:INFO:Accuracy = 94.18% -> 94.18%    Per_class_accuracy = 94.61% -> 94.61%
+2024-04-13 01:00:22:INFO:Task: amazon->dslr, Iter:112/120; Accuracy = 94.18%    Per_class_accuracy=94.61
+2024-04-13 01:00:26:INFO:Accuracy = 94.18% -> 94.18%    Per_class_accuracy = 94.61% -> 94.61%
+2024-04-13 01:00:31:INFO:Task: amazon->dslr, Iter:120/120; Accuracy = 94.18%    Per_class_accuracy=94.61
+2024-04-13 01:00:31:INFO:==========================================
+gpu_id:0
+s:amazon
+t:webcam
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 01:00:36:INFO:Accuracy = 76.48% -> 86.67%    Per_class_accuracy = 76.98% -> 87.29%
+2024-04-13 01:00:41:INFO:Task: amazon->webcam, Iter:13/195; Accuracy = 87.92%    Per_class_accuracy=88.84
+2024-04-13 01:00:43:INFO:Accuracy = 87.92% -> 89.81%    Per_class_accuracy = 88.84% -> 90.52%
+2024-04-13 01:00:48:INFO:Task: amazon->webcam, Iter:26/195; Accuracy = 89.81%    Per_class_accuracy=90.41
+2024-04-13 01:00:50:INFO:Accuracy = 89.81% -> 90.06%    Per_class_accuracy = 90.41% -> 90.70%
+2024-04-13 01:00:55:INFO:Task: amazon->webcam, Iter:39/195; Accuracy = 90.31%    Per_class_accuracy=90.92
+2024-04-13 01:00:58:INFO:Accuracy = 90.31% -> 90.44%    Per_class_accuracy = 90.92% -> 91.08%
+2024-04-13 01:01:02:INFO:Task: amazon->webcam, Iter:52/195; Accuracy = 90.57%    Per_class_accuracy=91.18
+2024-04-13 01:01:05:INFO:Accuracy = 90.57% -> 90.82%    Per_class_accuracy = 91.18% -> 91.42%
+2024-04-13 01:01:09:INFO:Task: amazon->webcam, Iter:65/195; Accuracy = 90.82%    Per_class_accuracy=91.42
+2024-04-13 01:01:12:INFO:Accuracy = 90.82% -> 90.82%    Per_class_accuracy = 91.42% -> 91.46%
+2024-04-13 01:01:16:INFO:Task: amazon->webcam, Iter:78/195; Accuracy = 90.82%    Per_class_accuracy=91.46
+2024-04-13 01:01:19:INFO:Accuracy = 90.82% -> 90.94%    Per_class_accuracy = 91.46% -> 91.57%
+2024-04-13 01:01:24:INFO:Task: amazon->webcam, Iter:91/195; Accuracy = 90.94%    Per_class_accuracy=91.57
+2024-04-13 01:01:26:INFO:Accuracy = 90.94% -> 90.94%    Per_class_accuracy = 91.57% -> 91.57%
+2024-04-13 01:01:31:INFO:Task: amazon->webcam, Iter:104/195; Accuracy = 90.94%    Per_class_accuracy=91.57
+2024-04-13 01:01:33:INFO:Accuracy = 90.94% -> 90.94%    Per_class_accuracy = 91.57% -> 91.57%
+2024-04-13 01:01:38:INFO:Task: amazon->webcam, Iter:117/195; Accuracy = 91.07%    Per_class_accuracy=91.68
+2024-04-13 01:01:40:INFO:Accuracy = 91.07% -> 91.57%    Per_class_accuracy = 91.68% -> 92.11%
+2024-04-13 01:01:45:INFO:Task: amazon->webcam, Iter:130/195; Accuracy = 91.07%    Per_class_accuracy=91.68
+2024-04-13 01:01:47:INFO:Accuracy = 91.07% -> 91.57%    Per_class_accuracy = 91.68% -> 92.11%
+2024-04-13 01:01:52:INFO:Task: amazon->webcam, Iter:143/195; Accuracy = 91.07%    Per_class_accuracy=91.68
+2024-04-13 01:01:54:INFO:Accuracy = 91.07% -> 91.57%    Per_class_accuracy = 91.68% -> 92.11%
+2024-04-13 01:01:59:INFO:Task: amazon->webcam, Iter:156/195; Accuracy = 91.19%    Per_class_accuracy=91.79
+2024-04-13 01:02:02:INFO:Accuracy = 91.19% -> 91.57%    Per_class_accuracy = 91.79% -> 92.11%
+2024-04-13 01:02:06:INFO:Task: amazon->webcam, Iter:169/195; Accuracy = 91.32%    Per_class_accuracy=91.89
+2024-04-13 01:02:09:INFO:Accuracy = 91.32% -> 91.57%    Per_class_accuracy = 91.89% -> 92.11%
+2024-04-13 01:02:13:INFO:Task: amazon->webcam, Iter:182/195; Accuracy = 91.57%    Per_class_accuracy=92.11
+2024-04-13 01:02:15:INFO:Accuracy = 91.57% -> 91.57%    Per_class_accuracy = 92.11% -> 92.11%
+2024-04-13 01:02:19:INFO:Task: amazon->webcam, Iter:195/195; Accuracy = 91.57%    Per_class_accuracy=92.11
+2024-04-13 01:15:07:INFO:visdom:2312248
+2024-04-13 01:15:07:INFO:==========================================
+gpu_id:0
+s:amazon
+t:dslr
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/dslr.txt
+test_dset_path:../data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 01:15:22:INFO:Accuracy = 81.53% -> 91.77%    Per_class_accuracy = 84.02% -> 92.50%
+2024-04-13 01:15:29:INFO:Task: amazon->dslr, Iter:8/120; Accuracy = 88.76%    Per_class_accuracy=90.60
+2024-04-13 01:15:34:INFO:Accuracy = 88.76% -> 92.37%    Per_class_accuracy = 90.60% -> 93.22%
+2024-04-13 01:15:39:INFO:Task: amazon->dslr, Iter:16/120; Accuracy = 91.97%    Per_class_accuracy=92.86
+2024-04-13 01:15:43:INFO:Accuracy = 91.97% -> 92.77%    Per_class_accuracy = 92.86% -> 93.46%
+2024-04-13 01:15:48:INFO:Task: amazon->dslr, Iter:24/120; Accuracy = 92.97%    Per_class_accuracy=93.56
+2024-04-13 01:15:53:INFO:Accuracy = 92.97% -> 93.17%    Per_class_accuracy = 93.56% -> 93.78%
+2024-04-13 01:15:58:INFO:Task: amazon->dslr, Iter:32/120; Accuracy = 93.17%    Per_class_accuracy=93.77
+2024-04-13 01:16:02:INFO:Accuracy = 93.17% -> 93.17%    Per_class_accuracy = 93.77% -> 93.78%
+2024-04-13 01:16:06:INFO:Task: amazon->dslr, Iter:40/120; Accuracy = 93.37%    Per_class_accuracy=93.87
+2024-04-13 01:16:11:INFO:Accuracy = 93.37% -> 93.78%    Per_class_accuracy = 93.87% -> 94.32%
+2024-04-13 01:16:16:INFO:Task: amazon->dslr, Iter:48/120; Accuracy = 93.57%    Per_class_accuracy=94.03
+2024-04-13 01:16:20:INFO:Accuracy = 93.57% -> 93.78%    Per_class_accuracy = 94.03% -> 94.32%
+2024-04-13 01:16:25:INFO:Task: amazon->dslr, Iter:56/120; Accuracy = 93.57%    Per_class_accuracy=94.03
+2024-04-13 01:16:29:INFO:Accuracy = 93.57% -> 93.78%    Per_class_accuracy = 94.03% -> 94.32%
+2024-04-13 01:16:34:INFO:Task: amazon->dslr, Iter:64/120; Accuracy = 93.78%    Per_class_accuracy=94.24
+2024-04-13 01:16:39:INFO:Accuracy = 93.78% -> 93.98%    Per_class_accuracy = 94.24% -> 94.46%
+2024-04-13 01:16:43:INFO:Task: amazon->dslr, Iter:72/120; Accuracy = 93.98%    Per_class_accuracy=94.57
+2024-04-13 01:16:48:INFO:Accuracy = 93.98% -> 94.18%    Per_class_accuracy = 94.57% -> 94.78%
+2024-04-13 01:16:53:INFO:Task: amazon->dslr, Iter:80/120; Accuracy = 93.98%    Per_class_accuracy=94.57
+2024-04-13 01:16:57:INFO:Accuracy = 93.98% -> 94.18%    Per_class_accuracy = 94.57% -> 94.78%
+2024-04-13 01:17:02:INFO:Task: amazon->dslr, Iter:88/120; Accuracy = 93.98%    Per_class_accuracy=94.57
+2024-04-13 01:17:06:INFO:Accuracy = 93.98% -> 94.18%    Per_class_accuracy = 94.57% -> 94.78%
+2024-04-13 01:17:11:INFO:Task: amazon->dslr, Iter:96/120; Accuracy = 94.18%    Per_class_accuracy=94.78
+2024-04-13 01:17:16:INFO:Accuracy = 94.18% -> 94.18%    Per_class_accuracy = 94.78% -> 94.78%
+2024-04-13 01:17:20:INFO:Task: amazon->dslr, Iter:104/120; Accuracy = 94.18%    Per_class_accuracy=94.78
+2024-04-13 01:17:25:INFO:Accuracy = 94.18% -> 94.18%    Per_class_accuracy = 94.78% -> 94.78%
+2024-04-13 01:17:30:INFO:Task: amazon->dslr, Iter:112/120; Accuracy = 94.18%    Per_class_accuracy=94.78
+2024-04-13 01:17:35:INFO:Accuracy = 94.18% -> 94.18%    Per_class_accuracy = 94.78% -> 94.78%
+2024-04-13 01:17:39:INFO:Task: amazon->dslr, Iter:120/120; Accuracy = 94.18%    Per_class_accuracy=94.78
+2024-04-13 01:17:40:INFO:==========================================
+gpu_id:0
+s:amazon
+t:webcam
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 01:17:45:INFO:Accuracy = 76.48% -> 86.67%    Per_class_accuracy = 76.98% -> 87.29%
+2024-04-13 01:17:49:INFO:Task: amazon->webcam, Iter:13/195; Accuracy = 87.55%    Per_class_accuracy=88.39
+2024-04-13 01:17:52:INFO:Accuracy = 87.55% -> 90.69%    Per_class_accuracy = 88.39% -> 91.29%
+2024-04-13 01:17:56:INFO:Task: amazon->webcam, Iter:26/195; Accuracy = 91.19%    Per_class_accuracy=91.48
+2024-04-13 01:17:59:INFO:Accuracy = 91.19% -> 92.20%    Per_class_accuracy = 91.48% -> 92.34%
+2024-04-13 01:18:03:INFO:Task: amazon->webcam, Iter:39/195; Accuracy = 91.95%    Per_class_accuracy=92.09
+2024-04-13 01:18:06:INFO:Accuracy = 91.95% -> 92.20%    Per_class_accuracy = 92.09% -> 92.30%
+2024-04-13 01:18:10:INFO:Task: amazon->webcam, Iter:52/195; Accuracy = 92.20%    Per_class_accuracy=92.32
+2024-04-13 01:18:13:INFO:Accuracy = 92.20% -> 92.20%    Per_class_accuracy = 92.32% -> 92.22%
+2024-04-13 01:18:17:INFO:Task: amazon->webcam, Iter:65/195; Accuracy = 92.33%    Per_class_accuracy=92.39
+2024-04-13 01:18:19:INFO:Accuracy = 92.33% -> 92.20%    Per_class_accuracy = 92.39% -> 92.22%
+2024-04-13 01:18:24:INFO:Task: amazon->webcam, Iter:78/195; Accuracy = 92.33%    Per_class_accuracy=92.39
+2024-04-13 01:18:26:INFO:Accuracy = 92.33% -> 92.20%    Per_class_accuracy = 92.39% -> 92.22%
+2024-04-13 01:18:31:INFO:Task: amazon->webcam, Iter:91/195; Accuracy = 92.08%    Per_class_accuracy=92.15
+2024-04-13 01:18:33:INFO:Accuracy = 92.08% -> 92.08%    Per_class_accuracy = 92.15% -> 92.15%
+2024-04-13 01:18:38:INFO:Task: amazon->webcam, Iter:104/195; Accuracy = 92.08%    Per_class_accuracy=92.15
+2024-04-13 01:18:41:INFO:Accuracy = 92.08% -> 92.08%    Per_class_accuracy = 92.15% -> 92.15%
+2024-04-13 01:18:45:INFO:Task: amazon->webcam, Iter:117/195; Accuracy = 91.95%    Per_class_accuracy=92.07
+2024-04-13 01:18:48:INFO:Accuracy = 91.95% -> 92.08%    Per_class_accuracy = 92.07% -> 92.15%
+2024-04-13 01:18:52:INFO:Task: amazon->webcam, Iter:130/195; Accuracy = 91.95%    Per_class_accuracy=92.07
+2024-04-13 01:18:55:INFO:Accuracy = 91.95% -> 92.20%    Per_class_accuracy = 92.07% -> 92.25%
+2024-04-13 01:18:59:INFO:Task: amazon->webcam, Iter:143/195; Accuracy = 91.95%    Per_class_accuracy=92.07
+2024-04-13 01:19:02:INFO:Accuracy = 91.95% -> 92.20%    Per_class_accuracy = 92.07% -> 92.25%
+2024-04-13 01:19:06:INFO:Task: amazon->webcam, Iter:156/195; Accuracy = 92.20%    Per_class_accuracy=92.25
+2024-04-13 01:19:09:INFO:Accuracy = 92.20% -> 92.20%    Per_class_accuracy = 92.25% -> 92.25%
+2024-04-13 01:19:13:INFO:Task: amazon->webcam, Iter:169/195; Accuracy = 92.08%    Per_class_accuracy=92.18
+2024-04-13 01:19:16:INFO:Accuracy = 92.08% -> 92.20%    Per_class_accuracy = 92.18% -> 92.25%
+2024-04-13 01:19:20:INFO:Task: amazon->webcam, Iter:182/195; Accuracy = 92.08%    Per_class_accuracy=92.18
+2024-04-13 01:19:23:INFO:Accuracy = 92.08% -> 92.33%    Per_class_accuracy = 92.18% -> 92.36%
+2024-04-13 01:19:27:INFO:Task: amazon->webcam, Iter:195/195; Accuracy = 92.08%    Per_class_accuracy=92.18
+2024-04-13 01:32:09:INFO:visdom:2414337
+2024-04-13 01:32:09:INFO:==========================================
+gpu_id:0
+s:amazon
+t:dslr
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/dslr.txt
+test_dset_path:../data/office31/image_list/dslr.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 01:32:24:INFO:Accuracy = 81.53% -> 91.77%    Per_class_accuracy = 84.02% -> 92.50%
+2024-04-13 01:32:32:INFO:Task: amazon->dslr, Iter:8/120; Accuracy = 88.35%    Per_class_accuracy=89.98
+2024-04-13 01:32:37:INFO:Accuracy = 88.35% -> 91.57%    Per_class_accuracy = 89.98% -> 92.85%
+2024-04-13 01:32:42:INFO:Task: amazon->dslr, Iter:16/120; Accuracy = 90.96%    Per_class_accuracy=92.31
+2024-04-13 01:32:47:INFO:Accuracy = 90.96% -> 93.17%    Per_class_accuracy = 92.31% -> 93.86%
+2024-04-13 01:32:51:INFO:Task: amazon->dslr, Iter:24/120; Accuracy = 92.77%    Per_class_accuracy=93.42
+2024-04-13 01:32:56:INFO:Accuracy = 92.77% -> 93.37%    Per_class_accuracy = 93.42% -> 94.00%
+2024-04-13 01:33:01:INFO:Task: amazon->dslr, Iter:32/120; Accuracy = 93.17%    Per_class_accuracy=93.74
+2024-04-13 01:33:05:INFO:Accuracy = 93.17% -> 93.37%    Per_class_accuracy = 93.74% -> 94.00%
+2024-04-13 01:33:10:INFO:Task: amazon->dslr, Iter:40/120; Accuracy = 93.17%    Per_class_accuracy=93.73
+2024-04-13 01:33:15:INFO:Accuracy = 93.17% -> 93.17%    Per_class_accuracy = 93.73% -> 93.86%
+2024-04-13 01:33:19:INFO:Task: amazon->dslr, Iter:48/120; Accuracy = 93.37%    Per_class_accuracy=93.89
+2024-04-13 01:33:23:INFO:Accuracy = 93.37% -> 93.17%    Per_class_accuracy = 93.89% -> 93.86%
+2024-04-13 01:33:28:INFO:Task: amazon->dslr, Iter:56/120; Accuracy = 92.97%    Per_class_accuracy=93.65
+2024-04-13 01:33:33:INFO:Accuracy = 92.97% -> 93.17%    Per_class_accuracy = 93.65% -> 93.86%
+2024-04-13 01:33:38:INFO:Task: amazon->dslr, Iter:64/120; Accuracy = 92.97%    Per_class_accuracy=93.64
+2024-04-13 01:33:43:INFO:Accuracy = 92.97% -> 93.17%    Per_class_accuracy = 93.64% -> 93.86%
+2024-04-13 01:33:47:INFO:Task: amazon->dslr, Iter:72/120; Accuracy = 93.17%    Per_class_accuracy=93.86
+2024-04-13 01:33:52:INFO:Accuracy = 93.17% -> 93.37%    Per_class_accuracy = 93.86% -> 94.18%
+2024-04-13 01:33:56:INFO:Task: amazon->dslr, Iter:80/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:01:INFO:Accuracy = 93.37% -> 93.37%    Per_class_accuracy = 94.18% -> 94.18%
+2024-04-13 01:34:05:INFO:Task: amazon->dslr, Iter:88/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:09:INFO:Accuracy = 93.37% -> 93.37%    Per_class_accuracy = 94.18% -> 94.18%
+2024-04-13 01:34:14:INFO:Task: amazon->dslr, Iter:96/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:18:INFO:Accuracy = 93.37% -> 93.37%    Per_class_accuracy = 94.18% -> 94.18%
+2024-04-13 01:34:23:INFO:Task: amazon->dslr, Iter:104/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:28:INFO:Accuracy = 93.37% -> 93.37%    Per_class_accuracy = 94.18% -> 94.18%
+2024-04-13 01:34:32:INFO:Task: amazon->dslr, Iter:112/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:37:INFO:Accuracy = 93.37% -> 93.37%    Per_class_accuracy = 94.18% -> 94.18%
+2024-04-13 01:34:42:INFO:Task: amazon->dslr, Iter:120/120; Accuracy = 93.37%    Per_class_accuracy=94.18
+2024-04-13 01:34:42:INFO:==========================================
+gpu_id:0
+s:amazon
+t:webcam
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office31
+lr:0.01
+net:resnet50
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-13_00.57.53
+use_file_logger:True
+names:['amazon', 'dslr', 'webcam']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:31
+s_dset_path:../data/office31/image_list/amazon.txt
+t_dset_path:../data/office31/image_list/webcam.txt
+test_dset_path:../data/office31/image_list/webcam.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-13 01:34:47:INFO:Accuracy = 76.48% -> 86.67%    Per_class_accuracy = 76.98% -> 87.29%
+2024-04-13 01:34:51:INFO:Task: amazon->webcam, Iter:13/195; Accuracy = 87.67%    Per_class_accuracy=88.55
+2024-04-13 01:34:53:INFO:Accuracy = 87.67% -> 90.69%    Per_class_accuracy = 88.55% -> 91.32%
+2024-04-13 01:34:58:INFO:Task: amazon->webcam, Iter:26/195; Accuracy = 89.94%    Per_class_accuracy=90.73
+2024-04-13 01:35:00:INFO:Accuracy = 89.94% -> 90.94%    Per_class_accuracy = 90.73% -> 91.54%
+2024-04-13 01:35:05:INFO:Task: amazon->webcam, Iter:39/195; Accuracy = 90.57%    Per_class_accuracy=91.19
+2024-04-13 01:35:07:INFO:Accuracy = 90.57% -> 91.07%    Per_class_accuracy = 91.19% -> 91.54%
+2024-04-13 01:35:12:INFO:Task: amazon->webcam, Iter:52/195; Accuracy = 90.82%    Per_class_accuracy=91.30
+2024-04-13 01:35:14:INFO:Accuracy = 90.82% -> 91.07%    Per_class_accuracy = 91.30% -> 91.53%
+2024-04-13 01:35:19:INFO:Task: amazon->webcam, Iter:65/195; Accuracy = 91.07%    Per_class_accuracy=91.51
+2024-04-13 01:35:21:INFO:Accuracy = 91.07% -> 91.19%    Per_class_accuracy = 91.51% -> 91.61%
+2024-04-13 01:35:25:INFO:Task: amazon->webcam, Iter:78/195; Accuracy = 91.07%    Per_class_accuracy=91.51
+2024-04-13 01:35:28:INFO:Accuracy = 91.07% -> 91.07%    Per_class_accuracy = 91.51% -> 91.50%
+2024-04-13 01:35:32:INFO:Task: amazon->webcam, Iter:91/195; Accuracy = 91.07%    Per_class_accuracy=91.51
+2024-04-13 01:35:35:INFO:Accuracy = 91.07% -> 91.07%    Per_class_accuracy = 91.51% -> 91.50%
+2024-04-13 01:35:39:INFO:Task: amazon->webcam, Iter:104/195; Accuracy = 91.07%    Per_class_accuracy=91.51
+2024-04-13 01:35:42:INFO:Accuracy = 91.07% -> 91.19%    Per_class_accuracy = 91.51% -> 91.65%
+2024-04-13 01:35:46:INFO:Task: amazon->webcam, Iter:117/195; Accuracy = 91.07%    Per_class_accuracy=91.55
+2024-04-13 01:35:49:INFO:Accuracy = 91.07% -> 91.19%    Per_class_accuracy = 91.55% -> 91.65%
+2024-04-13 01:35:54:INFO:Task: amazon->webcam, Iter:130/195; Accuracy = 91.19%    Per_class_accuracy=91.65
+2024-04-13 01:35:56:INFO:Accuracy = 91.19% -> 91.19%    Per_class_accuracy = 91.65% -> 91.65%
+2024-04-13 01:36:01:INFO:Task: amazon->webcam, Iter:143/195; Accuracy = 91.19%    Per_class_accuracy=91.65
+2024-04-13 01:36:03:INFO:Accuracy = 91.19% -> 91.19%    Per_class_accuracy = 91.65% -> 91.65%
+2024-04-13 01:36:08:INFO:Task: amazon->webcam, Iter:156/195; Accuracy = 91.19%    Per_class_accuracy=91.65
+2024-04-13 01:36:10:INFO:Accuracy = 91.19% -> 91.19%    Per_class_accuracy = 91.65% -> 91.65%
+2024-04-13 01:36:15:INFO:Task: amazon->webcam, Iter:169/195; Accuracy = 91.19%    Per_class_accuracy=91.65
+2024-04-13 01:36:17:INFO:Accuracy = 91.19% -> 91.19%    Per_class_accuracy = 91.65% -> 91.65%
+2024-04-13 01:36:21:INFO:Task: amazon->webcam, Iter:182/195; Accuracy = 91.19%    Per_class_accuracy=91.65
+2024-04-13 01:36:24:INFO:Accuracy = 91.19% -> 91.19%    Per_class_accuracy = 91.65% -> 91.65%
+2024-04-13 01:36:28:INFO:Task: amazon->webcam, Iter:195/195; Accuracy = 91.19%    Per_class_accuracy=91.65

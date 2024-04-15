@@ -1,0 +1,642 @@
+2024-04-14 14:30:17:INFO:visdom:2476659
+2024-04-14 14:30:17:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Art
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Art.txt
+test_dset_path:../data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 14:30:28:INFO:Accuracy = 64.81% -> 68.93%    Per_class_accuracy = 62.16% -> 66.31%
+2024-04-14 14:30:42:INFO:Task: Real_World->Art, Iter:38/570; Accuracy = 71.69%    Per_class_accuracy=67.21
+2024-04-14 14:30:51:INFO:Accuracy = 71.69% -> 72.23%    Per_class_accuracy = 67.21% -> 68.72%
+2024-04-14 14:31:03:INFO:Task: Real_World->Art, Iter:76/570; Accuracy = 72.44%    Per_class_accuracy=68.48
+2024-04-14 14:31:12:INFO:Accuracy = 72.44% -> 72.52%    Per_class_accuracy = 68.48% -> 69.17%
+2024-04-14 14:31:25:INFO:Task: Real_World->Art, Iter:114/570; Accuracy = 72.39%    Per_class_accuracy=68.74
+2024-04-14 14:31:34:INFO:Accuracy = 72.39% -> 72.52%    Per_class_accuracy = 68.74% -> 69.48%
+2024-04-14 14:31:46:INFO:Task: Real_World->Art, Iter:152/570; Accuracy = 73.01%    Per_class_accuracy=69.60
+2024-04-14 14:31:55:INFO:Accuracy = 73.01% -> 72.81%    Per_class_accuracy = 69.60% -> 69.64%
+2024-04-14 14:32:07:INFO:Task: Real_World->Art, Iter:190/570; Accuracy = 73.34%    Per_class_accuracy=70.22
+2024-04-14 14:32:15:INFO:Accuracy = 73.34% -> 73.05%    Per_class_accuracy = 70.22% -> 69.92%
+2024-04-14 14:32:29:INFO:Task: Real_World->Art, Iter:228/570; Accuracy = 73.38%    Per_class_accuracy=70.28
+2024-04-14 14:32:37:INFO:Accuracy = 73.38% -> 73.22%    Per_class_accuracy = 70.28% -> 70.18%
+2024-04-14 14:32:51:INFO:Task: Real_World->Art, Iter:266/570; Accuracy = 73.38%    Per_class_accuracy=70.28
+2024-04-14 14:32:59:INFO:Accuracy = 73.38% -> 73.18%    Per_class_accuracy = 70.28% -> 70.18%
+2024-04-14 14:33:13:INFO:Task: Real_World->Art, Iter:304/570; Accuracy = 73.26%    Per_class_accuracy=70.18
+2024-04-14 14:33:21:INFO:Accuracy = 73.26% -> 73.26%    Per_class_accuracy = 70.18% -> 70.23%
+2024-04-14 14:33:33:INFO:Task: Real_World->Art, Iter:342/570; Accuracy = 73.34%    Per_class_accuracy=70.27
+2024-04-14 14:33:42:INFO:Accuracy = 73.34% -> 73.18%    Per_class_accuracy = 70.27% -> 70.16%
+2024-04-14 14:33:55:INFO:Task: Real_World->Art, Iter:380/570; Accuracy = 73.42%    Per_class_accuracy=70.33
+2024-04-14 14:34:04:INFO:Accuracy = 73.42% -> 73.22%    Per_class_accuracy = 70.33% -> 70.25%
+2024-04-14 14:34:18:INFO:Task: Real_World->Art, Iter:418/570; Accuracy = 73.42%    Per_class_accuracy=70.36
+2024-04-14 14:34:26:INFO:Accuracy = 73.42% -> 73.22%    Per_class_accuracy = 70.36% -> 70.25%
+2024-04-14 14:34:38:INFO:Task: Real_World->Art, Iter:456/570; Accuracy = 73.22%    Per_class_accuracy=70.14
+2024-04-14 14:34:46:INFO:Accuracy = 73.22% -> 73.30%    Per_class_accuracy = 70.14% -> 70.32%
+2024-04-14 14:35:00:INFO:Task: Real_World->Art, Iter:494/570; Accuracy = 73.26%    Per_class_accuracy=70.18
+2024-04-14 14:35:08:INFO:Accuracy = 73.26% -> 73.30%    Per_class_accuracy = 70.18% -> 70.32%
+2024-04-14 14:35:21:INFO:Task: Real_World->Art, Iter:532/570; Accuracy = 73.26%    Per_class_accuracy=70.18
+2024-04-14 14:35:29:INFO:Accuracy = 73.26% -> 73.30%    Per_class_accuracy = 70.18% -> 70.32%
+2024-04-14 14:35:42:INFO:Task: Real_World->Art, Iter:570/570; Accuracy = 73.34%    Per_class_accuracy=70.34
+2024-04-14 14:35:42:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Clipart
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Clipart.txt
+test_dset_path:../data/office-home/image_list/Clipart.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 14:35:51:INFO:Accuracy = 45.22% -> 50.93%    Per_class_accuracy = 45.56% -> 51.51%
+2024-04-14 14:36:09:INFO:Task: Real_World->Clipart, Iter:69/1035; Accuracy = 55.60%    Per_class_accuracy=55.70
+2024-04-14 14:36:16:INFO:Accuracy = 55.60% -> 56.17%    Per_class_accuracy = 55.70% -> 56.46%
+2024-04-14 14:36:32:INFO:Task: Real_World->Clipart, Iter:138/1035; Accuracy = 57.34%    Per_class_accuracy=57.60
+2024-04-14 14:36:40:INFO:Accuracy = 57.34% -> 57.59%    Per_class_accuracy = 57.60% -> 58.02%
+2024-04-14 14:36:55:INFO:Task: Real_World->Clipart, Iter:207/1035; Accuracy = 57.53%    Per_class_accuracy=57.90
+2024-04-14 14:37:03:INFO:Accuracy = 57.53% -> 57.73%    Per_class_accuracy = 57.90% -> 58.17%
+2024-04-14 14:37:21:INFO:Task: Real_World->Clipart, Iter:276/1035; Accuracy = 57.71%    Per_class_accuracy=58.14
+2024-04-14 14:37:29:INFO:Accuracy = 57.71% -> 57.94%    Per_class_accuracy = 58.14% -> 58.40%
+2024-04-14 14:37:44:INFO:Task: Real_World->Clipart, Iter:345/1035; Accuracy = 57.94%    Per_class_accuracy=58.47
+2024-04-14 14:37:52:INFO:Accuracy = 57.94% -> 57.94%    Per_class_accuracy = 58.47% -> 58.47%
+2024-04-14 14:38:09:INFO:Task: Real_World->Clipart, Iter:414/1035; Accuracy = 58.01%    Per_class_accuracy=58.47
+2024-04-14 14:38:18:INFO:Accuracy = 58.01% -> 58.03%    Per_class_accuracy = 58.47% -> 58.59%
+2024-04-14 14:38:33:INFO:Task: Real_World->Clipart, Iter:483/1035; Accuracy = 58.19%    Per_class_accuracy=58.67
+2024-04-14 14:38:41:INFO:Accuracy = 58.19% -> 58.12%    Per_class_accuracy = 58.67% -> 58.65%
+2024-04-14 14:38:56:INFO:Task: Real_World->Clipart, Iter:552/1035; Accuracy = 58.10%    Per_class_accuracy=58.65
+2024-04-14 14:39:04:INFO:Accuracy = 58.10% -> 58.05%    Per_class_accuracy = 58.65% -> 58.63%
+2024-04-14 14:39:21:INFO:Task: Real_World->Clipart, Iter:621/1035; Accuracy = 58.24%    Per_class_accuracy=58.78
+2024-04-14 14:39:28:INFO:Accuracy = 58.24% -> 58.24%    Per_class_accuracy = 58.78% -> 58.80%
+2024-04-14 14:39:43:INFO:Task: Real_World->Clipart, Iter:690/1035; Accuracy = 58.19%    Per_class_accuracy=58.71
+2024-04-14 14:39:51:INFO:Accuracy = 58.19% -> 58.12%    Per_class_accuracy = 58.71% -> 58.71%
+2024-04-14 14:40:09:INFO:Task: Real_World->Clipart, Iter:759/1035; Accuracy = 58.01%    Per_class_accuracy=58.59
+2024-04-14 14:40:17:INFO:Accuracy = 58.01% -> 58.03%    Per_class_accuracy = 58.59% -> 58.65%
+2024-04-14 14:40:34:INFO:Task: Real_World->Clipart, Iter:828/1035; Accuracy = 58.03%    Per_class_accuracy=58.65
+2024-04-14 14:40:41:INFO:Accuracy = 58.03% -> 58.05%    Per_class_accuracy = 58.65% -> 58.69%
+2024-04-14 14:40:55:INFO:Task: Real_World->Clipart, Iter:897/1035; Accuracy = 58.03%    Per_class_accuracy=58.65
+2024-04-14 14:41:03:INFO:Accuracy = 58.03% -> 57.98%    Per_class_accuracy = 58.65% -> 58.60%
+2024-04-14 14:41:18:INFO:Task: Real_World->Clipart, Iter:966/1035; Accuracy = 58.08%    Per_class_accuracy=58.70
+2024-04-14 14:41:26:INFO:Accuracy = 58.08% -> 58.03%    Per_class_accuracy = 58.70% -> 58.67%
+2024-04-14 14:41:44:INFO:Task: Real_World->Clipart, Iter:1035/1035; Accuracy = 58.05%    Per_class_accuracy=58.67
+2024-04-14 14:41:44:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Product
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2020
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Product.txt
+test_dset_path:../data/office-home/image_list/Product.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 14:41:53:INFO:Accuracy = 77.70% -> 81.89%    Per_class_accuracy = 76.46% -> 81.31%
+2024-04-14 14:42:10:INFO:Task: Real_World->Product, Iter:70/1050; Accuracy = 82.34%    Per_class_accuracy=81.70
+2024-04-14 14:42:17:INFO:Accuracy = 82.34% -> 82.74%    Per_class_accuracy = 81.70% -> 82.11%
+2024-04-14 14:42:32:INFO:Task: Real_World->Product, Iter:140/1050; Accuracy = 83.15%    Per_class_accuracy=82.54
+2024-04-14 14:42:40:INFO:Accuracy = 83.15% -> 83.15%    Per_class_accuracy = 82.54% -> 82.70%
+2024-04-14 14:42:55:INFO:Task: Real_World->Product, Iter:210/1050; Accuracy = 83.37%    Per_class_accuracy=83.00
+2024-04-14 14:43:02:INFO:Accuracy = 83.37% -> 83.44%    Per_class_accuracy = 83.00% -> 83.07%
+2024-04-14 14:43:21:INFO:Task: Real_World->Product, Iter:280/1050; Accuracy = 83.35%    Per_class_accuracy=83.03
+2024-04-14 14:43:29:INFO:Accuracy = 83.35% -> 83.53%    Per_class_accuracy = 83.03% -> 83.15%
+2024-04-14 14:43:46:INFO:Task: Real_World->Product, Iter:350/1050; Accuracy = 83.58%    Per_class_accuracy=83.21
+2024-04-14 14:43:54:INFO:Accuracy = 83.58% -> 83.51%    Per_class_accuracy = 83.21% -> 83.16%
+2024-04-14 14:44:08:INFO:Task: Real_World->Product, Iter:420/1050; Accuracy = 83.74%    Per_class_accuracy=83.38
+2024-04-14 14:44:16:INFO:Accuracy = 83.74% -> 83.67%    Per_class_accuracy = 83.38% -> 83.28%
+2024-04-14 14:44:32:INFO:Task: Real_World->Product, Iter:490/1050; Accuracy = 83.67%    Per_class_accuracy=83.31
+2024-04-14 14:44:40:INFO:Accuracy = 83.67% -> 83.58%    Per_class_accuracy = 83.31% -> 83.21%
+2024-04-14 14:44:57:INFO:Task: Real_World->Product, Iter:560/1050; Accuracy = 83.64%    Per_class_accuracy=83.32
+2024-04-14 14:45:05:INFO:Accuracy = 83.64% -> 83.69%    Per_class_accuracy = 83.32% -> 83.36%
+2024-04-14 14:45:23:INFO:Task: Real_World->Product, Iter:630/1050; Accuracy = 83.74%    Per_class_accuracy=83.41
+2024-04-14 14:45:31:INFO:Accuracy = 83.74% -> 83.67%    Per_class_accuracy = 83.41% -> 83.33%
+2024-04-14 14:45:46:INFO:Task: Real_World->Product, Iter:700/1050; Accuracy = 83.69%    Per_class_accuracy=83.36
+2024-04-14 14:45:54:INFO:Accuracy = 83.69% -> 83.76%    Per_class_accuracy = 83.36% -> 83.40%
+2024-04-14 14:46:10:INFO:Task: Real_World->Product, Iter:770/1050; Accuracy = 83.69%    Per_class_accuracy=83.34
+2024-04-14 14:46:17:INFO:Accuracy = 83.69% -> 83.74%    Per_class_accuracy = 83.34% -> 83.38%
+2024-04-14 14:46:34:INFO:Task: Real_World->Product, Iter:840/1050; Accuracy = 83.71%    Per_class_accuracy=83.41
+2024-04-14 14:46:42:INFO:Accuracy = 83.71% -> 83.69%    Per_class_accuracy = 83.41% -> 83.35%
+2024-04-14 14:47:00:INFO:Task: Real_World->Product, Iter:910/1050; Accuracy = 83.71%    Per_class_accuracy=83.37
+2024-04-14 14:47:08:INFO:Accuracy = 83.71% -> 83.76%    Per_class_accuracy = 83.37% -> 83.40%
+2024-04-14 14:47:24:INFO:Task: Real_World->Product, Iter:980/1050; Accuracy = 83.74%    Per_class_accuracy=83.41
+2024-04-14 14:47:32:INFO:Accuracy = 83.74% -> 83.71%    Per_class_accuracy = 83.41% -> 83.36%
+2024-04-14 14:47:45:INFO:Task: Real_World->Product, Iter:1050/1050; Accuracy = 83.71%    Per_class_accuracy=83.36
+2024-04-14 16:36:03:INFO:visdom:3008323
+2024-04-14 16:36:03:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Art
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Art.txt
+test_dset_path:../data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 16:36:13:INFO:Accuracy = 64.81% -> 68.93%    Per_class_accuracy = 62.16% -> 66.31%
+2024-04-14 16:36:26:INFO:Task: Real_World->Art, Iter:38/570; Accuracy = 72.11%    Per_class_accuracy=67.79
+2024-04-14 16:36:34:INFO:Accuracy = 72.11% -> 72.48%    Per_class_accuracy = 67.79% -> 69.07%
+2024-04-14 16:36:46:INFO:Task: Real_World->Art, Iter:76/570; Accuracy = 72.89%    Per_class_accuracy=68.94
+2024-04-14 16:36:53:INFO:Accuracy = 72.89% -> 72.68%    Per_class_accuracy = 68.94% -> 69.12%
+2024-04-14 16:37:06:INFO:Task: Real_World->Art, Iter:114/570; Accuracy = 73.01%    Per_class_accuracy=69.32
+2024-04-14 16:37:14:INFO:Accuracy = 73.01% -> 72.72%    Per_class_accuracy = 69.32% -> 69.08%
+2024-04-14 16:37:26:INFO:Task: Real_World->Art, Iter:152/570; Accuracy = 73.18%    Per_class_accuracy=69.47
+2024-04-14 16:37:35:INFO:Accuracy = 73.18% -> 72.93%    Per_class_accuracy = 69.47% -> 69.25%
+2024-04-14 16:37:47:INFO:Task: Real_World->Art, Iter:190/570; Accuracy = 73.38%    Per_class_accuracy=69.81
+2024-04-14 16:37:55:INFO:Accuracy = 73.38% -> 73.05%    Per_class_accuracy = 69.81% -> 69.47%
+2024-04-14 16:38:07:INFO:Task: Real_World->Art, Iter:228/570; Accuracy = 73.18%    Per_class_accuracy=69.52
+2024-04-14 16:38:15:INFO:Accuracy = 73.18% -> 73.09%    Per_class_accuracy = 69.52% -> 69.45%
+2024-04-14 16:38:27:INFO:Task: Real_World->Art, Iter:266/570; Accuracy = 73.26%    Per_class_accuracy=69.58
+2024-04-14 16:38:36:INFO:Accuracy = 73.26% -> 73.09%    Per_class_accuracy = 69.58% -> 69.45%
+2024-04-14 16:38:48:INFO:Task: Real_World->Art, Iter:304/570; Accuracy = 73.18%    Per_class_accuracy=69.52
+2024-04-14 16:38:56:INFO:Accuracy = 73.18% -> 73.09%    Per_class_accuracy = 69.52% -> 69.45%
+2024-04-14 16:39:09:INFO:Task: Real_World->Art, Iter:342/570; Accuracy = 73.18%    Per_class_accuracy=69.55
+2024-04-14 16:39:16:INFO:Accuracy = 73.18% -> 73.18%    Per_class_accuracy = 69.55% -> 69.57%
+2024-04-14 16:39:29:INFO:Task: Real_World->Art, Iter:380/570; Accuracy = 73.22%    Per_class_accuracy=69.54
+2024-04-14 16:39:37:INFO:Accuracy = 73.22% -> 73.18%    Per_class_accuracy = 69.54% -> 69.57%
+2024-04-14 16:39:48:INFO:Task: Real_World->Art, Iter:418/570; Accuracy = 73.26%    Per_class_accuracy=69.60
+2024-04-14 16:39:56:INFO:Accuracy = 73.26% -> 73.22%    Per_class_accuracy = 69.60% -> 69.61%
+2024-04-14 16:40:08:INFO:Task: Real_World->Art, Iter:456/570; Accuracy = 73.26%    Per_class_accuracy=69.60
+2024-04-14 16:40:16:INFO:Accuracy = 73.26% -> 73.18%    Per_class_accuracy = 69.60% -> 69.59%
+2024-04-14 16:40:29:INFO:Task: Real_World->Art, Iter:494/570; Accuracy = 73.18%    Per_class_accuracy=69.54
+2024-04-14 16:40:37:INFO:Accuracy = 73.18% -> 73.18%    Per_class_accuracy = 69.54% -> 69.59%
+2024-04-14 16:40:48:INFO:Task: Real_World->Art, Iter:532/570; Accuracy = 73.18%    Per_class_accuracy=69.54
+2024-04-14 16:40:56:INFO:Accuracy = 73.18% -> 73.18%    Per_class_accuracy = 69.54% -> 69.59%
+2024-04-14 16:41:08:INFO:Task: Real_World->Art, Iter:570/570; Accuracy = 73.18%    Per_class_accuracy=69.54
+2024-04-14 16:41:09:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Clipart
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Clipart.txt
+test_dset_path:../data/office-home/image_list/Clipart.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 16:41:17:INFO:Accuracy = 45.22% -> 50.93%    Per_class_accuracy = 45.56% -> 51.51%
+2024-04-14 16:41:30:INFO:Task: Real_World->Clipart, Iter:69/1035; Accuracy = 56.47%    Per_class_accuracy=56.62
+2024-04-14 16:41:37:INFO:Accuracy = 56.47% -> 56.59%    Per_class_accuracy = 56.62% -> 56.93%
+2024-04-14 16:41:50:INFO:Task: Real_World->Clipart, Iter:138/1035; Accuracy = 57.43%    Per_class_accuracy=57.72
+2024-04-14 16:41:58:INFO:Accuracy = 57.43% -> 57.59%    Per_class_accuracy = 57.72% -> 58.08%
+2024-04-14 16:42:11:INFO:Task: Real_World->Clipart, Iter:207/1035; Accuracy = 57.89%    Per_class_accuracy=58.23
+2024-04-14 16:42:18:INFO:Accuracy = 57.89% -> 57.82%    Per_class_accuracy = 58.23% -> 58.28%
+2024-04-14 16:42:30:INFO:Task: Real_World->Clipart, Iter:276/1035; Accuracy = 57.94%    Per_class_accuracy=58.35
+2024-04-14 16:42:37:INFO:Accuracy = 57.94% -> 58.10%    Per_class_accuracy = 58.35% -> 58.60%
+2024-04-14 16:42:50:INFO:Task: Real_World->Clipart, Iter:345/1035; Accuracy = 58.37%    Per_class_accuracy=58.80
+2024-04-14 16:42:57:INFO:Accuracy = 58.37% -> 58.37%    Per_class_accuracy = 58.80% -> 58.85%
+2024-04-14 16:43:09:INFO:Task: Real_World->Clipart, Iter:414/1035; Accuracy = 58.21%    Per_class_accuracy=58.72
+2024-04-14 16:43:15:INFO:Accuracy = 58.21% -> 58.24%    Per_class_accuracy = 58.72% -> 58.80%
+2024-04-14 16:43:27:INFO:Task: Real_World->Clipart, Iter:483/1035; Accuracy = 58.33%    Per_class_accuracy=58.87
+2024-04-14 16:43:35:INFO:Accuracy = 58.33% -> 58.30%    Per_class_accuracy = 58.87% -> 58.87%
+2024-04-14 16:43:48:INFO:Task: Real_World->Clipart, Iter:552/1035; Accuracy = 58.26%    Per_class_accuracy=58.81
+2024-04-14 16:43:56:INFO:Accuracy = 58.26% -> 58.12%    Per_class_accuracy = 58.81% -> 58.70%
+2024-04-14 16:44:09:INFO:Task: Real_World->Clipart, Iter:621/1035; Accuracy = 58.35%    Per_class_accuracy=58.90
+2024-04-14 16:44:16:INFO:Accuracy = 58.35% -> 58.30%    Per_class_accuracy = 58.90% -> 58.90%
+2024-04-14 16:44:28:INFO:Task: Real_World->Clipart, Iter:690/1035; Accuracy = 58.44%    Per_class_accuracy=59.04
+2024-04-14 16:44:35:INFO:Accuracy = 58.44% -> 58.37%    Per_class_accuracy = 59.04% -> 58.96%
+2024-04-14 16:44:48:INFO:Task: Real_World->Clipart, Iter:759/1035; Accuracy = 58.44%    Per_class_accuracy=59.03
+2024-04-14 16:44:55:INFO:Accuracy = 58.44% -> 58.42%    Per_class_accuracy = 59.03% -> 58.99%
+2024-04-14 16:45:07:INFO:Task: Real_World->Clipart, Iter:828/1035; Accuracy = 58.35%    Per_class_accuracy=58.91
+2024-04-14 16:45:14:INFO:Accuracy = 58.35% -> 58.42%    Per_class_accuracy = 58.91% -> 58.98%
+2024-04-14 16:45:26:INFO:Task: Real_World->Clipart, Iter:897/1035; Accuracy = 58.33%    Per_class_accuracy=58.91
+2024-04-14 16:45:33:INFO:Accuracy = 58.33% -> 58.42%    Per_class_accuracy = 58.91% -> 58.98%
+2024-04-14 16:45:46:INFO:Task: Real_World->Clipart, Iter:966/1035; Accuracy = 58.42%    Per_class_accuracy=58.98
+2024-04-14 16:45:54:INFO:Accuracy = 58.42% -> 58.42%    Per_class_accuracy = 58.98% -> 58.99%
+2024-04-14 16:46:06:INFO:Task: Real_World->Clipart, Iter:1035/1035; Accuracy = 58.37%    Per_class_accuracy=58.95
+2024-04-14 16:46:07:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Product
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2021
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Product.txt
+test_dset_path:../data/office-home/image_list/Product.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 16:46:15:INFO:Accuracy = 77.70% -> 81.89%    Per_class_accuracy = 76.46% -> 81.31%
+2024-04-14 16:46:28:INFO:Task: Real_World->Product, Iter:70/1050; Accuracy = 82.65%    Per_class_accuracy=81.91
+2024-04-14 16:46:34:INFO:Accuracy = 82.65% -> 83.06%    Per_class_accuracy = 81.91% -> 82.41%
+2024-04-14 16:46:48:INFO:Task: Real_World->Product, Iter:140/1050; Accuracy = 83.58%    Per_class_accuracy=83.14
+2024-04-14 16:46:55:INFO:Accuracy = 83.58% -> 83.69%    Per_class_accuracy = 83.14% -> 83.20%
+2024-04-14 16:47:08:INFO:Task: Real_World->Product, Iter:210/1050; Accuracy = 84.05%    Per_class_accuracy=83.54
+2024-04-14 16:47:15:INFO:Accuracy = 84.05% -> 84.03%    Per_class_accuracy = 83.54% -> 83.57%
+2024-04-14 16:47:29:INFO:Task: Real_World->Product, Iter:280/1050; Accuracy = 84.16%    Per_class_accuracy=83.71
+2024-04-14 16:47:36:INFO:Accuracy = 84.16% -> 84.07%    Per_class_accuracy = 83.71% -> 83.63%
+2024-04-14 16:47:50:INFO:Task: Real_World->Product, Iter:350/1050; Accuracy = 84.37%    Per_class_accuracy=83.89
+2024-04-14 16:47:57:INFO:Accuracy = 84.37% -> 84.21%    Per_class_accuracy = 83.89% -> 83.73%
+2024-04-14 16:48:12:INFO:Task: Real_World->Product, Iter:420/1050; Accuracy = 84.28%    Per_class_accuracy=83.82
+2024-04-14 16:48:20:INFO:Accuracy = 84.28% -> 84.28%    Per_class_accuracy = 83.82% -> 83.80%
+2024-04-14 16:48:33:INFO:Task: Real_World->Product, Iter:490/1050; Accuracy = 84.25%    Per_class_accuracy=83.78
+2024-04-14 16:48:40:INFO:Accuracy = 84.25% -> 84.30%    Per_class_accuracy = 83.78% -> 83.83%
+2024-04-14 16:48:54:INFO:Task: Real_World->Product, Iter:560/1050; Accuracy = 84.19%    Per_class_accuracy=83.71
+2024-04-14 16:49:01:INFO:Accuracy = 84.19% -> 84.25%    Per_class_accuracy = 83.71% -> 83.80%
+2024-04-14 16:49:14:INFO:Task: Real_World->Product, Iter:630/1050; Accuracy = 84.30%    Per_class_accuracy=83.86
+2024-04-14 16:49:22:INFO:Accuracy = 84.30% -> 84.30%    Per_class_accuracy = 83.86% -> 83.87%
+2024-04-14 16:49:35:INFO:Task: Real_World->Product, Iter:700/1050; Accuracy = 84.37%    Per_class_accuracy=83.92
+2024-04-14 16:49:43:INFO:Accuracy = 84.37% -> 84.32%    Per_class_accuracy = 83.92% -> 83.89%
+2024-04-14 16:49:56:INFO:Task: Real_World->Product, Iter:770/1050; Accuracy = 84.34%    Per_class_accuracy=83.94
+2024-04-14 16:50:04:INFO:Accuracy = 84.34% -> 84.32%    Per_class_accuracy = 83.94% -> 83.90%
+2024-04-14 16:50:17:INFO:Task: Real_World->Product, Iter:840/1050; Accuracy = 84.32%    Per_class_accuracy=83.90
+2024-04-14 16:50:25:INFO:Accuracy = 84.32% -> 84.30%    Per_class_accuracy = 83.90% -> 83.88%
+2024-04-14 16:50:38:INFO:Task: Real_World->Product, Iter:910/1050; Accuracy = 84.32%    Per_class_accuracy=83.91
+2024-04-14 16:50:45:INFO:Accuracy = 84.32% -> 84.34%    Per_class_accuracy = 83.91% -> 83.92%
+2024-04-14 16:50:58:INFO:Task: Real_World->Product, Iter:980/1050; Accuracy = 84.37%    Per_class_accuracy=83.96
+2024-04-14 16:51:06:INFO:Accuracy = 84.37% -> 84.37%    Per_class_accuracy = 83.96% -> 83.96%
+2024-04-14 16:51:19:INFO:Task: Real_World->Product, Iter:1050/1050; Accuracy = 84.34%    Per_class_accuracy=83.94
+2024-04-14 18:27:51:INFO:visdom:3331260
+2024-04-14 18:27:51:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Art
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Art.txt
+test_dset_path:../data/office-home/image_list/Art.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 18:28:00:INFO:Accuracy = 64.81% -> 68.93%    Per_class_accuracy = 62.16% -> 66.31%
+2024-04-14 18:28:15:INFO:Task: Real_World->Art, Iter:38/570; Accuracy = 71.69%    Per_class_accuracy=67.40
+2024-04-14 18:28:23:INFO:Accuracy = 71.69% -> 72.02%    Per_class_accuracy = 67.40% -> 68.51%
+2024-04-14 18:28:34:INFO:Task: Real_World->Art, Iter:76/570; Accuracy = 72.52%    Per_class_accuracy=68.62
+2024-04-14 18:28:42:INFO:Accuracy = 72.52% -> 72.39%    Per_class_accuracy = 68.62% -> 68.88%
+2024-04-14 18:28:54:INFO:Task: Real_World->Art, Iter:114/570; Accuracy = 73.14%    Per_class_accuracy=69.30
+2024-04-14 18:29:03:INFO:Accuracy = 73.14% -> 73.30%    Per_class_accuracy = 69.30% -> 69.80%
+2024-04-14 18:29:15:INFO:Task: Real_World->Art, Iter:152/570; Accuracy = 73.38%    Per_class_accuracy=69.62
+2024-04-14 18:29:23:INFO:Accuracy = 73.38% -> 73.22%    Per_class_accuracy = 69.62% -> 69.73%
+2024-04-14 18:29:35:INFO:Task: Real_World->Art, Iter:190/570; Accuracy = 73.59%    Per_class_accuracy=69.88
+2024-04-14 18:29:42:INFO:Accuracy = 73.59% -> 73.34%    Per_class_accuracy = 69.88% -> 69.85%
+2024-04-14 18:29:54:INFO:Task: Real_World->Art, Iter:228/570; Accuracy = 73.75%    Per_class_accuracy=70.29
+2024-04-14 18:30:03:INFO:Accuracy = 73.75% -> 73.47%    Per_class_accuracy = 70.29% -> 70.05%
+2024-04-14 18:30:15:INFO:Task: Real_World->Art, Iter:266/570; Accuracy = 73.55%    Per_class_accuracy=70.03
+2024-04-14 18:30:21:INFO:Accuracy = 73.55% -> 73.51%    Per_class_accuracy = 70.03% -> 70.13%
+2024-04-14 18:30:33:INFO:Task: Real_World->Art, Iter:304/570; Accuracy = 73.59%    Per_class_accuracy=70.09
+2024-04-14 18:30:41:INFO:Accuracy = 73.59% -> 73.47%    Per_class_accuracy = 70.09% -> 70.02%
+2024-04-14 18:30:52:INFO:Task: Real_World->Art, Iter:342/570; Accuracy = 73.71%    Per_class_accuracy=70.25
+2024-04-14 18:30:59:INFO:Accuracy = 73.71% -> 73.51%    Per_class_accuracy = 70.25% -> 70.08%
+2024-04-14 18:31:11:INFO:Task: Real_World->Art, Iter:380/570; Accuracy = 73.63%    Per_class_accuracy=70.20
+2024-04-14 18:31:17:INFO:Accuracy = 73.63% -> 73.42%    Per_class_accuracy = 70.20% -> 70.05%
+2024-04-14 18:31:27:INFO:Task: Real_World->Art, Iter:418/570; Accuracy = 73.55%    Per_class_accuracy=70.06
+2024-04-14 18:31:35:INFO:Accuracy = 73.55% -> 73.38%    Per_class_accuracy = 70.06% -> 69.99%
+2024-04-14 18:31:47:INFO:Task: Real_World->Art, Iter:456/570; Accuracy = 73.55%    Per_class_accuracy=70.13
+2024-04-14 18:31:54:INFO:Accuracy = 73.55% -> 73.38%    Per_class_accuracy = 70.13% -> 69.99%
+2024-04-14 18:32:05:INFO:Task: Real_World->Art, Iter:494/570; Accuracy = 73.55%    Per_class_accuracy=70.15
+2024-04-14 18:32:13:INFO:Accuracy = 73.55% -> 73.42%    Per_class_accuracy = 70.15% -> 70.05%
+2024-04-14 18:32:23:INFO:Task: Real_World->Art, Iter:532/570; Accuracy = 73.55%    Per_class_accuracy=70.15
+2024-04-14 18:32:30:INFO:Accuracy = 73.55% -> 73.42%    Per_class_accuracy = 70.15% -> 70.05%
+2024-04-14 18:32:41:INFO:Task: Real_World->Art, Iter:570/570; Accuracy = 73.59%    Per_class_accuracy=70.19
+2024-04-14 18:32:42:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Clipart
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Clipart.txt
+test_dset_path:../data/office-home/image_list/Clipart.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 18:32:49:INFO:Accuracy = 45.22% -> 50.93%    Per_class_accuracy = 45.56% -> 51.51%
+2024-04-14 18:33:02:INFO:Task: Real_World->Clipart, Iter:69/1035; Accuracy = 54.89%    Per_class_accuracy=54.86
+2024-04-14 18:33:09:INFO:Accuracy = 54.89% -> 55.78%    Per_class_accuracy = 54.86% -> 56.21%
+2024-04-14 18:33:22:INFO:Task: Real_World->Clipart, Iter:138/1035; Accuracy = 57.18%    Per_class_accuracy=57.56
+2024-04-14 18:33:28:INFO:Accuracy = 57.18% -> 57.53%    Per_class_accuracy = 57.56% -> 57.95%
+2024-04-14 18:33:40:INFO:Task: Real_World->Clipart, Iter:207/1035; Accuracy = 57.89%    Per_class_accuracy=58.35
+2024-04-14 18:33:47:INFO:Accuracy = 57.89% -> 58.24%    Per_class_accuracy = 58.35% -> 58.74%
+2024-04-14 18:34:00:INFO:Task: Real_World->Clipart, Iter:276/1035; Accuracy = 57.96%    Per_class_accuracy=58.44
+2024-04-14 18:34:07:INFO:Accuracy = 57.96% -> 58.01%    Per_class_accuracy = 58.44% -> 58.53%
+2024-04-14 18:34:20:INFO:Task: Real_World->Clipart, Iter:345/1035; Accuracy = 58.10%    Per_class_accuracy=58.60
+2024-04-14 18:34:26:INFO:Accuracy = 58.10% -> 58.12%    Per_class_accuracy = 58.60% -> 58.64%
+2024-04-14 18:34:39:INFO:Task: Real_World->Clipart, Iter:414/1035; Accuracy = 58.37%    Per_class_accuracy=58.85
+2024-04-14 18:34:47:INFO:Accuracy = 58.37% -> 58.33%    Per_class_accuracy = 58.85% -> 58.81%
+2024-04-14 18:34:59:INFO:Task: Real_World->Clipart, Iter:483/1035; Accuracy = 58.40%    Per_class_accuracy=58.88
+2024-04-14 18:35:06:INFO:Accuracy = 58.40% -> 58.35%    Per_class_accuracy = 58.88% -> 58.85%
+2024-04-14 18:35:17:INFO:Task: Real_World->Clipart, Iter:552/1035; Accuracy = 58.33%    Per_class_accuracy=58.79
+2024-04-14 18:35:23:INFO:Accuracy = 58.33% -> 58.37%    Per_class_accuracy = 58.79% -> 58.93%
+2024-04-14 18:35:35:INFO:Task: Real_World->Clipart, Iter:621/1035; Accuracy = 58.51%    Per_class_accuracy=59.01
+2024-04-14 18:35:42:INFO:Accuracy = 58.51% -> 58.40%    Per_class_accuracy = 59.01% -> 58.92%
+2024-04-14 18:35:53:INFO:Task: Real_World->Clipart, Iter:690/1035; Accuracy = 58.47%    Per_class_accuracy=58.99
+2024-04-14 18:36:00:INFO:Accuracy = 58.47% -> 58.35%    Per_class_accuracy = 58.99% -> 58.87%
+2024-04-14 18:36:13:INFO:Task: Real_World->Clipart, Iter:759/1035; Accuracy = 58.47%    Per_class_accuracy=58.96
+2024-04-14 18:36:20:INFO:Accuracy = 58.47% -> 58.42%    Per_class_accuracy = 58.96% -> 58.93%
+2024-04-14 18:36:32:INFO:Task: Real_World->Clipart, Iter:828/1035; Accuracy = 58.37%    Per_class_accuracy=58.87
+2024-04-14 18:36:39:INFO:Accuracy = 58.37% -> 58.42%    Per_class_accuracy = 58.87% -> 58.93%
+2024-04-14 18:36:50:INFO:Task: Real_World->Clipart, Iter:897/1035; Accuracy = 58.37%    Per_class_accuracy=58.89
+2024-04-14 18:36:57:INFO:Accuracy = 58.37% -> 58.40%    Per_class_accuracy = 58.89% -> 58.91%
+2024-04-14 18:37:10:INFO:Task: Real_World->Clipart, Iter:966/1035; Accuracy = 58.42%    Per_class_accuracy=58.97
+2024-04-14 18:37:16:INFO:Accuracy = 58.42% -> 58.42%    Per_class_accuracy = 58.97% -> 58.94%
+2024-04-14 18:37:28:INFO:Task: Real_World->Clipart, Iter:1035/1035; Accuracy = 58.42%    Per_class_accuracy=58.91
+2024-04-14 18:37:29:INFO:==========================================
+gpu_id:0
+s:Real_World
+t:Product
+max_epoch:15
+interval:15
+batch_size:64
+worker:4
+dset:office-home
+lr:0.01
+net:resnet50
+seed:2022
+gent:True
+ent:True
+threshold:0
+cls_par:0.3
+ent_par:1.0
+lr_decay1:0.1
+lr_decay2:1.0
+bottleneck:256
+epsilon:1e-05
+layer:wn
+classifier:bn
+distance:cosine
+output:san
+output_src:san
+da:uda
+issave:True
+timestamp:2024-04-14_12.41.55
+use_file_logger:True
+names:['Art', 'Clipart', 'Product', 'Real_World']
+use_train_transform:False
+use_balanced_sampler:False
+class_num:65
+s_dset_path:../data/office-home/image_list/Real_World.txt
+t_dset_path:../data/office-home/image_list/Product.txt
+test_dset_path:../data/office-home/image_list/Product.txt
+output_dir_src:../checkpoints/SHOT/source/uda/
+output_dir:../checkpoints/SHOT/target/uda/
+savename:par_0.3
+
+2024-04-14 18:37:36:INFO:Accuracy = 77.70% -> 81.89%    Per_class_accuracy = 76.46% -> 81.31%
+2024-04-14 18:37:49:INFO:Task: Real_World->Product, Iter:70/1050; Accuracy = 82.56%    Per_class_accuracy=81.94
+2024-04-14 18:37:56:INFO:Accuracy = 82.56% -> 83.17%    Per_class_accuracy = 81.94% -> 82.64%
+2024-04-14 18:38:09:INFO:Task: Real_World->Product, Iter:140/1050; Accuracy = 83.76%    Per_class_accuracy=83.30
+2024-04-14 18:38:17:INFO:Accuracy = 83.76% -> 83.98%    Per_class_accuracy = 83.30% -> 83.54%
+2024-04-14 18:38:29:INFO:Task: Real_World->Product, Iter:210/1050; Accuracy = 84.03%    Per_class_accuracy=83.54
+2024-04-14 18:38:36:INFO:Accuracy = 84.03% -> 83.96%    Per_class_accuracy = 83.54% -> 83.49%
+2024-04-14 18:38:49:INFO:Task: Real_World->Product, Iter:280/1050; Accuracy = 84.01%    Per_class_accuracy=83.54
+2024-04-14 18:38:57:INFO:Accuracy = 84.01% -> 84.07%    Per_class_accuracy = 83.54% -> 83.59%
+2024-04-14 18:39:10:INFO:Task: Real_World->Product, Iter:350/1050; Accuracy = 84.07%    Per_class_accuracy=83.59
+2024-04-14 18:39:18:INFO:Accuracy = 84.07% -> 84.14%    Per_class_accuracy = 83.59% -> 83.64%
+2024-04-14 18:39:30:INFO:Task: Real_World->Product, Iter:420/1050; Accuracy = 84.19%    Per_class_accuracy=83.71
+2024-04-14 18:39:37:INFO:Accuracy = 84.19% -> 84.19%    Per_class_accuracy = 83.71% -> 83.69%
+2024-04-14 18:39:49:INFO:Task: Real_World->Product, Iter:490/1050; Accuracy = 84.23%    Per_class_accuracy=83.76
+2024-04-14 18:39:56:INFO:Accuracy = 84.23% -> 84.16%    Per_class_accuracy = 83.76% -> 83.68%
+2024-04-14 18:40:09:INFO:Task: Real_World->Product, Iter:560/1050; Accuracy = 84.28%    Per_class_accuracy=83.76
+2024-04-14 18:40:16:INFO:Accuracy = 84.28% -> 84.16%    Per_class_accuracy = 83.76% -> 83.67%
+2024-04-14 18:40:28:INFO:Task: Real_World->Product, Iter:630/1050; Accuracy = 84.21%    Per_class_accuracy=83.70
+2024-04-14 18:40:35:INFO:Accuracy = 84.21% -> 84.21%    Per_class_accuracy = 83.70% -> 83.72%
+2024-04-14 18:40:47:INFO:Task: Real_World->Product, Iter:700/1050; Accuracy = 84.25%    Per_class_accuracy=83.77
+2024-04-14 18:40:54:INFO:Accuracy = 84.25% -> 84.23%    Per_class_accuracy = 83.77% -> 83.75%
+2024-04-14 18:41:06:INFO:Task: Real_World->Product, Iter:770/1050; Accuracy = 84.25%    Per_class_accuracy=83.79
+2024-04-14 18:41:13:INFO:Accuracy = 84.25% -> 84.23%    Per_class_accuracy = 83.79% -> 83.76%
+2024-04-14 18:41:25:INFO:Task: Real_World->Product, Iter:840/1050; Accuracy = 84.30%    Per_class_accuracy=83.84
+2024-04-14 18:41:32:INFO:Accuracy = 84.30% -> 84.23%    Per_class_accuracy = 83.84% -> 83.75%
+2024-04-14 18:41:44:INFO:Task: Real_World->Product, Iter:910/1050; Accuracy = 84.23%    Per_class_accuracy=83.77
+2024-04-14 18:41:51:INFO:Accuracy = 84.23% -> 84.23%    Per_class_accuracy = 83.77% -> 83.75%
+2024-04-14 18:42:04:INFO:Task: Real_World->Product, Iter:980/1050; Accuracy = 84.23%    Per_class_accuracy=83.75
+2024-04-14 18:42:11:INFO:Accuracy = 84.23% -> 84.21%    Per_class_accuracy = 83.75% -> 83.73%
+2024-04-14 18:42:23:INFO:Task: Real_World->Product, Iter:1050/1050; Accuracy = 84.23%    Per_class_accuracy=83.75
